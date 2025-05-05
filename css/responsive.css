@@ -1,0 +1,109 @@
+/* =============================================== */
+/* ============== MEDIA QUERIES ================== */
+/* =============================================== */
+@media (max-width: 992px) {
+    /* Layout General */
+    .page-title { display: block; text-align: center; transform: none; left: auto; }
+    #subtopics h2 { display: block; text-align: center; transform: none; left: auto; }
+
+    /* Intro Tabs */
+    .tab-pane-content { flex-direction: column-reverse; align-items: center; text-align: center;}
+    .tab-visual { margin-bottom: 1.5rem; }
+
+    /* Acordeón */
+    .accordion-header { font-size: 1.05em; padding: 0.9rem 1.2rem;}
+
+    /* Simulador */
+     .simulator-visuals { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    /* Base */
+    h2 { font-size: 1.9em; }
+
+    /* Layout */
+    .logo { font-size: 1.3em; }
+    nav button { padding: 0.4em 0.8em; font-size: 0.8em; margin-left: 0.5em;}
+    #theme-toggle { width: 35px; height: 35px; }
+    main { padding: 0 1rem; margin-top: 2rem;}
+    .page-title { font-size: 1.8em; }
+    .content-section { padding: 1.5rem; }
+    footer { margin-top: 3rem; padding: 1rem; }
+
+    /* Intro Tabs */
+    #intro { padding: 1.5rem 1rem; }
+    .tabs-nav { justify-content: flex-start; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;}
+    .tabs-nav::-webkit-scrollbar { display: none; } /* Oculta scrollbar en Webkit */
+    .tabs-nav { scrollbar-width: none; } /* Oculta scrollbar en Firefox */
+    .tabs-nav .tab-link { padding: 0.6rem 1rem; font-size: 1em; }
+    .tab-pane-content { gap: 1rem; }
+    .subtle-icon { font-size: 4em; }
+    .usage-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.8rem; }
+    .usage-item { padding: 0.6rem;}
+    .usage-item i { font-size: 1.5em;}
+
+    /* Subtopic Cards */
+    .cards-container { grid-template-columns: 1fr; gap: 1.5rem;}
+    .card { border-radius: 8px; }
+    .card a { padding: 1.5rem; }
+    .card-icon { font-size: 2em; }
+
+    /* Acordeón */
+    .accordion-header { padding: 0.8rem 1rem; font-size: 1em;}
+    .accordion-content { padding: 0 1rem;}
+
+    /* Carrusel */
+    .carousel-slide { padding: 0 0.5rem; }
+    .carousel-button { width: 35px; height: 35px; font-size: 1.2rem;}
+    .carousel-button.prev { left: 5px; }
+    .carousel-button.next { right: 5px; }
+
+    /* Ejercicios */
+    .exercises-list { padding-left: 1.2rem; }
+
+    /* Simulador */
+    .simulator-controls { gap: 0.5rem;}
+    .simulator-controls label { width: 100%; margin-bottom: 0.2rem;}
+    .simulator-controls input[type="number"] { width: 60px; padding: 0.4rem;}
+    .simulator-controls button { flex-grow: 1; padding: 0.6em 1em;} /* Ajuste botón para ocupar espacio */
+
+    /* Quiz */
+    .quiz-questions-mc { gap: 1rem; }
+    .quiz-question-mc { padding: 0.8rem 1rem;}
+    .quiz-option { padding: 0.4rem;}
+}
+
+@media (max-width: 480px) {
+    /* Ajustes finos para pantallas muy pequeñas */
+
+    nav {
+        /* Podrías ajustar el layout de los botones si se solapan */
+        gap: 0.3rem;
+    }
+    nav button {
+        margin-left: 0.3em;
+        padding: 0.4em 0.6em;
+    }
+     #theme-toggle {
+        width: 30px;
+        height: 30px;
+    }
+    .tabs-nav .tab-link {
+        font-size: 0.9em;
+        padding: 0.5rem 0.8rem;
+    }
+    .simulator-controls {
+       flex-direction: column; /* Apila los controles */
+       align-items: stretch; /* Estira los elementos */
+    }
+    .simulator-controls input[type="number"] {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-bottom: 0.5rem;
+    }
+    .simulator-controls button {
+         width: 100%; /* Ocupa todo el ancho */
+    }
+    .simulator-visuals {
+        gap: 1rem; /* Reduce el espacio */
+    }
+}

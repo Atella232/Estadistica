@@ -1,0 +1,81 @@
+/* =============================================== */
+/* ========== VARIABLES Y ESTILOS DE TEMA ======== */
+/* =============================================== */
+
+/* --- Variables de Color --- */
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #1d1c1d;
+    --primary-color: #611f69; /* Púrpura Slack */
+    --secondary-color: #007a5a; /* Verde Slack */
+    --card-bg: #ffffff;
+    --card-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    --header-bg: #ffffff;
+    --button-bg: #f0f0f0; /* Fondo para elementos interactivos sutiles */
+    --button-text: #333;
+    --button-hover-bg: #e0e0e0;
+    --link-color: var(--primary-color);
+    --icon-color: var(--secondary-color); /* Color base para iconos */
+    --border-color: #e0e0e0;
+    --intro-section-bg: #ffffff; /* Fondo específico para la sección intro con pestañas */
+    --subtle-icon-color: rgba(0, 122, 90, 0.1); /* Verde muy tenue para icono grande tabs */
+    --tab-nav-border: #d8d8d8;
+    --tab-active-border: var(--secondary-color);
+    --tab-inactive-opacity: 0.6;
+    --accordion-border: var(--border-color);
+    --accordion-bg: #ffffff; /* Fondo para el acordeón */
+    --accordion-content-bg: #fdfdfd; /* Fondo ligeramente diferente para el contenido */
+    --carousel-bg: #fdfdfd;
+    --hint-bg: #f0f8ff; /* Fondo azul claro para pistas */
+    --hint-border: #b0e0e6; /* Borde azul claro */
+    --quiz-feedback-correct-bg: #dff0d8;
+    --quiz-feedback-correct-text: #3c763d;
+    --quiz-feedback-correct-border: #d6e9c6;
+    --quiz-feedback-incorrect-bg: #f2dede;
+    --quiz-feedback-incorrect-text: #a94442;
+    --quiz-feedback-incorrect-border: #ebccd1;
+    --dot-blue: #4285F4;
+    --dot-orange: #FFA500;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1d21;
+    --text-color: #d1d2d3;
+    --primary-color: #a475aa; /* Púrpura más claro */
+    --secondary-color: #2eb67d; /* Verde más brillante */
+    --card-bg: #2c2f33;
+    --card-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    --header-bg: #222529;
+    --button-bg: #3a3f44;
+    --button-text: #e0e0e0;
+    --button-hover-bg: #4a4f54;
+    --link-color: var(--secondary-color);
+    --icon-color: var(--secondary-color);
+    --border-color: #3a3f44;
+    --intro-section-bg: #25282c; /* Fondo oscuro para intro */
+    --subtle-icon-color: rgba(46, 182, 125, 0.08); /* Verde oscuro aún más tenue */
+    --tab-nav-border: #444;
+    --tab-active-border: var(--secondary-color);
+    --tab-inactive-opacity: 0.5;
+    --accordion-border: var(--border-color);
+    --accordion-bg: #2c2f33;
+    --accordion-content-bg: #25282c;
+    --carousel-bg: #25282c;
+    --hint-bg: #2a3b4c; /* Fondo azul oscuro para pistas */
+    --hint-border: #3a5f7e; /* Borde azul oscuro */
+    --quiz-feedback-correct-bg: #2a4d32;
+    --quiz-feedback-correct-text: #a3d9a5;
+    --quiz-feedback-correct-border: #3c763d;
+    --quiz-feedback-incorrect-bg: #5a2a29;
+    --quiz-feedback-incorrect-text: #f9bdbb;
+    --quiz-feedback-incorrect-border: #a94442;
+    --dot-blue: #5c9bff; /* Azul más brillante */
+    --dot-orange: #ffb74d; /* Naranja más brillante */
+}
+
+/* Transiciones suaves para cambios de tema */
+body, header, main, footer, .content-section, .card, .accordion, .accordion-item, .accordion-header, .accordion-content, .carousel-container, .interactive-tool, .simulator-visuals, .dot-container, #quiz-area, .quiz-question-mc, .quiz-feedback, input, button, textarea {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}

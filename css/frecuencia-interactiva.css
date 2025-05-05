@@ -1,0 +1,417 @@
+/* ================================================ */
+/* === ESTILOS HERRAMIENTA FRECUENCIA INTERACTIVA === */
+/* ================================================ */
+
+#herramienta-frecuencia-interactiva {
+    /* Hereda padding de .interactive-tool.card-style */
+    /* Asegurar un fondo consistente si no hereda de card-style */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Coincidir con content-section */
+    padding: 2rem; /* Coincidir con content-section */
+    margin-top: 2rem;
+}
+
+#herramienta-frecuencia-interactiva > h3 { /* Título de la herramienta */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    text-align: center;
+    font-size: 1.6em; /* Ajustar tamaño si es necesario */
+    color: var(--primary-color); /* Usar color primario para título principal */
+}
+
+#herramienta-frecuencia-interactiva > p { /* Descripción debajo del título */
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+
+/* --- Controles de Generación --- */
+.tool-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajustar minmax */
+    gap: 1rem 1.5rem; /* Espacio vertical y horizontal */
+    align-items: center; /* Alinear verticalmente */
+    padding: 1.5rem;
+    background-color: var(--bg-color); /* Fondo ligeramente distinto */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+}
+
+.tool-controls-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; /* Espacio entre label e input */
+}
+
+.tool-controls-grid label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: var(--text-color);
+    opacity: 1; /* Más visible */
+}
+
+/* Estilo común para selects e inputs */
+.tool-controls-grid select,
+.tool-controls-grid input[type="number"],
+.tool-controls-grid input[type="text"] {
+    padding: 0.7rem 0.8rem; /* Más padding */
+    border: 1px solid var(--border-color);
+    border-radius: 6px; /* Radio estándar */
+    background-color: var(--card-bg); /* Fondo blanco/oscuro */
+    color: var(--text-color);
+    width: 100%;
+    font-size: 0.95em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.tool-controls-grid select:focus,
+.tool-controls-grid input[type="number"]:focus,
+.tool-controls-grid input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb, 97, 31, 105), 0.2); /* Añadir variable RGB para color primario si no existe */
+}
+/* Nota: Necesitarías definir --primary-color-rgb en :root, ej: --primary-color-rgb: 97, 31, 105; */
+
+
+.tool-controls-grid input[type="range"] {
+    padding: 0;
+    cursor: pointer;
+    accent-color: var(--primary-color); /* Color del slider */
+    margin-top: 0.5rem; /* Espacio extra para el slider */
+}
+
+.tool-controls-grid #tamano-muestra-valor {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+    display: inline-block;
+    background-color: var(--button-hover-bg);
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Estilos para los botones (simulando .button-primary de components.css si no existe) */
+.tool-controls-grid button.button-primary,
+.botones-accion .button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    grid-column: 1 / -1; /* Hacer que el botón ocupe todo el ancho en el grid de controles */
+    margin-top: 0.5rem; /* Espacio sobre el botón */
+}
+.tool-controls-grid button.button-primary:hover,
+.botones-accion .button-primary:hover {
+    background-color: var(--secondary-color); /* O un tono más oscuro de primary */
+}
+.tool-controls-grid button.button-primary:active,
+.botones-accion .button-primary:active {
+    transform: scale(0.98);
+}
+
+/* --- Zona del Ejercicio --- */
+.ejercicio-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack por defecto */
+    gap: 2rem;
+    margin-top: 2.5rem; /* Más separación de los controles */
+}
+
+@media (min-width: 800px) { /* Ajustar breakpoint si es necesario */
+    .ejercicio-grid {
+        grid-template-columns: 1fr 3fr; /* Datos brutos más estrechos */
+        align-items: start;
+    }
+}
+
+.datos-brutos-container,
+.tabla-frecuencias-container {
+     /* Aplicar estilo .card-style (o copiar propiedades) */
+    background-color: var(--bg-color); /* Fondo ligeramente distinto para contenedores internos */
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+
+.datos-brutos-container h4,
+.tabla-frecuencias-container h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2em; /* Un poco más grande */
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.8rem;
+}
+.datos-brutos-container h4 #n-display-es,
+.datos-brutos-container h4 #n-display-eu {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.datos-brutos-lista {
+    max-height: 350px; /* Un poco más de altura */
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--card-bg); /* Fondo principal */
+    font-size: 0.95em;
+    line-height: 1.7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em; /* Espacio entre etiquetas */
+}
+.datos-brutos-lista span { /* Estilo etiqueta */
+    background-color: var(--button-bg);
+    padding: 0.25em 0.6em;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap; /* Evitar que se partan las etiquetas */
+}
+
+/* --- Tabla Editable --- */
+.tabla-frecuencias-container .table-container {
+     max-height: 450px; /* Más altura si es necesario */
+     overflow-y: auto;
+     border: 1px solid var(--border-color); /* Borde alrededor del scroll */
+     border-radius: 6px;
+}
+
+.editable-freq-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Heredar estilo de .variables-table si es posible */
+}
+
+.editable-freq-table th,
+.editable-freq-table td {
+    border: 1px solid var(--border-color);
+    padding: 0; /* Padding lo controla el input */
+    text-align: center;
+    vertical-align: middle;
+    min-width: 70px; /* Un poco más anchas */
+}
+
+.editable-freq-table thead th {
+    background-color: var(--primary-color); /* Cabecera como .variables-table */
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9em;
+    position: sticky; /* Cabecera pegajosa */
+    top: 0;
+    z-index: 1;
+}
+
+.editable-freq-table td.xi-value {
+    font-weight: bold;
+    background-color: var(--button-bg); /* Fondo distinto para xi */
+    padding: 0.8rem 0.5rem;
+    font-size: 0.95em;
+    color: var(--primary-color);
+}
+
+.editable-freq-table input[type="number"],
+.editable-freq-table input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Borde invisible para mantener tamaño */
+    background-color: transparent;
+    text-align: center;
+    font-size: 0.95em;
+    padding: 0.8rem 0.5rem; /* Padding igual que celdas no editables */
+    box-sizing: border-box;
+    color: var(--text-color);
+    border-radius: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+.editable-freq-table input[type="number"]::-webkit-outer-spin-button,
+.editable-freq-table input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Estados de Validación Inputs */
+.editable-freq-table input.input-correct {
+    /* background-color: rgba(46, 182, 125, 0.1); */
+    border-color: var(--secondary-color); /* Verde Slack */
+    /* color: #3c763d; */
+}
+
+.editable-freq-table input.input-incorrect {
+    /* background-color: rgba(217, 83, 79, 0.1); */
+    border-color: #a94442; /* Rojo */
+     /* color: #a94442; */
+}
+.editable-freq-table input.input-incorrect::placeholder { /* Si usas placeholder para pistas */
+    color: #a94442;
+    opacity: 0.7;
+}
+
+
+.editable-freq-table input:focus {
+    outline: none;
+    background-color: var(--button-hover-bg);
+    border-color: var(--primary-color);
+    box-shadow: inset 0 0 0 1px var(--primary-color); /* Sombra interior al enfocar */
+}
+.editable-freq-table input:disabled { /* Estilo cuando está deshabilitado */
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* Fila de Totales */
+.editable-freq-table tfoot td {
+    font-weight: bold;
+    background-color: var(--button-bg);
+    padding: 0.8rem 0.5rem;
+    font-size: 0.95em;
+    color: var(--primary-color);
+    border-top: 2px solid var(--primary-color); /* Separador más grueso */
+}
+
+/* Feedback General Debajo Tabla */
+.feedback-message {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin-top: 1rem; /* Espacio sobre el mensaje */
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.feedback-message.correct {
+    background-color: var(--quiz-feedback-correct-bg);
+    color: var(--quiz-feedback-correct-text);
+    border-color: var(--quiz-feedback-correct-border);
+}
+.feedback-message.incorrect {
+     background-color: var(--quiz-feedback-incorrect-bg);
+     color: var(--quiz-feedback-incorrect-text);
+     border-color: var(--quiz-feedback-incorrect-border);
+}
+.feedback-message .hint {
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top: 0.4em;
+}
+
+
+/* --- Acciones y Estadísticas --- */
+.acciones-stats-grid {
+    display: flex; /* Flex para alinear botones y stats */
+    flex-wrap: wrap; /* Wrap en pantallas pequeñas */
+    gap: 1.5rem;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espacio entre botones y stats */
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.botones-accion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+/* Estilos para botones secundarios (simulando components.css) */
+.botones-accion .button-secondary,
+.acciones-stats-grid .button-secondary { /* Aplicar a ambos contextos */
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.7em 1.3em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+}
+.botones-accion .button-secondary:hover,
+.acciones-stats-grid .button-secondary:hover {
+    background-color: var(--button-hover-bg); /* Fondo suave al pasar */
+    border-color: var(--primary-color); /* Mantener borde */
+    color: var(--primary-color);
+}
+.botones-accion .button-secondary:active,
+.acciones-stats-grid .button-secondary:active {
+    transform: scale(0.98);
+}
+.botones-accion #btn-exportar-csv i { font-size: 1.1em; }
+
+/* Deshabilitar botones */
+.botones-accion button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--button-bg);
+     border-color: var(--border-color);
+     color: var(--text-color);
+}
+
+
+.stats-panel {
+     /* Aplicar estilo .card-style */
+    background-color: var(--bg-color);
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    flex-grow: 1; /* Que ocupe espacio disponible */
+    min-width: 200px; /* Ancho mínimo */
+}
+.stats-panel h5 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.stats-panel p {
+    font-size: 0.95em;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6em; /* Más espacio */
+    color: var(--text-color);
+}
+.stats-panel p i {
+    color: var(--icon-color);
+    width: 18px;
+    text-align: center;
+    opacity: 0.8;
+}
+.stats-panel p span:last-child {
+    font-weight: bold;
+    color: var(--secondary-color); /* Color secundario para el valor */
+    margin-left: auto; /* Empujar valor a la derecha */
+    background-color: var(--button-hover-bg);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+}

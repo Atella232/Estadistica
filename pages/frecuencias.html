@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-es="Estadística 1º ESO - Frecuencias y Tablas" data-lang-eu="Estatistika DBH 1 - Maiztasunak eta Taulak">Estadística 1º ESO - Frecuencias y Tablas</title>
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/frecuencia-interactiva.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+</head>
+<body data-theme="light">
+
+    <header>
+        <div class="logo">
+             <i class="fas fa-calculator"></i>
+             <a href="../index.html" class="home-link" data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">
+                 <span data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">Estadística 1º ESO</span>
+             </a>
+        </div>
+        <nav>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="lang-toggle"
+                    data-lang-es="Euskara"
+                    data-lang-eu="Castellano"
+                    aria-label="Cambiar idioma">
+                Euskara
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" data-lang-es="Frecuencias y Tablas" data-lang-eu="Maiztasunak eta Taulak">Frecuencias y Tablas</h2>
+
+        <section class="content-section">
+            <h3 data-lang-es="Conceptos Clave: Organizando los Datos" data-lang-eu="Gako Kontzeptuak: Datuak Antolatzen">Conceptos Clave: Organizando los Datos</h3>
+             <p data-lang-es="Una vez que hemos recogido los datos de nuestra muestra (por ejemplo, las respuestas a una encuesta), solemos tener una lista desordenada de valores, lo que se llama <strong>datos brutos</strong>. Para poder entenderlos mejor, necesitamos organizarlos. Las <strong>frecuencias</strong> nos dicen cuántas veces aparece cada valor o categoría."
+               data-lang-eu="Gure lagineko datuak bildu ondoren (adibidez, inkesta baten erantzunak), normalean balioen zerrenda desordenatu bat izaten dugu, <strong>datu gordinak</strong> deitzen direnak. Hobeto ulertu ahal izateko, antolatu behar ditugu. <strong>Maiztasunek</strong> esaten digute balio edo kategoria bakoitza zenbat aldiz agertzen den.">
+               Una vez que hemos recogido los datos de nuestra muestra (por ejemplo, las respuestas a una encuesta), solemos tener una lista desordenada de valores, lo que se llama <strong>datos brutos</strong>. Para poder entenderlos mejor, necesitamos organizarlos. Las <strong>frecuencias</strong> nos dicen cuántas veces aparece cada valor o categoría.
+            </p>
+            <div class="accordion">
+                 <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-hashtag icon-concept"></i>
+                        <span data-lang-es="Frecuencia Absoluta ($f_i$)" data-lang-eu="Maiztasun Absolutua ($f_i$)">Frecuencia Absoluta ($f_i$)</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p data-lang-es="Es el número de veces que aparece cada valor o categoría. La suma de todas las $f_i$ debe ser igual al número total de datos ($N$)."
+                           data-lang-eu="Balio edo kategoria bakoitza agertzen den aldi kopurua da. $f_i$ guztien batura datu kopuru osoaren ($N$) berdina izan behar da.">
+                           Es el número de veces que aparece cada valor o categoría de la variable en el conjunto de datos. La suma de todas las frecuencias absolutas ($f_i$) debe ser igual al número total de datos ($N$).
+                        </p>
+                         <p class="example"><strong data-lang-es="Ej:" data-lang-eu="Adib:">Ej:</strong> <em data-lang-es="Si 5 de 20 alumnos tienen 1 hermano, $f_1 = 5$." data-lang-eu="20 ikasletik 5ek anaia/arreba 1 badute, $f_1 = 5$.">Si 5 de 20 alumnos tienen 1 hermano, $f_1 = 5$.</em></p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-divide icon-concept"></i>
+                        <span data-lang-es="Frecuencia Relativa ($h_i$)" data-lang-eu="Maiztasun Erlatiboa ($h_i$)">Frecuencia Relativa ($h_i$)</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                     <div class="accordion-content">
+                         <p data-lang-es="Es la proporción de veces que aparece cada valor ($h_i = f_i / N$). La suma de todas las $h_i$ siempre es 1."
+                            data-lang-eu="Balio bakoitza agertzen den aldien proportzioa da ($h_i = f_i / N$). $h_i$ guztien batura beti 1 da.">
+                            Es la proporción de veces que aparece cada valor. Se calcula dividiendo la frecuencia absoluta ($f_i$) entre el número total de datos ($N$). Fórmula: $h_i = \frac{f_i}{N}$. Se expresa como fracción o decimal. La suma de todas las $h_i$ siempre es 1 (o muy cercana si hay redondeos).
+                         </p>
+                         <p class="example"><strong data-lang-es="Ej:" data-lang-eu="Adib:">Ej:</strong> <em data-lang-es="Si $f_1=5$ y $N=20$, $h_1 = 5/20 = 0.25$." data-lang-eu="$f_1=5$ eta $N=20$ badira, $h_1 = 5/20 = 0.25$.">Si $f_1=5$ y $N=20$, entonces $h_1 = 5/20 = 1/4 = 0.25$.</em></p>
+                    </div>
+                 </div>
+                <div class="accordion-item">
+                     <button class="accordion-header" aria-expanded="false">
+                         <i class="fas fa-percentage icon-concept"></i>
+                         <span data-lang-es="Porcentaje (%)" data-lang-eu="Ehunekoa (%)">Porcentaje (%)</span>
+                         <i class="fas fa-chevron-down icon-toggle"></i>
+                     </button>
+                    <div class="accordion-content">
+                         <p data-lang-es="Es la frecuencia relativa multiplicada por 100 ($\% = h_i \times 100$). La suma de todos los porcentajes debe ser 100%."
+                             data-lang-eu="Maiztasun erlatiboa 100ez biderkatuta da ($\% = h_i \times 100$). Ehuneko guztien batura %100 izan behar da.">
+                             Es la frecuencia relativa multiplicada por 100. Fórmula: $\%=h_i \times 100$. Es una forma muy común e intuitiva de expresar la $h_i$. La suma de todos los porcentajes debe ser 100%.
+                         </p>
+                         <p class="example"><strong data-lang-es="Ej:" data-lang-eu="Adib:">Ej:</strong> <em data-lang-es="Si $h_1=0.25$, el porcentaje es $0.25 \times 100 = 25\% $." data-lang-eu="$h_1=0.25$ bada, ehunekoa $0.25 \times 100 = \%25$ da.">Si $h_1=0.25$, el porcentaje es $0.25 \times 100 = 25\% $.</em></p>
+                     </div>
+                </div>
+             </div>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="La Tabla de Frecuencias: El Resumen Esencial" data-lang-eu="Maiztasun-Taula: Funtsezko Laburpena">La Tabla de Frecuencias: El Resumen Esencial</h3>
+             <p data-lang-es="La <strong>tabla de frecuencias</strong> organiza toda esta información de forma clara. Transforma una lista caótica de datos en un resumen que permite ver rápidamente qué valores son más comunes y cómo se distribuyen los datos."
+                data-lang-eu="<strong>Maiztasun-taulak</strong> informazio hori guztia modu argian antolatzen du. Datu-zerrenda kaotiko bat laburpen bihurtzen du, eta horrek aukera ematen du azkar ikusteko zer balio diren ohikoenak eta nola banatzen diren datuak.">
+                 La <strong>tabla de frecuencias</strong> organiza toda esta información de forma clara. Transforma una lista caótica de datos en un resumen que permite ver rápidamente qué valores son más comunes y cómo se distribuyen los datos.
+             </p>
+             <h4 data-lang-es="Estructura Típica (sin acumuladas):" data-lang-eu="Ohiko Egitura (metaturik gabe):">Estructura Típica (sin acumuladas):</h4>
+             <div class="table-container">
+                  <table class="variables-table">
+                       <thead>
+                          <tr>
+                              <th data-lang-es="Valor ($x_i$)" data-lang-eu="Balioa ($x_i$)">Valor ($x_i$)</th>
+                              <th data-lang-es="Frec. Absoluta ($f_i$)" data-lang-eu="Maiz. Absolutua ($f_i$)">Frec. Absoluta ($f_i$)</th>
+                              <th data-lang-es="Frec. Relativa ($h_i$)" data-lang-eu="Maiz. Erlatiboa ($h_i$)">Frec. Relativa ($h_i$)</th>
+                              <th data-lang-es="Porcentaje (%)" data-lang-eu="Ehunekoa (%)">Porcentaje (%)</th>
+                          </tr>
+                      </thead>
+                       <tbody>
+                          <tr><td data-lang-es="Valor 1" data-lang-eu="Balioa 1">Valor 1</td><td>...</td><td>...</td><td>...</td></tr>
+                          <tr><td data-lang-es="Valor 2" data-lang-eu="Balioa 2">Valor 2</td><td>...</td><td>...</td><td>...</td></tr>
+                          <tr><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+                          <tr><td data-lang-es="Valor k" data-lang-eu="k Balioa">Valor k</td><td>...</td><td>...</td><td>...</td></tr>
+                          <tr>
+                              <td style="font-weight:bold;" data-lang-es="Total" data-lang-eu="Guztira">Total</td>
+                              <td style="font-weight:bold;">$N$</td>
+                              <td style="font-weight:bold;">1</td>
+                              <td style="font-weight:bold;">100%</td>
+                          </tr>
+                       </tbody>
+                  </table>
+              </div>
+            <p class="key-takeaway" data-lang-es="Las frecuencias relativas ($h_i$) y porcentajes (%) son muy útiles para comparar grupos de tamaño diferente."
+                           data-lang-eu="Maiztasun erlatiboak ($h_i$) eta ehunekoak (%) oso erabilgarriak dira tamaina desberdineko taldeak konparatzeko.">
+                 Las frecuencias relativas ($h_i$) y porcentajes (%) son muy útiles para comparar grupos de tamaño diferente.
+            </p>
+        </section>
+
+        <section class="content-section">
+             <h3 data-lang-es="Ejemplos Resueltos: Construyendo Tablas" data-lang-eu="Adibide Ebatziak: Taulak Eraikitzen">Ejemplos Resueltos: Construyendo Tablas</h3>
+             <div class="card-style" style="margin-bottom: 2rem;">
+                  <h4 data-lang-es="Ejemplo 1 (Datos Cuantitativos Discretos): Notas Examen" data-lang-eu="1. Adibidea (Datu Kuantitatibo Diskretuak): Azterketako Notak">Ejemplo 1 (Datos Cuantitativos Discretos): Notas Examen</h4>
+                  <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Las notas de 20 alumnos fueron: 5, 7, 6, 5, 8, 4, 6, 9, 5, 7, 6, 8, 5, 4, 7, 6, 9, 5, 6, 7. Construye la tabla de frecuencias." data-lang-eu="20 ikasleren notak hauek izan ziren: 5, 7, 6, 5, 8, 4, 6, 9, 5, 7, 6, 8, 5, 4, 7, 6, 9, 5, 6, 7. Eraiki maiztasun-taula.">Las notas de 20 alumnos fueron: 5, 7, 6, 5, 8, 4, 6, 9, 5, 7, 6, 8, 5, 4, 7, 6, 9, 5, 6, 7. Construye la tabla de frecuencias.</span></p>
+                  <div class="solution">
+                      <strong data-lang-es="Tabla Final:" data-lang-eu="Amaierako Taula:">Tabla Final:</strong>
+                      <div class="table-container">
+                           <table class="variables-table">
+                               <thead><tr><th>Nota ($x_i$)</th><th>$f_i$</th><th>$h_i$</th><th>%</th></tr></thead>
+                               <tbody>
+                                   <tr><td>4</td><td>2</td><td>0.10</td><td>10%</td></tr>
+                                   <tr><td>5</td><td>5</td><td>0.25</td><td>25%</td></tr>
+                                   <tr><td>6</td><td>5</td><td>0.25</td><td>25%</td></tr>
+                                   <tr><td>7</td><td>4</td><td>0.20</td><td>20%</td></tr>
+                                   <tr><td>8</td><td>2</td><td>0.10</td><td>10%</td></tr>
+                                   <tr><td>9</td><td>2</td><td>0.10</td><td>10%</td></tr>
+                                   <tr><td style="font-weight:bold;" data-lang-es="Total" data-lang-eu="Guztira">Total</td><td style="font-weight:bold;">20</td><td style="font-weight:bold;">1.00</td><td style="font-weight:bold;">100%</td></tr>
+                               </tbody>
+                           </table>
+                       </div>
+                  </div>
+             </div>
+              <div class="card-style">
+                   <h4 data-lang-es="Ejemplo 2 (Datos Cualitativos): Color Favorito" data-lang-eu="2. Adibidea (Datu Kualitatiboak): Kolore Gustukoena">Ejemplo 2 (Datos Cualitativos): Color Favorito</h4>
+                   <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Se preguntó a 15 alumnos por su color favorito, obteniendo: Azul, Rojo, Verde, Azul, Verde, Azul, Amarillo, Rojo, Azul, Verde, Verde, Azul, Rojo, Amarillo, Azul. Construye la tabla." data-lang-eu="15 ikasleri beren kolore gustukoenaz galdetu zitzaien, eta hau lortu zen: Urdina, Gorria, Berdea, Urdina, Berdea, Urdina, Horia, Gorria, Urdina, Berdea, Berdea, Urdina, Gorria, Horia, Urdina. Eraiki taula.">Se preguntó a 15 alumnos por su color favorito, obteniendo: Azul, Rojo, Verde, Azul, Verde, Azul, Amarillo, Rojo, Azul, Verde, Verde, Azul, Rojo, Amarillo, Azul. Construye la tabla.</span></p>
+                   <div class="solution">
+                       <strong data-lang-es="Tabla Final:" data-lang-eu="Amaierako Taula:">Tabla Final:</strong>
+                       <div class="table-container">
+                            <table class="variables-table">
+                                <thead><tr><th data-lang-es="Color ($x_i$)" data-lang-eu="Kolorea ($x_i$)">Color ($x_i$)</th><th>$f_i$</th><th>$h_i$</th><th>%</th></tr></thead>
+                                <tbody>
+                                   <tr><td data-lang-es="Azul" data-lang-eu="Urdina">Azul</td><td>6</td><td>0.40</td><td>40%</td></tr>
+                                   <tr><td data-lang-es="Rojo" data-lang-eu="Gorria">Rojo</td><td>3</td><td>0.20</td><td>20%</td></tr>
+                                   <tr><td data-lang-es="Verde" data-lang-eu="Berdea">Verde</td><td>4</td><td>0.27</td><td>27%</td></tr>
+                                   <tr><td data-lang-es="Amarillo" data-lang-eu="Horia">Amarillo</td><td>2</td><td>0.13</td><td>13%</td></tr>
+                                   <tr><td style="font-weight:bold;" data-lang-es="Total" data-lang-eu="Guztira">Total</td><td style="font-weight:bold;">15</td><td style="font-weight:bold;">1.00</td><td style="font-weight:bold;">100%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                   </div>
+              </div>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejercicios Propuestos: ¡A Practicar!" data-lang-eu="Proposatutako Ariketak: Praktikatzera!">Ejercicios Propuestos: ¡A Practicar!</h3>
+             <ol class="exercises-list">
+                 <li><i class="fas fa-users fa-fw"></i> <span data-lang-es="Recoge los datos del <strong>número de hermanos</strong> de tu clase. Construye la tabla de frecuencias ($f_i, h_i, \%$)." data-lang-eu="Bildu zure gelako ikasleen <strong>anai-arreba kopuruaren</strong> datuak. Eraiki maiztasun-taula ($f_i, h_i, \%$).">Recoge los datos del <strong>número de hermanos</strong> de todos los alumnos de tu clase. Construye la tabla de frecuencias completa ($f_i, h_i, \%$).</span></li>
+                 <li><i class="fas fa-dice fa-fw"></i> <span data-lang-es="Lanza un <strong>dado</strong> 30 veces y anota los resultados. Construye la tabla de frecuencias para la variable &quot;Resultado&quot; ($f_i, h_i, \%$)." data-lang-eu="Bota <strong>dado</strong> bat 30 aldiz eta idatzi emaitzak. Eraiki maiztasun-taula &quot;Emaitza&quot; aldagairako ($f_i, h_i, \%$).">Lanza un <strong>dado</strong> 30 veces y anota los resultados. Construye la tabla de frecuencias completa para la variable "Resultado del lanzamiento".</span></li>
+                 <li><i class="fas fa-bus fa-fw"></i> <span data-lang-es="Pregunta a tus compañeros por el <strong>medio de transporte</strong> que usan. Construye la tabla ($f_i, h_i, \%$)." data-lang-eu="Galdetu ikaskideei erabiltzen duten <strong>garraiobidea</strong>. Eraiki taula ($f_i, h_i, \%$).">Pregunta a tus compañeros por el <strong>medio de transporte</strong> que usan para ir al instituto (Andando, Bici, Autobús, Coche...). Construye la tabla de frecuencias ($f_i, h_i, \%$).</span></li>
+                 <li><i class="fas fa-campground fa-fw"></i> <span data-lang-es="La tabla muestra las <strong>edades</strong> de los asistentes a un campamento. Complétala:" data-lang-eu="Ondoko taulak udaleku bateko parte-hartzaileen <strong>adinak</strong> erakusten ditu. Osatu ezazu:">La siguiente tabla muestra las <strong>edades</strong> de los asistentes a un campamento de verano, pero está incompleta. Complétala:</span>
+                     <div class="table-container" style="margin-top:0.5em;">
+                          <table class="variables-table">
+                              <thead><tr><th>Edad ($x_i$)</th><th>$f_i$</th><th>$h_i$</th><th>%</th></tr></thead>
+                              <tbody>
+                                  <tr><td>12</td><td>10</td><td></td><td></td></tr>
+                                  <tr><td>13</td><td>15</td><td></td><td></td></tr>
+                                  <tr><td>14</td><td>20</td><td></td><td></td></tr>
+                                  <tr><td>15</td><td>5</td><td></td><td></td></tr>
+                                  <tr><td style="font-weight:bold;" data-lang-es="Total" data-lang-eu="Guztira">Total</td><td></td><td></td><td></td></tr>
+                              </tbody>
+                          </table>
+                     </div>
+                      </li>
+                  <li><i class="fas fa-question-circle fa-fw"></i> <span data-lang-es="Utilizando la tabla completa del <strong>Ejemplo 1 (Notas)</strong>:" data-lang-eu="<strong>1. Adibideko (Notak)</strong> taula osoa erabiliz:">Utilizando la tabla completa del <strong>Ejemplo 1 (Notas)</strong>:</span>
+                      <ul style="list-style-type: lower-alpha; margin-top: 0.5em;">
+                          <li data-lang-es="¿Cuál es la nota más frecuente?" data-lang-eu="Zein da notarik ohikoena?">¿Cuál es la nota más frecuente?</li>
+                          <li data-lang-es="¿Qué porcentaje de alumnos obtuvo un 7?" data-lang-eu="Ikasleen zer ehunekok lortu zuen 7 bat?">¿Qué porcentaje de alumnos obtuvo un 7?</li>
+                          <li data-lang-es="¿Qué proporción de alumnos suspendió (nota < 5)?" data-lang-eu="Ikasleen zer proportziok suspenditu zuen (nota < 5)?">¿Qué proporción de alumnos suspendió (nota inferior a 5)?</li>
+                      </ul>
+                  </li>
+             </ol>
+        </section>
+
+        <section class="content-section interactive-tool card-style" id="herramienta-frecuencia-interactiva">
+             <h3 data-lang-es="¡Practica con Tablas de Frecuencia!" data-lang-eu="Praktikatu Maiztasun Taulekin!">¡Practica con Tablas de Frecuencia!</h3>
+             <p data-lang-es="Genera datos aleatorios y completa tú mismo la tabla de frecuencias ($f_i$, $h_i$, %). ¡Comprueba tus resultados!"
+                data-lang-eu="Sortu ausazko datuak eta bete zuk zeuk maiztasun-taula ($f_i$, $h_i$, %). Egiaztatu zure emaitzak!">
+                 Genera datos aleatorios y completa tú mismo la tabla de frecuencias ($f_i$, $h_i$, %). ¡Comprueba tus resultados!
+             </p>
+
+             <div id="controles-frecuencia" class="tool-controls-grid">
+                 <div>
+                     <label for="tipo-variable" data-lang-es="Tipo de Variable:" data-lang-eu="Aldagai Mota:">Tipo de Variable:</label>
+                     <select id="tipo-variable">
+                         <option value="discreta" data-lang-es="Cuantitativa Discreta" data-lang-eu="Kuantitatibo Diskretua">Cuantitativa Discreta</option>
+                         <option value="cualitativa" data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</option>
+                     </select>
+                 </div>
+
+                 <div id="controles-discreta">
+                     <label for="rango-min" data-lang-es="Rango (Min-Max):" data-lang-eu="Barrutia (Min-Max):">Rango (Min-Max):</label>
+                     <input type="number" id="rango-min" value="1" min="0" style="width: 60px;"> -
+                     <input type="number" id="rango-max" value="10" min="1" style="width: 60px;">
+                 </div>
+
+                 <div id="controles-cualitativa" style="display: none;">
+                     <label for="categorias" data-lang-es="Categorías (separadas por comas):" data-lang-eu="Kategoriak (komaz bereizita):">Categorías (separadas por comas):</label>
+                     <input type="text" id="categorias" value="Rojo, Verde, Azul" placeholder="Ej: Sí, No, Quizás">
+                 </div>
+
+                 <div>
+                     <label for="tamano-muestra" data-lang-es="Tamaño Muestra (N):" data-lang-eu="Lagin Tamaina (N):">Tamaño Muestra (N):</label>
+                     <input type="range" id="tamano-muestra" min="10" max="100" value="20">
+                     <span id="tamano-muestra-valor">20</span>
+                 </div>
+
+                <div>
+                     <label for="nivel-dificultad" data-lang-es="Nivel:" data-lang-eu="Maila:">Nivel:</label>
+                     <select id="nivel-dificultad">
+                         <option value="basico" data-lang-es="Básico" data-lang-eu="Oinarrizkoa">Básico</option>
+                         <option value="avanzado" data-lang-es="Avanzado" data-lang-eu="Aurreratua">Avanzado</option>
+                     </select>
+                 </div>
+
+                 <button id="btn-generar-datos" class="button-primary" data-lang-es="Generar Datos y Empezar" data-lang-eu="Datuak Sortu eta Hasi">Generar Datos y Empezar</button>
+             </div>
+
+             <div id="zona-ejercicio" class="ejercicio-grid" style="display: none;">
+                 <div class="datos-brutos-container card-style">
+                     <h4 data-lang-es="Datos Generados (N=<span id='n-display'></span>)" data-lang-eu="Sortutako Datuak (N=<span id='n-display-eu'></span>)">Datos Generados (N=<span id='n-display-es'></span>)</h4>
+                     <div id="datos-brutos-display" class="datos-brutos-lista">
+                         </div>
+                 </div>
+
+                 <div class="tabla-frecuencias-container card-style">
+                     <h4 data-lang-es="Completa la Tabla de Frecuencias" data-lang-eu="Osatu Maiztasun Taula">Completa la Tabla de Frecuencias</h4>
+                     <div class="table-container" style="max-height: 400px; overflow-y: auto;">
+                         <table id="tabla-frecuencias-editable" class="editable-freq-table">
+                             <thead>
+                                 <tr>
+                                     <th>$x_i$</th>
+                                     <th>$f_i$</th>
+                                     <th>$h_i$</th>
+                                     <th>%</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 </tbody>
+                             <tfoot>
+                                 </tfoot>
+                         </table>
+                     </div>
+                      <div id="feedback-general" class="feedback-message" style="margin-top: 1rem;"></div>
+                 </div>
+             </div>
+
+             <div id="acciones-estadisticas" class="acciones-stats-grid" style="display: none;">
+                 <div class="botones-accion">
+                     <button id="btn-comprobar" class="button-primary" data-lang-es="Comprobar" data-lang-eu="Egiaztatu">Comprobar</button>
+                     <button id="btn-reintentar" class="button-secondary" data-lang-es="Reintentar" data-lang-eu="Berriz Saiatu">Reintentar</button>
+                     <button id="btn-nueva-muestra" class="button-secondary" data-lang-es="Nueva Muestra" data-lang-eu="Lagin Berria">Nueva Muestra</button>
+                     <button id="btn-exportar-csv" class="button-secondary" data-lang-es="Exportar CSV" data-lang-eu="Esportatu CSV" title="Exportar tabla completada" style="margin-left: auto;"><i class="fas fa-file-csv"></i> CSV</button>
+                 </div>
+                 <div id="panel-estadisticas" class="stats-panel card-style">
+                     <h5 data-lang-es="Estadísticas" data-lang-eu="Estatistikak">Estadísticas</h5>
+                     <p><i class="fas fa-stopwatch"></i> <span data-lang-es="Tiempo:" data-lang-eu="Denbora:">Tiempo:</span> <span id="stats-tiempo">0s</span></p>
+                     <p><i class="fas fa-bullseye"></i> <span data-lang-es="Intentos:" data-lang-eu="Saiakerak:">Intentos:</span> <span id="stats-intentos">0</span></p>
+                     <p><i class="fas fa-check-circle"></i> <span data-lang-es="Aciertos (%):" data-lang-eu="Asmatzeak (%):">Aciertos (%):</span> <span id="stats-aciertos">--</span></p>
+                 </div>
+             </div>
+        </section>
+        </main>
+
+    <footer>
+        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/uiComponents.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/frecuencia-interactiva.js" defer></script>
+    </body>
+</html>

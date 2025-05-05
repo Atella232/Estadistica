@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-es="Estadística 1º ESO - Variables Estadísticas" data-lang-eu="Estatistika DBH 1 - Aldagai Estatistikoak">Estadística 1º ESO - Variables Estadísticas</title>
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/interactive.css"> <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body data-theme="light">
+
+    <header>
+        <div class="logo">
+             <i class="fas fa-calculator"></i>
+             <a href="../index.html" class="home-link" data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">
+                 <span data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">Estadística 1º ESO</span>
+             </a>
+        </div>
+        <nav>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="lang-toggle"
+                    data-lang-es="Euskara"
+                    data-lang-eu="Castellano"
+                    aria-label="Cambiar idioma">
+                Euskara
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" data-lang-es="Variables Estadísticas" data-lang-eu="Aldagai Estatistikoak">Variables Estadísticas</h2>
+
+        <section class="content-section">
+            <h3 data-lang-es="Tipos de Variables: Explorando las Características" data-lang-eu="Aldagai Motak: Ezaugarriak">Tipos de Variables: Explorando las Características</h3>
+            <ul class="tabs-nav">
+                <li><a href="#tab-vision-general" class="tab-link active" data-lang-es="Visión General" data-lang-eu="Ikuspegi Orokorra">Visión General</a></li>
+                <li><a href="#tab-cualitativas" class="tab-link" data-lang-es="Cualitativas" data-lang-eu="Kualitatiboak">Cualitativas</a></li>
+                <li><a href="#tab-cuantitativas" class="tab-link" data-lang-es="Cuantitativas" data-lang-eu="Kuantitatiboak">Cuantitativas</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div id="tab-vision-general" class="tab-pane active">
+                     <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;"> <p data-lang-es="Una vez definida la población y la muestra, necesitamos saber qué característica concreta vamos a estudiar en cada individuo. Esa característica es la <strong>variable estadística</strong>. Es crucial distinguirlas, ¡porque de ello depende cómo las analizaremos!"
+                            data-lang-eu="Populazioa eta lagina definitu ondoren, banako bakoitzean zer ezaugarri zehatz aztertuko dugun jakin behar dugu. Ezaugarri hori <strong>aldagai estatistikoa</strong> da. Funtsezkoa da horiek bereiztea, horren araberakoa izango baita datu horiek aztertzeko modua!">
+                            Una vez definida la población y la muestra, necesitamos saber qué característica concreta vamos a estudiar en cada individuo. Esa característica es la <strong>variable estadística</strong>. Es crucial distinguirlas, ¡porque de ello depende cómo las analizaremos!
+                         </p>
+                         <div class="variable-diagram">
+                             <strong data-lang-es="Clasificación Principal" data-lang-eu="Sailkapen Nagusia">Clasificación Principal</strong>
+                             <div class="split">
+                                 <div class="category">
+                                     <strong data-lang-es="Cualitativas" data-lang-eu="Kualitatiboak">Cualitativas</strong><br>
+                                     <i class="fas fa-font fa-2x" style="color: var(--secondary-color); margin-top: 0.5rem;"></i><br>
+                                     <span style="font-size:0.85em;" data-lang-es="(Describen cualidades)" data-lang-eu="(Kualitateak deskribatzen dituzte)">(Describen cualidades)</span>
+                                 </div>
+                                 <div class="category">
+                                     <strong data-lang-es="Cuantitativas" data-lang-eu="Kuantitatiboak">Cuantitativas</strong><br>
+                                     <i class="fas fa-hashtag fa-2x" style="color: var(--secondary-color); margin-top: 0.5rem;"></i><br>
+                                     <span style="font-size:0.85em;" data-lang-es="(Miden cantidades)" data-lang-eu="(Kantitateak neurtzen dituzte)">(Miden cantidades)</span>
+                                     <div class="sub-split">
+                                         <div class="sub-category" data-lang-es="↳ Discretas (Contar)" data-lang-eu="↳ Diskretuak (Kontatu)">↳ Discretas (Contar)</div>
+                                         <div class="sub-category" data-lang-es="↳ Continuas (Medir)" data-lang-eu="↳ Jarraituak (Neurtu)">↳ Continuas (Medir)</div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <p data-lang-es="Saber clasificar las variables es el primer paso para elegir las herramientas estadísticas adecuadas. No tiene sentido calcular la &quot;media&quot; del color de ojos, ¡pero sí la de la altura!"
+                            data-lang-eu="Aldagaiak sailkatzen jakitea tresna estatistiko egokiak aukeratzeko lehen urratsa da. Ez du zentzurik begi-kolorearen &quot;batez bestekoa&quot; kalkulatzeak, baina bai altuerarena!">
+                            Saber clasificar las variables es el primer paso para elegir las herramientas estadísticas adecuadas. No tiene sentido calcular la "media" del color de ojos, ¡pero sí la de la altura!
+                         </p>
+                    </div>
+                </div>
+                <div id="tab-cualitativas" class="tab-pane">
+                     <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;">
+                         <h4 style="color:var(--secondary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-font fa-fw"></i> <span data-lang-es="Variables Cualitativas (o Categóricas)" data-lang-eu="Aldagai Kualitatiboak (edo Kategorikoak)">Variables Cualitativas (o Categóricas)</span></h4>
+                         <p data-lang-es="Describen una <strong>cualidad</strong>, característica o categoría que no se puede expresar numéricamente de forma natural. Responden a la pregunta <em>&quot;¿de qué tipo?&quot;</em>."
+                            data-lang-eu="Modu naturalean zenbakiz adierazi ezin den <strong>kualitate</strong>, ezaugarri edo kategoria bat deskribatzen dute. <em>&quot;Zer motatakoa?&quot;</em> galderari erantzuten diote.">
+                            Describen una <strong>cualidad</strong>, característica o categoría que no se puede expresar numéricamente de forma natural. Responden a la pregunta <em>"¿de qué tipo?"</em>.
+                         </p>
+                         <h5 data-lang-es="Ejemplos Comunes:" data-lang-eu="Adibide Ohikoak:">Ejemplos Comunes:</h5>
+                         <ul class="icon-list"> <li><i class="fas fa-eye fa-fw"></i><span data-lang-es="Color de ojos (azul, marrón, verde)" data-lang-eu="Begi-kolorea (urdina, marroia, berdea)">Color de ojos (azul, marrón, verde)</span></li>
+                            <li><i class="fas fa-car fa-fw"></i><span data-lang-es="Marca de coche preferida (Seat, Renault, Ford)" data-lang-eu="Auto-marka gustukoena (Seat, Renault, Ford)">Marca de coche preferida (Seat, Renault, Ford)</span></li>
+                            <li><i class="fas fa-question-circle fa-fw"></i><span data-lang-es="Respuesta a una pregunta de Sí/No (¿Tienes mascota?)" data-lang-eu="Bai/Ez galdera baten erantzuna (Maskotarik baduzu?)">Respuesta a una pregunta de Sí/No (¿Tienes mascota?)</span></li>
+                            <li><i class="fas fa-map-marker-alt fa-fw"></i><span data-lang-es="Provincia de nacimiento" data-lang-eu="Jaiotza-probintzia">Provincia de nacimiento</span></li>
+                            <li><i class="fas fa-venus-mars fa-fw"></i><span data-lang-es="Sexo" data-lang-eu="Sexua">Sexo</span></li>
+                         </ul>
+                     </div>
+                </div>
+                <div id="tab-cuantitativas" class="tab-pane">
+                      <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;">
+                         <h4 style="color:var(--secondary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-hashtag fa-fw"></i> <span data-lang-es="Variables Cuantitativas" data-lang-eu="Aldagai Kuantitatiboak">Variables Cuantitativas</span></h4>
+                         <p data-lang-es="Se expresan mediante una <strong>cantidad numérica</strong>. Responden a la pregunta <em>&quot;¿cuánto?&quot;</em> o <em>&quot;¿cuántos?&quot;</em>. Se dividen en dos subtipos importantes:"
+                            data-lang-eu="<strong>Zenbakizko kantitate</strong> baten bidez adierazten dira. <em>&quot;Zenbat?&quot;</em> galderari erantzuten diote. Bi azpimota garrantzitsutan banatzen dira:">
+                             Se expresan mediante una <strong>cantidad numérica</strong>. Responden a la pregunta <em>"¿cuánto?"</em> o <em>"¿cuántos?"</em>. Se dividen en dos subtipos importantes:
+                         </p>
+                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                             <div class="card-style"> <h5 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-list-ol fa-fw"></i> <span data-lang-es="Discretas" data-lang-eu="Diskretuak">Discretas</span></h5>
+                                 <p data-lang-es="Solo toman valores aislados (normalmente enteros). ¡Son el resultado de <strong>contar</strong>!"
+                                    data-lang-eu="Balio isolatuak bakarrik hartzen dituzte (normalean osoak). <strong>Kontatzearen</strong> emaitza da!">
+                                     Solo toman valores aislados (normalmente enteros). ¡Son el resultado de <strong>contar</strong>!
+                                 </p>
+                                 <p class="example" style="font-size: 0.9em;"><strong data-lang-es="Ej:" data-lang-eu="Adib:">Ej:</strong> <em data-lang-es="Nº hermanos, nº goles, nº libros, nº asignaturas aprobadas, nº veces al cine." data-lang-eu="Anai-arreba kop., gol kop., liburu kop., gainditutako irakasgai kop., zinemara joate kop.">Nº hermanos, nº goles, nº libros, nº asignaturas aprobadas, nº veces al cine.</em></p>
+                                  <p style="font-size: 0.85em; margin-top: 0.8rem;" data-lang-es="<em>Nota sobre zapatos:</em> Aunque haya tallas como 38.5, no hay infinitos valores entre 38 y 39. Por eso, ¡se considera discreta!"
+                                     data-lang-eu="<em>Oinetakoei buruzko oharra:</em> Nahiz eta 38.5 bezalako neurriak egon, ez dago balio infiniturik 38 eta 39 artean. Horregatik, diskretutzat jotzen da!">
+                                      <em>Nota sobre zapatos:</em> Aunque haya tallas como 38.5, no hay infinitos valores entre 38 y 39. Por eso, ¡se considera discreta!
+                                  </p>
+                             </div>
+                             <div class="card-style"> <h5 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-ruler-horizontal fa-fw"></i> <span data-lang-es="Continuas" data-lang-eu="Jarraituak">Continuas</span></h5>
+                                 <p data-lang-es="Pueden tomar cualquier valor en un intervalo. ¡Son el resultado de <strong>medir</strong>!"
+                                    data-lang-eu="Tarte batean edozein balio har dezakete. <strong>Neurtzearen</strong> emaitza da!">
+                                     Pueden tomar cualquier valor en un intervalo. ¡Son el resultado de <strong>medir</strong>!
+                                 </p>
+                                 <p class="example" style="font-size: 0.9em;"><strong data-lang-es="Ej:" data-lang-eu="Adib:">Ej:</strong> <em data-lang-es="Altura, peso, temperatura, tiempo en una carrera, nivel de colesterol." data-lang-eu="Altuera, pisua, tenperatura, lasterketa bateko denbora, kolesterol-maila.">Altura, peso, temperatura, tiempo en una carrera, nivel de colesterol.</em></p>
+                                 <p style="font-size: 0.85em; margin-top: 0.8rem;" data-lang-es="<em>Nota sobre medición:</em> Aunque en la práctica redondeemos (ej: altura a cm), la variable podría tener valores intermedios. ¡La naturaleza manda!"
+                                    data-lang-eu="<em>Neurtzeari buruzko oharra:</em> Praktikan biribildu arren (adib.: altuera cm-tara), aldagaiak tarteko balioak izan litzake. Naturak agintzen du!">
+                                     <em>Nota sobre medición:</em> Aunque en la práctica redondeemos (ej: altura a cm), la variable podría tener valores intermedios. ¡La naturaleza manda!
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="key-takeaway" style="margin-top: 2rem;">
+                            <strong data-lang-es="Pregunta Clave para Distinguir Discreta vs. Continua:" data-lang-eu="Diskretua vs Jarraitua Bereizteko Galdera Gakoa:">Pregunta Clave para Distinguir Discreta vs. Continua:</strong>
+                            <p style="margin-top: 0.5em;" data-lang-es="<em>&quot;Si tengo dos valores posibles (ej: 2 y 3 hermanos; 1.70m y 1.71m), ¿tiene sentido que exista un valor justo en medio?&quot;</em><br> • Si la respuesta es <strong>NO</strong> (no puedo tener 2.5 hermanos) ➜ <strong>Discreta</strong>.<br> • Si la respuesta es <strong>SÍ</strong> (puedo medir 1.705m) ➜ <strong>Continua</strong>."
+                               data-lang-eu="<em>&quot;Bi balio posible baditut (adib.: 2 eta 3 anai-arreba; 1.70m eta 1.71m), zentzuzkoa al da justu erdian balio bat egotea?&quot;</em><br> • Erantzuna <strong>EZETZA</strong> bada (ezin ditut 2.5 anai-arreba izan) ➜ <strong>Diskretua</strong>.<br> • Erantzuna <strong>BAIEZKOA</strong> bada (1.705m neur dezaket) ➜ <strong>Jarraitua</strong>.">
+                               <em>"Si tengo dos valores posibles (ej: 2 y 3 hermanos; 1.70m y 1.71m), ¿tiene sentido que exista un valor justo en medio?"</em><br> • Si la respuesta es <strong>NO</strong> (no puedo tener 2.5 hermanos) ➜ <strong>Discreta</strong>.<br> • Si la respuesta es <strong>SÍ</strong> (puedo medir 1.705m) ➜ <strong>Continua</strong>.
+                            </p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+             <h3 data-lang-es="Ejemplos Resueltos: ¡A Clasificar!" data-lang-eu="Adibide Ebatziak: Sailkatzera!">Ejemplos Resueltos: ¡A Clasificar!</h3>
+             <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Clasifica las siguientes variables estadísticas:" data-lang-eu="Sailkatu honako aldagai estatistiko hauek:">Clasifica las siguientes variables estadísticas:</span></p>
+             <div class="table-container">
+                 <table class="variables-table">
+                    <thead>
+                         <tr>
+                             <th data-lang-es="Variable Descrita" data-lang-eu="Deskribatutako Aldagaia">Variable Descrita</th>
+                             <th data-lang-es="Tipo Principal" data-lang-eu="Mota Nagusia">Tipo Principal</th>
+                             <th data-lang-es="Subtipo" data-lang-eu="Azpimota">Subtipo</th>
+                             <th data-lang-es="Justificación / Notas" data-lang-eu="Justifikazioa / Oharrak">Justificación / Notas</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr><td data-lang-es="a) Nota en un control (0-10)" data-lang-eu="a) Kontrol bateko nota (0-10)">a) Nota en un control (0-10)</td><td data-lang-es="Cuantitativa" data-lang-eu="Kuantitatiboa">Cuantitativa</td><td data-lang-es="Discreta" data-lang-eu="Diskretua">Discreta</td><td data-lang-es="Generalmente se usan valores fijos (5, 5.5, 6...). Aunque teóricamente podría ser continua, en la práctica se limita." data-lang-eu="Normalean balio finkoak erabiltzen dira (5, 5.5, 6...). Teorian jarraitua izan litekeen arren, praktikan mugatu egiten da.">Generalmente se usan valores fijos (5, 5.5, 6...). Aunque teóricamente podría ser continua, en la práctica se limita.</td></tr>
+                         <tr><td data-lang-es="b) Comida favorita" data-lang-eu="b) Janari gustukoena">b) Comida favorita</td><td data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</td><td>-</td><td data-lang-es="Describe una preferencia, no una cantidad." data-lang-eu="Lehentasun bat deskribatzen du, ez kantitate bat.">Describe una preferencia, no una cantidad.</td></tr>
+                         <tr><td data-lang-es="c) Tiempo viendo vídeos (horas/día)" data-lang-eu="c) Bideoak ikusten emandako denbora (ordu/egun)">c) Tiempo viendo vídeos (horas/día)</td><td data-lang-es="Cuantitativa" data-lang-eu="Kuantitatiboa">Cuantitativa</td><td data-lang-es="Continua" data-lang-eu="Jarraitua">Continua</td><td data-lang-es="El tiempo se mide y puede tomar valores intermedios (2.3h, 2.35h...)." data-lang-eu="Denbora neurtu egiten da eta tarteko balioak har ditzake (2.3h, 2.35h...).">El tiempo se mide y puede tomar valores intermedios (2.3h, 2.35h...).</td></tr>
+                         <tr><td data-lang-es="d) Nº asignaturas aprobadas" data-lang-eu="d) Gainditutako irakasgai kop.">d) Nº asignaturas aprobadas</td><td data-lang-es="Cuantitativa" data-lang-eu="Kuantitatiboa">Cuantitativa</td><td data-lang-es="Discreta" data-lang-eu="Diskretua">Discreta</td><td data-lang-es="Es un conteo (0, 1, 2...). No hay valores intermedios." data-lang-eu="Zenbaketa bat da (0, 1, 2...). Ez dago tarteko baliorik.">Es un conteo (0, 1, 2...). No hay valores intermedios.</td></tr>
+                         <tr><td data-lang-es="e) Nacionalidad de jugadores" data-lang-eu="e) Jokalarien nazionalitatea">e) Nacionalidad de jugadores</td><td data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</td><td>-</td><td data-lang-es="Indica una categoría (país)." data-lang-eu="Kategoria bat adierazten du (herrialdea).">Indica una categoría (país).</td></tr>
+                         <tr><td data-lang-es="f) Color de pelo" data-lang-eu="f) Ile kolorea">f) Color de pelo</td><td data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</td><td>-</td><td data-lang-es="Describe un atributo (rubio, moreno...)." data-lang-eu="Atributu bat deskribatzen du (ilehoria, beltzarana...).">Describe un atributo (rubio, moreno...).</td></tr>
+                     </tbody>
+                 </table>
+             </div>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejercicios Propuestos: ¡Ahora Tú!" data-lang-eu="Proposatutako Ariketak: Orain Zuk!">Ejercicios Propuestos: ¡Ahora Tú!</h3>
+            <ol class="exercises-list">
+                <li> <span data-lang-es="Piensa en 5 características que se podrían estudiar sobre los alumnos de tu clase. Escribe el nombre de cada variable y clasifícala."
+                           data-lang-eu="Pentsatu zure gelako ikasleei buruz azter litezkeen 5 ezaugarri. Idatzi aldagai bakoitzaren izena eta sailkatu.">
+                    Piensa en 5 características que se podrían estudiar sobre los alumnos de tu clase. Escribe el nombre de cada variable y clasifícala.</span>
+                </li>
+                 <li> <span data-lang-es="Clasifica las siguientes variables referidas a un estudio sobre los árboles de un bosque:"
+                           data-lang-eu="Sailkatu baso bateko zuhaitzei buruzko azterlan bati dagozkion aldagai hauek:">
+                    Clasifica las siguientes variables referidas a un estudio sobre los árboles de un bosque:</span>
+                    <ul style="list-style-type: lower-alpha; margin-top: 0.5em;">
+                        <li><span data-lang-es="Altura del árbol (en metros)." data-lang-eu="Zuhaitzaren altuera (metrotan).">Altura del árbol (en metros).</span></li>
+                        <li><span data-lang-es="Tipo de hoja (perenne, caduca)." data-lang-eu="Hosto mota (iraunkorra, hostogalkorra).">Tipo de hoja (perenne, caduca).</span></li>
+                        <li><span data-lang-es="Número de nidos encontrados en el árbol." data-lang-eu="Zuhaitzean aurkitutako habi kopurua.">Número de nidos encontrados en el árbol.</span></li>
+                        <li><span data-lang-es="Diámetro del tronco (en centímetros)." data-lang-eu="Enborraren diametroa (zentimetrotan).">Diámetro del tronco (en centímetros).</span></li>
+                        <li><span data-lang-es="Especie del árbol (pino, roble, encina...)." data-lang-eu="Zuhaitzaren espeziea (pinua, haritza, artea...).">Especie del árbol (pino, roble, encina...).</span></li>
+                    </ul>
+                </li>
+                 <li> <span data-lang-es="En una encuesta sobre transporte público, clasifica la variable correspondiente a cada pregunta:"
+                          data-lang-eu="Garraio publikoari buruzko inkesta batean, sailkatu galdera bakoitzari dagokion aldagaia:">
+                           En una encuesta sobre transporte público, clasifica la variable correspondiente a cada pregunta:</span>
+                    <ul style="list-style-type: lower-alpha; margin-top: 0.5em;">
+                        <li><span data-lang-es="Medio de transporte habitual (autobús, metro...)" data-lang-eu="Ohiko garraiobidea (autobusa, metroa...)">Medio de transporte habitual (autobús, metro...)</span></li>
+                        <li><span data-lang-es="Veces que lo usó la semana pasada" data-lang-eu="Joan den astean erabilitako aldiak">Veces que lo usó la semana pasada</span></li>
+                        <li><span data-lang-es="Tiempo del último trayecto (minutos)" data-lang-eu="Azken ibilbidearen denbora (minutuak)">Tiempo del último trayecto (minutos)</span></li>
+                        <li><span data-lang-es="Satisfecho con el servicio (Sí/No)" data-lang-eu="Zerbitzuarekin pozik (Bai/Ez)">Satisfecho con el servicio (Sí/No)</span></li>
+                        <li><span data-lang-es="Coste mensual aproximado (€)" data-lang-eu="Gutxi gorabeherako hileko kostua (€)">Coste mensual aproximado (€)</span></li>
+                    </ul>
+                </li>
+                 <li> <span data-lang-es="Explica con tus palabras por qué la variable &quot;Número de calzado&quot; se considera cuantitativa discreta, aunque existan medias tallas como 40.5."
+                           data-lang-eu="Azaldu zure hitzekin zergatik &quot;Oinetako zenbakia&quot; aldagaia kuantitatibo diskretutzat jotzen den, 40.5 bezalako neurri erdiak existitzen badira ere.">
+                     Explica con tus palabras por qué la variable "Número de calzado" se considera cuantitativa discreta, aunque existan medias tallas como 40.5.</span>
+                 </li>
+            </ol>
+        </section>
+
+        <section class="content-section" id="variable-classifier-tool">
+            <h3 data-lang-es="Clasificador Interactivo de Variables" data-lang-eu="Aldagaien Sailkatzaile Interaktiboa">Clasificador Interactivo de Variables</h3>
+            <p data-lang-es="¡Pon a prueba tus conocimientos! Arrastra cada tarjeta de variable a la categoría correcta (Cualitativa, Cuantitativa Discreta o Cuantitativa Continua)."
+               data-lang-eu="Jarri zure ezagutzak proban! Arrastatu aldagai-txartel bakoitza kategoria zuzenera (Kualitatiboa, Kuantitatibo Diskretua edo Kuantitatibo Jarraitua).">
+                ¡Pon a prueba tus conocimientos! Arrastra cada tarjeta de variable a la categoría correcta (Cualitativa, Cuantitativa Discreta o Cuantitativa Continua).
+            </p>
+
+            <div class="tool-controls difficulty-selector">
+                <label data-lang-es="Nivel:" data-lang-eu="Maila:">Nivel:</label>
+                <input type="radio" id="level-basic" name="difficulty" value="basic" checked>
+                <label for="level-basic" data-lang-es="Básico" data-lang-eu="Oinarrizkoa">Básico</label>
+                <input type="radio" id="level-advanced" name="difficulty" value="advanced">
+                <label for="level-advanced" data-lang-es="Avanzado" data-lang-eu="Aurreratua">Avanzado</label>
+            </div>
+
+            <div class="classifier-container">
+                <div class="variable-cards-pool" id="cards-pool">
+                    <h4 data-lang-es="Arrastra las variables:" data-lang-eu="Arrastatu aldagaiak:">Arrastra las variables:</h4>
+                    </div>
+
+                <div class="drop-zones">
+                    <div class="drop-zone" id="zone-cualitativa" data-category="cualitativa">
+                        <h4 data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</h4>
+                         <p class="zone-description" data-lang-es="Describe cualidades, no números." data-lang-eu="Kualitateak deskribatzen ditu, ez zenbakiak.">Describe cualidades, no números.</p>
+                    </div>
+                    <div class="drop-zone" id="zone-discreta" data-category="discreta">
+                        <h4 data-lang-es="Cuantitativa Discreta" data-lang-eu="Kuantitatibo Diskretua">Cuantitativa Discreta</h4>
+                        <p class="zone-description" data-lang-es="Se cuenta, valores aislados." data-lang-eu="Kontatu egiten da, balio isolatuak.">Se cuenta, valores aislados.</p>
+                    </div>
+                    <div class="drop-zone" id="zone-continua" data-category="continua">
+                        <h4 data-lang-es="Cuantitativa Continua" data-lang-eu="Kuantitatibo Jarraitua">Cuantitativa Continua</h4>
+                        <p class="zone-description" data-lang-es="Se mide, valores intermedios posibles." data-lang-eu="Neurtu egiten da, tarteko balioak posibleak.">Se mide, valores intermedios posibles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="classifier-feedback" class="feedback-popup" style="display: none;">
+                </div>
+
+            <div class="classifier-stats" id="classifier-stats" style="display: none;">
+                <h4 data-lang-es="Resumen de la Sesión" data-lang-eu="Saioaren Laburpena">Resumen de la Sesión</h4>
+                <p><span data-lang-es="Total Intentos:" data-lang-eu="Saiakera Guztira:">Total Intentos:</span> <span id="stats-total">0</span></p>
+                <p><span data-lang-es="Aciertos:" data-lang-eu="Asmatzeak:">Aciertos:</span> <span id="stats-correct">0</span></p>
+                <p><span data-lang-es="Errores:" data-lang-eu="Akatsak:">Errores:</span> <span id="stats-incorrect">0</span></p>
+                <p><span data-lang-es="Tiempo Medio (seg):" data-lang-eu="Batez besteko Denbora (seg):">Tiempo Medio (seg):</span> <span id="stats-time">--</span></p>
+                <p id="stats-advice" class="key-takeaway" style="margin-top: 1rem; display: none;"></p> </div>
+            <button id="end-session-button" class="button-secondary" style="margin-top: 1rem; display: none;" data-lang-es="Terminar y Ver Resumen" data-lang-eu="Amaitu eta Laburpena Ikusi">Terminar y Ver Resumen</button>
+
+             <details class="teacher-extension">
+                <summary data-lang-es="Añadir Nueva Variable (Profesores)" data-lang-eu="Aldagai Berria Gehitu (Irakasleak)">Añadir Nueva Variable (Profesores)</summary>
+                <form id="add-variable-form" class="card-style">
+                    <h5 data-lang-es="Añadir nueva tarjeta al clasificador" data-lang-eu="Gehitu txartel berria sailkatzaileari">Añadir nueva tarjeta al clasificador</h5>
+                    <label for="new-var-text-es" data-lang-es="Descripción (ES):" data-lang-eu="Deskribapena (ES):">Descripción (ES):</label>
+                    <input type="text" id="new-var-text-es" required>
+
+                    <label for="new-var-text-eu" data-lang-es="Descripción (EU):" data-lang-eu="Deskribapena (EU):">Descripción (EU):</label>
+                    <input type="text" id="new-var-text-eu" required>
+
+                    <label for="new-var-category" data-lang-es="Categoría Correcta:" data-lang-eu="Kategoria Zuzena:">Categoría Correcta:</label>
+                    <select id="new-var-category" required>
+                        <option value="" data-lang-es="-- Selecciona --" data-lang-eu="-- Aukeratu --">-- Selecciona --</option>
+                        <option value="cualitativa" data-lang-es="Cualitativa" data-lang-eu="Kualitatiboa">Cualitativa</option>
+                        <option value="discreta" data-lang-es="Cuantitativa Discreta" data-lang-eu="Kuantitatibo Diskretua">Cuantitativa Discreta</option>
+                        <option value="continua" data-lang-es="Cuantitativa Continua" data-lang-eu="Kuantitatibo Jarraitua">Cuantitativa Continua</option>
+                    </select>
+
+                    <label for="new-var-icon" data-lang-es="Icono FontAwesome (ej: fas fa-book):" data-lang-eu="FontAwesome Ikonoa (adb: fas fa-book):">Icono FontAwesome (ej: fas fa-book):</label>
+                    <input type="text" id="new-var-icon" placeholder="fas fa-question-circle">
+
+                     <label for="new-var-level" data-lang-es="Nivel:" data-lang-eu="Maila:">Nivel:</label>
+                    <select id="new-var-level" required>
+                        <option value="basic" data-lang-es="Básico" data-lang-eu="Oinarrizkoa">Básico</option>
+                        <option value="advanced" data-lang-es="Avanzado" data-lang-eu="Aurreratua">Avanzado</option>
+                    </select>
+
+                    <button type="submit" data-lang-es="Añadir Tarjeta" data-lang-eu="Txartela Gehitu">Añadir Tarjeta</button>
+                </form>
+            </details>
+        </section>
+        </main>
+
+    <footer>
+        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/uiComponents.js"></script>
+    <script src="../js/interactive-tools.js"></script>    <script src="../js/main.js"></script>
+    <script src="../js/variable-classifier.js"></script>
+
+</body>
+</html>

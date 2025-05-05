@@ -1,0 +1,33 @@
+/* =============================================== */
+/* ========== ESTILOS BASE Y TIPOGRAFÍA ========== */
+/* =============================================== */
+
+/* --- Reseteo Básico y Tipografía --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Lato', sans-serif; }
+html { scroll-behavior: smooth; }
+body { 
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;          /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    line-height: 1.7; 
+    font-size: 16px; 
+}
+h1, h2, h3, h4 { color: var(--primary-color); margin-bottom: 0.8em; font-weight: 700; }
+h2 { font-size: 2.2em; margin-bottom: 1.2em; }
+h3 { font-size: 1.5em; font-weight: 400; }
+h4 { font-size: 1.1em; font-weight: 700; color: var(--text-color); opacity: 0.9; margin-top: 1.5rem; margin-bottom: 0.8rem;}
+p, ul, ol { margin-bottom: 1.2em; }
+ul, ol { list-style-position: outside; padding-left: 1.5em; }
+li { margin-bottom: 0.5em; }
+a { color: var(--link-color); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--primary-color); text-decoration: none; }
+b, strong { font-weight: 700; color: var(--primary-color); }
+i.fa-solid, i.fas { line-height: 1; }
+em, i { font-style: italic; }
+button { cursor: pointer; background: none; border: none; color: inherit; font: inherit; } /* Reset button styles */
+
+/* Animación FadeIn */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

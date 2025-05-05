@@ -1,0 +1,306 @@
+/* ================================================ */
+/* === ESTILOS HERRAMIENTA GRÁFICO INTERACTIVO ==== */
+/* ================================================ */
+
+#grafico-interactivo-tool {
+    /* Hereda padding/estilo de .interactive-tool.card-style */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#grafico-interactivo-tool > h3 { /* Título de la herramienta */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    text-align: center;
+    font-size: 1.6em;
+    color: var(--primary-color);
+}
+
+#grafico-interactivo-tool > p { /* Descripción */
+    text-align: center;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 800px; /* Limitar ancho descripción */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Sección de Entrada Manual --- */
+.data-input-section {
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 2rem; /* Separación antes de resultados */
+}
+
+.data-input-section h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2em;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.editable-input-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.editable-input-table th,
+.editable-input-table td {
+    border: 1px solid var(--border-color);
+    padding: 0; /* Padding gestionado por inputs */
+    text-align: center;
+    vertical-align: middle;
+}
+
+.editable-input-table thead th {
+    background-color: var(--button-bg);
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.editable-input-table td input[type="text"],
+.editable-input-table td input[type="number"] {
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent; /* Borde sutil o transparente por defecto */
+    background-color: transparent;
+    text-align: center;
+    font-size: 0.95em;
+    padding: 0.8rem 0.5rem;
+    box-sizing: border-box;
+    color: var(--text-color);
+    border-radius: 0;
+     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.editable-input-table td input:focus {
+     outline: none;
+    background-color: var(--button-hover-bg);
+    border-color: var(--primary-color);
+    box-shadow: inset 0 0 0 1px var(--primary-color);
+}
+/* Ocultar flechas number input */
+.editable-input-table td input[type="number"] { -moz-appearance: textfield; }
+.editable-input-table td input[type="number"]::-webkit-outer-spin-button,
+.editable-input-table td input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.editable-input-table td.remove-row-cell {
+    width: 40px; /* Ancho fijo para el botón */
+    padding: 0.2rem;
+    border-left: none; /* Quitar borde izquierdo si se prefiere */
+}
+
+.remove-row-button {
+    background: none;
+    border: none;
+    color: #a94442; /* Rojo */
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 0.5rem;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+.remove-row-button:hover {
+    opacity: 1;
+}
+
+.add-row-button {
+    /* Estilo botón secundario */
+    background-color: transparent;
+    color: var(--secondary-color); /* Usar color secundario */
+    border: 1px solid var(--secondary-color);
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-top: 0.5rem; /* Espacio tras la tabla */
+}
+.add-row-button:hover {
+     background-color: var(--button-hover-bg);
+}
+.add-row-button i { font-size: 0.9em; }
+
+.process-button {
+     /* Estilo botón primario */
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: block; /* Ocupar ancho disponible */
+    width: 100%; /* Ocupar ancho */
+    margin-top: 1.5rem; /* Espacio sobre el botón */
+}
+.process-button:hover {
+     background-color: var(--secondary-color);
+}
+.process-button:active {
+     transform: scale(0.98);
+}
+
+/* Mensaje de error para datos manuales */
+#manual-data-error {
+    margin-top: 1rem;
+    /* Estilos heredados de .feedback-message .incorrect */
+}
+
+/* --- Sección de Resultados --- */
+.results-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    /* border-top: 1px solid var(--border-color); */ /* Separador ya está con hr */
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack por defecto */
+    gap: 2rem;
+}
+
+@media (min-width: 992px) { /* Dos columnas en pantallas anchas */
+    .results-grid {
+        grid-template-columns: minmax(300px, 1.5fr) 2fr; /* Tabla a la izquierda, gráfico a la derecha */
+        align-items: start;
+    }
+}
+
+.calculated-table-container {
+     /* Estilo .card-style aplicado en HTML */
+     background-color: var(--bg-color);
+     padding: 1.5rem;
+     border: 1px solid var(--border-color);
+     border-radius: 8px;
+}
+.calculated-table-container h4 {
+     margin-top: 0;
+     margin-bottom: 1.5rem;
+     font-size: 1.2em;
+     color: var(--text-color);
+     text-align: center;
+}
+.calculated-table-container .table-container {
+     max-height: 400px; /* Altura máxima para scroll si es larga */
+     overflow-y: auto;
+     border: 1px solid var(--border-color);
+     border-radius: 6px;
+}
+
+.results-table { /* Estilo para la tabla calculada */
+    /* Hereda de .variables-table en HTML */
+    font-size: 0.9em; /* Un poco más pequeña */
+}
+.results-table th { font-size: 0.95em; }
+.results-table td { padding: 0.6rem 0.4rem; } /* Padding estándar */
+.results-table tfoot td { font-weight: bold; background-color: var(--button-bg); }
+
+
+.chart-display-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.chart-display-container h4 {
+     margin-top: 0;
+     margin-bottom: 0; /* Quitar margen inferior para acercar opciones */
+     font-size: 1.2em;
+     color: var(--text-color);
+     text-align: center;
+}
+
+/* Opciones de Gráfico */
+.chart-options {
+    /* Estilo .card-style aplicado en HTML */
+    background-color: var(--bg-color);
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Para que quepan opciones */
+    gap: 1rem;
+    align-items: center;
+}
+.chart-options strong {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 0.95em;
+}
+.chart-options .radio-group,
+.chart-options .checkbox-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.chart-options input[type="radio"],
+.chart-options input[type="checkbox"] {
+    margin-right: 0.3rem;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+.chart-options label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.95em;
+}
+.chart-options label i { color: var(--icon-color); }
+
+/* Área del Gráfico */
+.chart-render-area {
+     /* Estilo .card-style aplicado en HTML */
+    background-color: var(--card-bg); /* Fondo principal */
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-height: 300px; /* Altura mínima */
+    position: relative; /* Para el canvas */
+}
+#grafico-generado {
+    max-height: 450px; /* Limitar altura máxima */
+}
+
+
+/* Panel de Interpretación */
+.interpretation-panel {
+    /* Estilo .card-style aplicado en HTML */
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.interpretation-panel h5 {
+     margin-top: 0;
+     margin-bottom: 1rem;
+     font-size: 1.1em;
+     color: var(--primary-color);
+     border-bottom: 1px dashed var(--border-color);
+     padding-bottom: 0.5rem;
+}
+.interpretation-panel p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0; /* Quitar margen inferior si solo hay un párrafo */
+}
+.interpretation-panel strong { /* Para resaltar la moda */
+    color: var(--secondary-color);
+    font-weight: 700;
+}

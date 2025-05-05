@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-es="Estadística 1º ESO - Gráficos Estadísticos" data-lang-eu="Estatistika DBH 1 - Grafiko Estatistikoak">Estadística 1º ESO - Gráficos Estadísticos</title>
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/grafico-interactivo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+</head>
+<body data-theme="light">
+
+    <header>
+        <div class="logo">
+             <i class="fas fa-calculator"></i>
+             <a href="../index.html" class="home-link" data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">
+                 <span data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">Estadística 1º ESO</span>
+             </a>
+        </div>
+        <nav>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="lang-toggle"
+                    data-lang-es="Euskara"
+                    data-lang-eu="Castellano"
+                    aria-label="Cambiar idioma">
+                Euskara
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" data-lang-es="Gráficos Estadísticos (Barras y Sectores)" data-lang-eu="Grafiko Estatistikoak (Barrak eta Sektoreak)">Gráficos Estadísticos (Barras y Sectores)</h2>
+
+        <section class="content-section">
+             <h3 data-lang-es="Conceptos Clave: Visualizando los Datos" data-lang-eu="Gako Kontzeptuak: Datuak Bistaratzen">Conceptos Clave: Visualizando los Datos</h3>
+            <ul class="tabs-nav">
+                <li><a href="#tab-intro-graficos" class="tab-link active" data-lang-es="Introducción" data-lang-eu="Sarrera">Introducción</a></li>
+                <li><a href="#tab-barras" class="tab-link" data-lang-es="Diagrama de Barras" data-lang-eu="Barra-diagrama">Diagrama de Barras</a></li>
+                <li><a href="#tab-sectores" class="tab-link" data-lang-es="Diagrama de Sectores" data-lang-eu="Sektore-diagrama">Diagrama de Sectores</a></li>
+            </ul>
+             <div class="tabs-content">
+                 <div id="tab-intro-graficos" class="tab-pane active">
+                    <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;">
+                        <p data-lang-es="Las tablas de frecuencias organizan los datos, pero a menudo <strong>una imagen vale más que mil números</strong>. Los gráficos estadísticos nos permiten visualizar la información de las tablas de forma rápida y atractiva, facilitando la comparación y la identificación de patrones a simple vista. En este tema, nos centraremos en dos tipos fundamentales."
+                           data-lang-eu="Maiztasun-taulek datuak antolatzen dituzte, baina askotan <strong>irudi batek mila zenbakik baino gehiago balio du</strong>. Grafiko estatistikoek taulen informazioa azkar eta modu erakargarrian ikusteko aukera ematen digute, datuen konparaketa eta patroien identifikazioa begi-bistan erraztuz. Gai honetan, funtsezko bi motatan zentratuko gara.">
+                           Las tablas de frecuencias organizan los datos, pero a menudo <strong>una imagen vale más que mil números</strong>. Los gráficos estadísticos nos permiten visualizar la información de las tablas de forma rápida y atractiva, facilitando la comparación de datos y la identificación de patrones a simple vista. Para 1º de ESO, nos centraremos en dos tipos fundamentales:
+                        </p>
+                         <div class="key-takeaway" data-lang-es="La elección entre barras y sectores depende de qué queramos destacar: <strong>comparar</strong> frecuencias entre categorías (barras) o mostrar la <strong>proporción</strong> de cada categoría respecto al total (sectores). ¡Ambos se basan en la tabla de frecuencias!"
+                                       data-lang-eu="Barren eta sektoreen arteko aukeraketa nabarmendu nahi dugunaren araberakoa da: kategorien arteko maiztasunak <strong>konparatzea</strong> (barrak) edo kategoria bakoitzak guztizkoarekiko duen <strong>proportzioa</strong> erakustea (sektoreak). Biak maiztasun-taulan oinarritzen dira!">
+                             La elección entre un diagrama de barras y uno de sectores depende de qué queramos destacar. Si queremos comparar las frecuencias exactas entre categorías, el de barras suele ser más claro. Si queremos enfatizar la contribución de cada categoría al total, el de sectores es más visual. Es fundamental entender que ambos gráficos son representaciones visuales de la información contenida en la tabla de frecuencias; sin una tabla correcta, el gráfico será incorrecto.
+                         </div>
+                    </div>
+                 </div>
+                  <div id="tab-barras" class="tab-pane">
+                      <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;">
+                         <h4 style="color:var(--secondary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-bar fa-fw"></i> <span data-lang-es="Diagrama de Barras" data-lang-eu="Barra-diagrama">Diagrama de Barras</span></h4>
+                          <p><strong data-lang-es="Uso Principal:" data-lang-eu="Erabilera Nagusia:">Uso Principal:</strong> <span data-lang-es="Ideal para representar variables <strong>cualitativas</strong> o <strong>cuantitativas discretas</strong>." data-lang-eu="Egokiena aldagai <strong>kualitatiboak</strong> edo <strong>kuantitatibo diskretuak</strong> irudikatzeko.">Ideal para representar variables <strong>cualitativas</strong> o <strong>cuantitativas discretas</strong>.</span></p>
+                          <h5 data-lang-es="Construcción:" data-lang-eu="Eraikuntza:">Construcción:</h5>
+                          <ul style="margin-left: 1.2rem; font-size: 0.95em;">
+                             <li data-lang-es="<strong>Eje Horizontal (X):</strong> Se colocan los valores o categorías de la variable." data-lang-eu="<strong>Ardatz Horizontala (X):</strong> Aldagaiaren balioak edo kategoriak kokatzen dira."><strong>Eje Horizontal (X):</strong> Se colocan los valores o categorías de la variable.</li>
+                             <li data-lang-es="<strong>Eje Vertical (Y):</strong> Se representa la frecuencia (absoluta $f_i$ o relativa $h_i$) con una escala adecuada." data-lang-eu="<strong>Ardatz Bertikala (Y):</strong> Maiztasuna (absolutua $f_i$ edo erlatiboa $h_i$) irudikatzen da eskala egoki batekin."><strong>Eje Vertical (Y):</strong> Se representa la frecuencia (absoluta $f_i$ o relativa $h_i$) con una escala adecuada.</li>
+                              <li data-lang-es="<strong>Barras Rectangulares:</strong> Se dibuja una barra sobre cada valor/categoría. Su altura es proporcional a la frecuencia." data-lang-eu="<strong>Barra Laukizuzenak:</strong> Barra bat marrazten da balio/kategoria bakoitzaren gainean. Bere altuera maiztasunarekiko proportzionala da."><strong>Barras Rectangulares:</strong> Se dibuja una barra rectangular sobre cada valor/categoría del eje X. La altura de cada barra es proporcional a su frecuencia.</li>
+                              <li data-lang-es="<strong>¡Importante! Separación:</strong> Las barras deben estar <strong>separadas</strong> entre sí para indicar valores/categorías distintas." data-lang-eu="<strong>Garrantzitsua! Banaketa:</strong> Barrak elkarrengandik <strong>bereizita</strong> egon behar dira balio/kategoria desberdinak adierazteko."><strong>¡Importante! Separación:</strong> Las barras deben estar <strong>separadas</strong> entre sí para indicar que los valores son distintos o las categorías son independientes.</li>
+                          </ul>
+                          <div class="chart-container" style="position: relative; height:250px; width:90%; margin: 1.5rem auto;">
+                             <canvas id="genericBarChartExample"></canvas> </div>
+                          <script> document.addEventListener('DOMContentLoaded', () => { const ctxGenericBar = document.getElementById('genericBarChartExample'); if (ctxGenericBar && typeof Chart !== 'undefined') { new Chart(ctxGenericBar, { type: 'bar', data: { labels: ['A', 'B', 'C', 'D'], datasets: [{ label: 'Frecuencia', data: [10, 20, 15, 5], backgroundColor: 'rgba(75, 192, 192, 0.6)', borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, plugins:{ legend:{display:false}, title:{display:true, text:'Ejemplo Barra-Diagrama'}}, scales: { y: { beginAtZero: true } } } }); } }); </script>
+                          <h5 data-lang-es="Interpretación:" data-lang-eu="Interpretazioa:">Interpretación:</h5>
+                          <p data-lang-es="Permite comparar fácilmente las frecuencias (la barra más alta es la más frecuente)." data-lang-eu="Maiztasunak erraz konparatzeko aukera ematen du (barra altuena da ohikoena).">Permite comparar fácilmente las frecuencias de las distintas categorías (la barra más alta es la más frecuente, etc.).</p>
+                      </div>
+                 </div>
+                  <div id="tab-sectores" class="tab-pane">
+                     <div class="tab-pane-content" style="flex-direction: column; align-items: stretch;">
+                          <h4 style="color:var(--secondary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-pie fa-fw"></i> <span data-lang-es="Diagrama de Sectores (Circular o de Tarta)" data-lang-eu="Sektore-diagrama (Zirkularra edo Tarta)">Diagrama de Sectores (Circular o de Tarta)</span></h4>
+                          <p><strong data-lang-es="Uso Principal:" data-lang-eu="Erabilera Nagusia:">Uso Principal:</strong> <span data-lang-es="Muy útil para mostrar cómo se reparte un <strong>total ($N$)</strong> entre diferentes categorías o valores. Ideal para visualizar <strong>proporciones</strong> o <strong>porcentajes</strong>." data-lang-eu="Oso erabilgarria <strong>guztizko bat ($N$)</strong> kategoria edo balio desberdinen artean nola banatzen den erakusteko. Egokiena <strong>proportzioak</strong> edo <strong>ehunekoak</strong> bistaratzeko.">Muy útil para representar variables cualitativas o cuantitativas discretas cuando queremos mostrar cómo se reparte un total ($N$) entre las diferentes categorías o valores. Es decir, para visualizar la proporción o porcentaje de cada parte respecto al todo.</span></p>
+                           <h5 data-lang-es="Construcción:" data-lang-eu="Eraikuntza:">Construcción:</h5>
+                          <ul style="margin-left: 1.2rem; font-size: 0.95em;">
+                              <li data-lang-es="<strong>Círculo Completo:</strong> Representa el 100% de los datos (el total $N$)." data-lang-eu="<strong>Zirkulu Osoa:</strong> Datuen %100a adierazten du ($N$ guztira)."><strong>Círculo Completo:</strong> Representa el 100% de los datos o el total $N$.</li>
+                              <li data-lang-es="<strong>Sectores:</strong> El círculo se divide en sectores (porciones). Cada sector corresponde a un valor/categoría." data-lang-eu="<strong>Sektoreak:</strong> Zirkulua sektoretan (zatietan) banatzen da. Sektore bakoitzak balio/kategoria bat adierazten du."><strong>Sectores:</strong> El círculo se divide en sectores (como porciones de una tarta). Cada sector corresponde a un valor o categoría de la variable.</li>
+                              <li data-lang-es="<strong>Ángulo del Sector:</strong> El tamaño (ángulo) de cada sector es proporcional a su frecuencia. Se calcula:" data-lang-eu="<strong>Sektorearen Angelua:</strong> Sektore bakoitzaren tamaina (angelua) bere maiztasunarekiko proportzionala da. Honela kalkulatzen da:"><strong>Ángulo del Sector:</strong> El tamaño (ángulo central) de cada sector es proporcional a su frecuencia (absoluta o relativa). Para calcular el ángulo de cada sector:</li>
+                              <li style="list-style: none; margin-left: 1rem;" data-lang-es="Ángulo $= h_i \times 360^\circ = \frac{f_i}{N} \times 360^\circ$" data-lang-eu="Angelua $= h_i \times 360^\circ = \frac{f_i}{N} \times 360^\circ$">Ángulo $= h_i \times 360^\circ = \frac{f_i}{N} \times 360^\circ$</li>
+                              <li data-lang-es="Se necesita un transportador de ángulos para dibujarlo bien. Es útil incluir leyenda o etiquetas." data-lang-eu="Angelu-garraiagailu bat behar da ondo marrazteko. Erabilgarria da legenda edo etiketak sartzea.">Se necesita un transportador de ángulos para dibujarlo con precisión. Es recomendable incluir una leyenda o etiquetar cada sector con su categoría y/o porcentaje.</li>
+                          </ul>
+                          <div class="chart-container" style="position: relative; height:250px; width:80%; max-width: 300px; margin: 1.5rem auto;">
+                             <canvas id="genericPieChartExample"></canvas> </div>
+                          <script> document.addEventListener('DOMContentLoaded', () => { const ctxGenericPie = document.getElementById('genericPieChartExample'); if (ctxGenericPie && typeof Chart !== 'undefined') { new Chart(ctxGenericPie, { type: 'pie', data: { labels: ['Opción 1', 'Opción 2', 'Opción 3'], datasets: [{ label: 'Distribución', data: [50, 30, 20], backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(255, 206, 86, 0.7)'], hoverOffset: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins:{ legend:{position:'top'}, title:{display:true, text:'Ejemplo Sektore-Diagrama'}}} }); } }); </script>
+                          <h5 data-lang-es="Interpretación:" data-lang-eu="Interpretazioa:">Interpretación:</h5>
+                          <p data-lang-es="Permite ver rápidamente qué categoría representa la mayor o menor parte del total." data-lang-eu="Azkar ikusteko aukera ematen du zein kategoriak ordezkatzen duen guztizkoaren zatirik handiena edo txikiena.">Permite ver rápidamente qué categoría representa la mayor o menor parte del total.</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejemplos Resueltos: Creando Gráficos" data-lang-eu="Adibide Ebatziak: Grafikoak Sortzen">Ejemplos Resueltos: Creando Gráficos</h3>
+             <div class="card-style" style="margin-bottom: 2rem;">
+                <h4 data-lang-es="Ejemplo 1: Diagrama de Barras (Notas Examen)" data-lang-eu="1. Adibidea: Barra-diagrama (Azterketako Notak)">Ejemplo 1: Diagrama de Barras (Notas Examen)</h4>
+                <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Usando la tabla de frecuencias de las notas (Subtema 3, Ejemplo 1), construye el diagrama de barras de frecuencias absolutas." data-lang-eu="Noten maiztasun-taula erabiliz (3. Azpigaia, 1. Adibidea), eraiki maiztasun absolutuen barra-diagrama.">Utilizando la tabla de frecuencias de las notas del examen del Subtema 3 (Ejemplo 1), construye el diagrama de barras de frecuencias absolutas.</span></p>
+                <div class="solution">
+                     <strong data-lang-es="Resultado Gráfico:" data-lang-eu="Emaitza Grafikoa:">Resultado Gráfico:</strong>
+                     <div class="chart-container" style="position: relative; height:300px; width:90%; margin: 1.5rem auto;">
+                        <canvas id="notasBarChart"></canvas>
+                     </div>
+                     <p><strong data-lang-es="Interpretación:" data-lang-eu="Interpretazioa:">Interpretación:</strong> <span data-lang-es="Se observa rápidamente que las notas más frecuentes son 5 y 6 (barras más altas). Las menos frecuentes son 4, 8 y 9." data-lang-eu="Azkar ikusten da notarik ohikoenak 5 eta 6 direla (barra altuenak). Gutxien agertzen direnak 4, 8 eta 9 dira.">Se observa rápidamente que las notas más frecuentes son 5 y 6 (barras más altas). Las menos frecuentes son 4, 8 y 9.</span></p>
+                </div>
+            </div>
+             <div class="card-style">
+                 <h4 data-lang-es="Ejemplo 2: Diagrama de Sectores (Color Favorito)" data-lang-eu="2. Adibidea: Sektore-diagrama (Kolore Gustukoena)">Ejemplo 2: Diagrama de Sectores (Color Favorito)</h4>
+                 <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Usando la tabla de frecuencias de los colores favoritos (Subtema 3, Ejemplo 2), construye el diagrama de sectores." data-lang-eu="Kolore gustukoenen maiztasun-taula erabiliz (3. Azpigaia, 2. Adibidea), eraiki sektore-diagrama.">Utilizando la tabla de frecuencias de los colores favoritos del Subtema 3 (Ejemplo 2), construye el diagrama de sectores.</span></p>
+                <div class="solution">
+                     <strong data-lang-es="Resultado Gráfico:" data-lang-eu="Emaitza Grafikoa:">Resultado Gráfico:</strong>
+                      <div class="chart-container" style="position: relative; height:300px; width:80%; max-width: 350px; margin: 1.5rem auto;">
+                        <canvas id="coloresPieChart"></canvas>
+                     </div>
+                     <p><strong data-lang-es="Interpretación:" data-lang-eu="Interpretazioa:">Interpretación:</strong> <span data-lang-es="Se ve claramente que el azul es el color favorito (sector más grande), seguido por el verde. El rojo y el amarillo son menos preferidos." data-lang-eu="Argi ikusten da urdina dela kolorerik gustukoena (sektorerik handiena), eta ondoren berdea dator. Gorria eta horia gutxiago nahiago dira.">Se ve claramente que el azul es el color favorito (sector más grande), seguido por el verde. El rojo y el amarillo son menos preferidos.</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejercicios Propuestos: ¡Dibuja e Interpreta!" data-lang-eu="Proposatutako Ariketak: Marraztu eta Interpretatu!">Ejercicios Propuestos: ¡Dibuja e Interpreta!</h3>
+             <ol class="exercises-list">
+                 <li><i class="fas fa-users fa-fw"></i> <span data-lang-es="Construye el <strong>diagrama de barras</strong> de frecuencias absolutas para los datos del número de hermanos recogidos en tu clase (Ejercicio 1 del Subtema 3)." data-lang-eu="Eraiki zure gelan bildutako anai-arreba kopuruaren datuen maiztasun absolutuen <strong>barra-diagrama</strong> (3. Azpigaiko 1. ariketa).">Construye el <strong>diagrama de barras</strong> de frecuencias absolutas para los datos del número de hermanos recogidos en tu clase (Ejercicio 1 del Subtema 3).</span></li>
+                 <li><i class="fas fa-bus fa-fw"></i> <span data-lang-es="Construye el <strong>diagrama de sectors</strong> para los datos del medio de transporte utilizado para ir al instituto (Ejercicio 3 del Subtema 3). Calcula primero los ángulos necesarios." data-lang-eu="Eraiki institutura joateko erabilitako garraiobidearen datuen <strong>sektore-diagrama</strong> (3. Azpigaiko 3. ariketa). Kalkulatu lehenik beharrezko angeluak.">Construye el <strong>diagrama de sectores</strong> para los datos del medio de transporte utilizado para ir al instituto (Ejercicio 3 del Subtema 3). Calcula primero los ángulos necesarios.</span></li>
+                 <li><i class="fas fa-paw fa-fw"></i> <span data-lang-es="Observa el siguiente diagrama de barras sobre <strong>mascotas preferidas</strong>:" data-lang-eu="Begiratu <strong>maskota gustukoenei</strong> buruzko ondoko barra-diagrama:">Observa el siguiente diagrama de barras sobre <strong>mascotas preferidas</strong>:</span>
+                    <div class="chart-container" style="position: relative; height:250px; width:90%; margin: 1rem auto;">
+                        <canvas id="mascotasBarChart"></canvas>
+                    </div>
+                     <ul style="list-style-type: lower-alpha; margin-top: 0.5em;">
+                         <li data-lang-es="¿Cuál es la mascota preferida?" data-lang-eu="Zein da maskotarik gustukoena?">¿Cuál es la mascota preferida?</li>
+                         <li data-lang-es="¿Cuántos alumnos prefieren gatos?" data-lang-eu="Zenbat ikaslek nahiago dituzte katuak?">¿Cuántos alumnos prefieren gatos?</li>
+                         <li data-lang-es="¿Cuántos alumnos fueron encuestados en total?" data-lang-eu="Zenbat ikasle inkestatu ziren guztira?">¿Cuántos alumnos fueron encuestados en total?</li>
+                         <li data-lang-es="¿Qué porcentaje de alumnos prefiere hámsters? (Calcúlalo)." data-lang-eu="Ikasleen zer ehunekok nahiago ditu hamsterrak? (Kalkulatu).">¿Qué porcentaje de alumnos prefiere hámsters? (Calcularlo a partir de las frecuencias).</li>
+                     </ul>
+                 </li>
+                 <li><i class="fas fa-music fa-fw"></i> <span data-lang-es="Observa este diagrama de sectores sobre <strong>género musical</strong> favorito:" data-lang-eu="Begiratu <strong>musika genero</strong> gustukoenari buruzko sektore-diagrama hau:">Observa este diagrama de sectores sobre <strong>género musical</strong> favorito:</span>
+                    <div class="chart-container" style="position: relative; height:280px; width:85%; max-width: 320px; margin: 1rem auto;">
+                        <canvas id="musicaPieChart"></canvas> </div>
+                     <ul style="list-style-type: lower-alpha; margin-top: 0.5em;">
+                         <li data-lang-es="¿Cuál es el género musical más popular?" data-lang-eu="Zein da musika generorik ezagunena?">¿Cuál es el género musical más popular?</li>
+                         <li data-lang-es="Si se encuestó a 200 personas, ¿cuántas prefieren Rock?" data-lang-eu="200 pertsona inkestatu baziren, zenbatek nahiago dute Rocka?">Si se encuestó a 200 personas, ¿cuántas prefieren Rock?</li>
+                         <li data-lang-es="¿Qué ángulo corresponde al sector de &quot;Reggaetón&quot;?" data-lang-eu="Zer angelu dagokio &quot;Reggaetoia&quot; sektoreari?">¿Qué ángulo corresponde al sector de "Reggaetón"?</li>
+                     </ul>
+                 </li>
+                  <li><i class="fas fa-campground fa-fw"></i> <span data-lang-es="Para los datos sobre las <strong>edades</strong> en el campamento (Ejercicio 4 del Subtema 3), ¿qué gráfico te parece más adecuado (barras o sectores) para representar las $f_i$? Justifica y dibuja el elegido." data-lang-eu="Udalekuko <strong>adinei</strong> buruzko datuetarako (3. Azpigaiko 4. ariketa), zer grafiko iruditzen zaizu egokiena (barrak edo sektoreak) $f_i$ irudikatzeko? Justifikatu eta marraztu aukeratutakoa.">Para los datos sobre las <strong>edades</strong> en el campamento de verano (Ejercicio 4 del Subtema 3), ¿qué gráfico te parece más adecuado para representar las frecuencias absolutas, uno de barras o uno de sectores? Justifica tu respuesta y dibuja el gráfico que hayas elegido.</span></li>
+            </ol>
+        </section>
+
+        <section class="content-section interactive-tool card-style" id="grafico-interactivo-tool">
+            <h3 data-lang-es="Creador Interactivo de Gráficos" data-lang-eu="Grafiko Sortzaile Interaktiboa">Creador Interactivo de Gráficos</h3>
+             <p data-lang-es="Introduce tus datos de valor ($x_i$) y frecuencia ($f_i$) manualmente. La herramienta calculará la tabla de frecuencias completa y generará el gráfico que elijas (barras o sectores)."
+                data-lang-eu="Sartu zure balio ($x_i$) eta maiztasun ($f_i$) datuak eskuz. Tresnak maiztasun-taula osoa kalkulatuko du eta zuk aukeratutako grafikoa (barrak edo sektoreak) sortuko du.">
+                 Introduce tus datos de valor ($x_i$) y frecuencia ($f_i$) manualmente. La herramienta calculará la tabla de frecuencias completa y generará el gráfico que elijas (barras o sectores).
+            </p>
+
+             <div id="entrada-datos-manual" class="data-input-section">
+                 <h4 data-lang-es="1. Introduce tus Datos" data-lang-eu="1. Sartu Zure Datuak">1. Introduce tus Datos</h4>
+                 <div class="table-container">
+                     <table id="tabla-datos-manual" class="editable-input-table">
+                         <thead>
+                             <tr>
+                                 <th data-lang-es="Valor / Categoría ($x_i$)" data-lang-eu="Balioa / Kategoria ($x_i$)">Valor / Categoría ($x_i$)</th>
+                                 <th data-lang-es="Frecuencia Absoluta ($f_i$)" data-lang-eu="Maiztasun Absolutua ($f_i$)">Frecuencia Absoluta ($f_i$)</th>
+                                 <th></th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             </tbody>
+                     </table>
+                 </div>
+                 <button id="btn-add-row" class="button-secondary add-row-button">
+                     <i class="fas fa-plus"></i> <span data-lang-es="Añadir Fila" data-lang-eu="Gehitu Lerroa">Añadir Fila</span>
+                 </button>
+                 <button id="btn-process-data" class="button-primary process-button" data-lang-es="Calcular Tabla y Ver Gráficos" data-lang-eu="Taula Kalkulatu eta Grafikoak Ikusi">Calcular Tabla y Ver Gráficos</button>
+                 <div id="manual-data-error" class="feedback-message incorrect" style="display: none;"></div>
+            </div>
+
+             <div id="resultados-grafico" class="results-section" style="display: none;">
+                <hr style="margin: 2.5rem 0;"> <div class="results-grid">
+                     <div class="calculated-table-container card-style">
+                         <h4 data-lang-es="2. Tabla de Frecuencias Calculada" data-lang-eu="2. Kalkulatutako Maiztasun Taula">2. Tabla de Frecuencias Calculada</h4>
+                         <div class="table-container">
+                             <table id="tabla-frecuencias-calculada" class="variables-table results-table">
+                                 <thead>
+                                     <tr>
+                                         <th>$x_i$</th>
+                                         <th>$f_i$</th>
+                                         <th>$h_i$</th>
+                                         <th>$F_i$</th>
+                                         <th>$H_i$</th>
+                                         <th>%</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     </tbody>
+                                 <tfoot>
+                                     </tfoot>
+                             </table>
+                         </div>
+                     </div>
+
+                     <div class="chart-display-container">
+                         <h4 data-lang-es="3. Visualización Gráfica" data-lang-eu="3. Bistaratze Grafikoa">3. Visualización Gráfica</h4>
+
+                         <div class="chart-options card-style">
+                             <strong data-lang-es="Tipo de Gráfico:" data-lang-eu="Grafiko Mota:">Tipo de Gráfico:</strong>
+                             <div class="radio-group">
+                                 <input type="radio" id="chart-type-bar" name="chart-type" value="bar" checked>
+                                 <label for="chart-type-bar"><i class="fas fa-chart-bar"></i> <span data-lang-es="Barras" data-lang-eu="Barrak">Barras</span></label>
+                                 <input type="radio" id="chart-type-pie" name="chart-type" value="pie">
+                                 <label for="chart-type-pie"><i class="fas fa-chart-pie"></i> <span data-lang-es="Sectores" data-lang-eu="Sektoreak">Sectores</span></label>
+                             </div>
+                             </div>
+
+                         <div class="chart-render-area card-style">
+                             <canvas id="grafico-generado"></canvas>
+                         </div>
+
+                         <div id="panel-interpretacion" class="interpretation-panel card-style">
+                              <h5 data-lang-es="Interpretación Básica" data-lang-eu="Oinarrizko Interpretazioa">Interpretación Básica</h5>
+                              <p></p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+        </main>
+
+    <footer>
+        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/language.js"></script> <script src="../js/uiComponents.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/charts.js"></script> <script src="../js/grafico-interactivo.js" defer></script> </body>
+</html>

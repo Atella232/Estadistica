@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-es="Estadística 1º ESO - Población y Muestra" data-lang-eu="Estatistika DBH 1 - Populazioa eta Lagina">Estadística 1º ESO - Población y Muestra</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body data-theme="light">
+
+    <header>
+        <div class="logo">
+             <i class="fas fa-calculator"></i>
+             <a href="../index.html" class="home-link" data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">
+                 <span data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">Estadística 1º ESO</span>
+             </a>
+        </div>
+        <nav>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="lang-toggle"
+                    data-lang-es="Euskara"
+                    data-lang-eu="Castellano"
+                    aria-label="Cambiar idioma">
+                Euskara
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" data-lang-es="Población y Muestra" data-lang-eu="Populazioa eta Lagina">Población y Muestra</h2>
+
+        <section class="content-section">
+            <h3 data-lang-es="Conceptos Clave (Pulsa para expandir)" data-lang-eu="Kontzeptu Garrantzitsuak (Zabaltzeko sakatu)">Conceptos Clave (Pulsa para expandir)</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-globe-americas icon-concept"></i>
+                        <span data-lang-es="Población" data-lang-eu="Populazioa">Población</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p data-lang-es='Es el conjunto <b>completo</b> de todos los elementos (personas, objetos...) con una característica común que queremos estudiar. Es nuestro "universo".'
+                           data-lang-eu='Aztertu nahi dugun ezaugarri komun bat duten elementu (pertsonak, objektuak...) guztien multzo <b>osoa</b> da. Gure "unibertsoa" da.'>
+                           Es el conjunto <b>completo</b> de todos los elementos (personas, objetos...) con una característica común que queremos estudiar. Es nuestro "universo".
+                        </p>
+                        <p class="example"><em data-lang-es="Ej: Todos los alumnos de 1º ESO de un instituto." data-lang-eu="Adib: Institutu bateko DBH 1eko ikasle guztiak.">Ej: Todos los alumnos de 1º ESO de un instituto.</em></p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-user icon-concept"></i>
+                        <span data-lang-es="Individuo" data-lang-eu="Banakoa">Individuo</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                    <div class="accordion-content">
+                         <p data-lang-es="Es <b>cada uno</b> de los elementos que forman la población."
+                            data-lang-eu="Populazioa osatzen duten elementuetako <b>bakoitza</b> da.">
+                            Es <b>cada uno</b> de los elementos que forman la población.
+                         </p>
+                         <p class="example"><em data-lang-es="Ej: Un alumno de 1º ESO de ese instituto." data-lang-eu="Adib: Institutu horretako DBH 1eko ikasle bat.">Ej: Un alumno de 1º ESO de ese instituto.</em></p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-users-viewfinder icon-concept"></i>
+                        <span data-lang-es="Muestra" data-lang-eu="Lagina">Muestra</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                     <div class="accordion-content">
+                        <p data-lang-es="Es una <b>parte</b> o subconjunto que seleccionamos de la población para estudiarla. Se usa porque estudiar a toda la población puede ser imposible o muy costoso."
+                           data-lang-eu="Populaziotik aztertzeko hautatzen dugun <b>zati</b> edo azpimultzo bat da. Populazio osoa aztertzea ezinezkoa edo oso garestia izan daitekeelako erabiltzen da.">
+                           Es una <b>parte</b> o subconjunto que seleccionamos de la población para estudiarla. Se usa porque estudiar a toda la población puede ser imposible o muy costoso.
+                        </p>
+                        <p class="example"><em data-lang-es="Ej: Elegir 20 alumnos al azar para medir su estatura." data-lang-eu="Adib: 20 ikasle ausaz aukeratzea haien altuera neurtzeko.">Ej: Elegir 20 alumnos al azar para medir su estatura.</em></p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                     <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-check-circle icon-concept"></i>
+                        <span data-lang-es="Muestra Representativa" data-lang-eu="Lagin Adierazgarria">Muestra Representativa</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                    <div class="accordion-content">
+                         <p data-lang-es="Para que lo que descubras en la muestra sirva para <i>toda</i> la población, la muestra debe <b>parecerse</b> a ella. La mejor forma es elegirla <b>al azar</b>."
+                            data-lang-eu="Laginetik ondorioztatzen duzunak populazio <i>osorako</i> balio dezan, laginak haren <b>antza</b> izan behar du. Modurik onena <b>ausaz</b> aukeratzea da.">
+                             Para que lo que descubras en la muestra sirva para <i>toda</i> la población, la muestra debe <b>parecerse</b> a ella. La mejor forma es elegirla <b>al azar</b>.
+                        </p>
+                        <p class="example"><strong data-lang-es="¡Ojo! Ejemplo NO representativo:" data-lang-eu="Kontuz! Adibide EZ adierazgarria:">¡Ojo! Ejemplo NO representativo:</strong> <em data-lang-es="Elegir solo jugadores de baloncesto para saber la altura media (serán más altos)."
+                                             data-lang-eu="Saskibaloi jokalariak bakarrik aukeratzea batez besteko altuera jakiteko (altuagoak izango dira).">
+                                             Elegir solo jugadores de baloncesto para saber la altura media (serán más altos).</em>
+                        </p>
+                        <p class="key-takeaway" data-lang-es="<b>Importante:</b> La forma de elegir la muestra afecta mucho a si tus conclusiones serán correctas para toda la población."
+                                            data-lang-eu="<b>Garrantzitsua:</b> Lagina aukeratzeko moduak eragina du zure ondorioak populazio osoari aplika dakizkiokeen ala ez erabakitzeko.">
+                            <b>Importante:</b> La forma de elegir la muestra afecta mucho a si tus conclusiones serán correctas para toda la población.
+                        </p>
+                    </div>
+                 </div>
+            </div> </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejemplos Resueltos (Navega con las flechas)" data-lang-eu="Adibide Ebatziak (Nabigatu geziekin)">Ejemplos Resueltos (Navega con las flechas)</h3>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <div class="example-solved">
+                            <h4 data-lang-es="Ejemplo 1: Contexto Escolar" data-lang-eu="1. Adibidea: Eskola Testuingurua">Ejemplo 1: Contexto Escolar</h4>
+                             <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="En una clase de 25 alumnos, preguntamos a 10 elegidos al azar cuántos hermanos tienen. Identifica Población, Muestra e Individuo." data-lang-eu="25 ikasleko gela batean, ausaz aukeratutako 10i zenbat anai-arreba dituzten galdetzen diegu. Identifikatu Populazioa, Lagina eta Banakoa.">En una clase de 25 alumnos, preguntamos a 10 elegidos al azar cuántos hermanos tienen. Identifica Población, Muestra e Individuo.</span></p>
+                            <div class="solution">
+                                <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                                <ul>
+                                    <li><span data-lang-es="Población:" data-lang-eu="Populazioa:">Población:</span> <span data-lang-es="Los 25 alumnos de la clase." data-lang-eu="Gelako 25 ikasleak.">Los 25 alumnos de la clase.</span></li>
+                                    <li><span data-lang-es="Muestra:" data-lang-eu="Lagina:">Muestra:</span> <span data-lang-es="Los 10 alumnos seleccionados." data-lang-eu="Aukeratutako 10 ikasleak.">Los 10 alumnos seleccionados.</span></li>
+                                    <li><span data-lang-es="Individuo:" data-lang-eu="Banakoa:">Individuo:</span> <span data-lang-es="Cada alumno de la clase." data-lang-eu="Gelako ikasle bakoitza.">Cada alumno de la clase.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="example-solved">
+                           <h4 data-lang-es="Ejemplo 2: Contexto Local" data-lang-eu="2. Adibidea: Tokiko Testuingurua">Ejemplo 2: Contexto Local</h4>
+                            <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Un pueblo de 2500 habitantes. El ayuntamiento encuesta por teléfono a 150 vecinos al azar sobre la limpieza. Identifica Población, Muestra e Individuo." data-lang-eu="2500 biztanleko herri bat. Udalak ausaz aukeratutako 150 bizilaguni telefonoz inkesta egiten die garbiketari buruz. Identifikatu Populazioa, Lagina eta Banakoa.">Un pueblo de 2500 habitantes. El ayuntamiento encuesta por teléfono a 150 vecinos al azar sobre la limpieza. Identifica Población, Muestra e Individuo.</span></p>
+                           <div class="solution">
+                               <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                               <ul>
+                                   <li><span data-lang-es="Población:" data-lang-eu="Populazioa:">Población:</span> <span data-lang-es="Los 2500 habitantes del pueblo." data-lang-eu="Herriko 2500 biztanleak.">Los 2500 habitantes del pueblo.</span></li>
+                                   <li><span data-lang-es="Muestra:" data-lang-eu="Lagina:">Muestra:</span> <span data-lang-es="Los 150 vecinos encuestados." data-lang-eu="Inkestatutako 150 bizilagunak.">Los 150 vecinos encuestados.</span></li>
+                                   <li><span data-lang-es="Individuo:" data-lang-eu="Banakoa:">Individuo:</span> <span data-lang-es="Cada habitante del pueblo." data-lang-eu="Herriko biztanle bakoitza.">Cada habitante del pueblo.</span></li>
+                               </ul>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="example-solved non-representative">
+                           <h4 data-lang-es="Ejemplo 3: Muestra NO Representativa" data-lang-eu="3. Adibidea: Lagin EZ Adierazgarria">Ejemplo 3: Muestra NO Representativa</h4>
+                            <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Para saber si los alumnos de un instituto (ESO y Bach.) prefieren empezar más tarde, se encuesta SOLO a los de Bach. que hacen extraescolares por la tarde. ¿Por qué no es representativa?" data-lang-eu="Institutu bateko ikasleek (DBH eta Batx.) beranduago hastea nahiago duten jakiteko, arratsaldean eskolaz kanpoko ekintzak egiten dituzten jakiteko Batxilergokoei BAKARRIK egiten zaie inkesta. Zergatik ez da adierazgarria?">Para saber si los alumnos de un instituto (ESO y Bach.) prefieren empezar más tarde, se encuesta SOLO a los de Bach. que hacen extraescolares por la tarde. ¿Por qué no es representativa?</span></p>
+                           <div class="solution">
+                               <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                                <p data-lang-es="La <b>Población</b> son TODOS los alumnos (ESO y Bach.). La <b>Muestra</b> son solo los de Bach. con extraescolares." data-lang-eu="<b>Populazioa</b> ikasle GUZTIAK dira (DBH eta Batx.). <b>Lagina</b> eskolaz kanpokoak egiten dituzten Batxilergokoak baino ez dira.">La <b>Población</b> son TODOS los alumnos (ESO y Bach.). La <b>Muestra</b> son solo los de Bach. con extraescolares.</p>
+                                <p><strong data-lang-es="No es representativa porque:" data-lang-eu="Ez da adierazgarria zeren:">No es representativa porque:</strong></p>
+                               <ul>
+                                   <li><i class="fas fa-times-circle"></i><span data-lang-es="Excluye a toda la ESO." data-lang-eu="DBH osoa baztertzen du.">Excluye a toda la ESO.</span></li>
+                                    <li><i class="fas fa-times-circle"></i><span data-lang-es="Excluye a alumnos de Bach. sin extraescolares." data-lang-eu="Eskolaz kanpokorik gabeko Batxilergoko ikasleak baztertzen ditu.">Excluye a alumnos de Bach. sin extraescolares.</span></li>
+                                    <li><i class="fas fa-user-clock"></i><span data-lang-es="Este grupo podría tener una opinión distinta (querer acabar antes)." data-lang-eu="Talde honek iritzi desberdina izan lezake (lehenago amaitu nahi izatea).">Este grupo podría tener una opinión distinta (querer acabar antes).</span></li>
+                               </ul>
+                           </div>
+                       </div>
+                    </div>
+                </div> <button class="carousel-button prev" aria-label="Anterior">&lt;</button>
+                <button class="carousel-button next" aria-label="Siguiente">&gt;</button>
+            </div> </section>
+
+         <section class="content-section">
+            <h3 data-lang-es="Ejercicios Propuestos" data-lang-eu="Proposatutako Ariketak">Ejercicios Propuestos</h3>
+            <ol class="exercises-list">
+                 <li><span data-lang-es="Una fábrica produce 3000 bombillas/día. Se revisa 1 caja de 50 al azar. Identifica: Población, Muestra, Individuo."
+                    data-lang-eu="Fabrika batek 3000 bonbilla/egun ekoizten ditu. Ausaz 50eko kaxa bat berrikusten da. Identifikatu: Populazioa, Lagina, Banakoa.">
+                    Una fábrica produce 3000 bombillas/día. Se revisa 1 caja de 50 al azar. Identifica: Población, Muestra, Individuo.</span>
+                </li>
+                 <li><span data-lang-es="En un parque natural, biólogos analizan árboles de 5 zonas elegidas al azar. Identifica: Población, Muestra, Individuo."
+                    data-lang-eu="Parke natural batean, biologoek ausaz aukeratutako 5 gunetako zuhaitzak aztertzen dituzte. Identifikatu: Populazioa, Lagina, Banakoa.">
+                    En un parque natural, biólogos analizan árboles de 5 zonas elegidas al azar. Identifica: Población, Muestra, Individuo.</span>
+                </li>
+                 <li>
+                    <span data-lang-es="Se encuesta a 500 jóvenes (12-16 años) en institutos de Madrid/Barcelona sobre su móvil preferido."
+                          data-lang-eu="Madril/Bartzelonako institutuetan 500 gazteri (12-16 urte) inkesta egiten zaie mugikor gustukoenari buruz.">
+                           Se encuesta a 500 jóvenes (12-16 años) en institutos de Madrid/Barcelona sobre su móvil preferido.
+                    </span><br/>
+                    <span data-lang-es="a) Identifica Población y Muestra." data-lang-eu="a) Identifikatu Populazioa eta Lagina.">a) Identifica Población y Muestra.</span><br/>
+                    <span data-lang-es="b) ¿Crees que la muestra es representativa de TODOS los jóvenes españoles de esa edad? ¿Por qué?"
+                          data-lang-eu="b) Lagina adin horretako gazte espainiar GUZTIEN adierazgarria dela uste duzu? Zergatik?">
+                          b) ¿Crees que la muestra es representativa de TODOS los jóvenes españoles de esa edad? ¿Por qué?</span>
+                    <button class="toggle-hint-button" data-target="hint-ex3b" aria-expanded="false">
+                        <span data-lang-es="Mostrar Pista/Razón" data-lang-eu="Pista/Arrazoia Erakutsi" data-lang-es-hide="Ocultar Pista/Razón" data-lang-eu-hide="Pista/Arrazoia Ezkutatu">Mostrar Pista/Razón</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="hint-ex3b" class="hint-content">
+                        <p data-lang-es="<b>Pista:</b> Piensa si jóvenes de otras ciudades o que no van a esos institutos podrían tener opiniones diferentes. La muestra solo cubre Madrid y Barcelona, no toda España."
+                           data-lang-eu="<b>Pista:</b> Pentsatu beste hiri batzuetako edo institutu horietara joaten ez diren gazteek iritzi desberdinak izan ditzaketen. Laginak Madril eta Bartzelona bakarrik hartzen ditu, ez Espainia osoa.">
+                           <b>Pista:</b> Piensa si jóvenes de otras ciudades o que no van a esos institutos podrían tener opiniones diferentes. La muestra solo cubre Madrid y Barcelona, no toda España.
+                        </p>
+                    </div>
+                </li>
+                 <li><span data-lang-es="Inventa una situación donde quieras estudiar algo. Define la Población, una posible Muestra y los Individuos."
+                    data-lang-eu="Asmatu zerbait aztertu nahi duzun egoera bat. Definitu Populazioa, Lagin posible bat eta Banakoak.">
+                     Inventa una situación donde quieras estudiar algo. Define la Población, una posible Muestra y los Individuos.</span>
+                 </li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Herramientas Interactivas" data-lang-eu="Tresna Interaktiboak">Herramientas Interactivas</h3>
+
+            <div class="interactive-tool card-style">
+                <h4><i class="fas fa-magic"></i><span data-lang-es="Simulador de Muestreo Visual" data-lang-eu="Laginketa Bisualaren Simulagailua">Simulador de Muestreo Visual</span></h4>
+                <p data-lang-es="Imagina una población de 100 'individuos' (bolas). El 60% son azules (🔵) y el 40% son naranjas (🟠). Vamos a sacar una muestra aleatoria para ver si se parece a la población real."
+                   data-lang-eu="Imajinatu 100 'banako' (bola) dituen populazio bat. %60 urdinak dira (🔵) eta %40 laranjak (🟠). Ausazko lagin bat aterako dugu ea benetako populazioaren antza duen ikusteko."
+                   class="tool-description">
+                   Imagina una población de 100 'individuos' (bolas). El 60% son azules (🔵) y el 40% son naranjas (🟠). Vamos a sacar una muestra aleatoria para ver si se parece a la población real.
+                </p>
+                <div class="simulator-controls">
+                    <label for="population-size-input" data-lang-es="Tamaño de la Población:" data-lang-eu="Populazioaren Tamaina:">Tamaño de la Población:</label>
+                    <input type="range" id="population-size-input" value="200" min="100" max="400" step="50">
+                    <span id="population-size-display">200</span>
+
+                    <label for="sample-size-input" data-lang-es="Tamaño de la Muestra:" data-lang-eu="Laginaren Tamaina:">Tamaño de la Muestra:</label>
+                    <input type="number" id="sample-size-input" value="10" min="1" max="100">
+                    <button id="take-sample-button" data-lang-es="Sacar Muestra Aleatoria" data-lang-eu="Ausazko Lagina Atera">Sacar Muestra Aleatoria</button>
+                </div>
+                <div class="simulator-visuals">
+                    <div class="population-area">
+                        <strong data-lang-es="Población (100)" data-lang-eu="Populazioa (100)">Población (100)</strong>
+                        <div id="population-display" class="dot-container">
+                            </div>
+                         <div class="population-info" data-lang-es="Real: 60% 🔵, 40% 🟠" data-lang-eu="Erreala: %60 🔵, %40 🟠">Real: 60% 🔵, 40% 🟠</div>
+                    </div>
+                    <div class="sample-area">
+                        <strong data-lang-es="Muestra Obtenida" data-lang-eu="Lortutako Lagina">Muestra Obtenida</strong>
+                        <div id="sample-display" class="dot-container">
+                            </div>
+                        <div id="sample-info" class="sample-results">--</div>
+                    </div>
+                </div>
+                <p class="tool-objective">
+                    <strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong>
+                    <span data-lang-es="Experimenta cómo el tamaño de la muestra afecta a si se parece a la población. ¡Prueba con muestras pequeñas y grandes!"
+                          data-lang-eu="Esperimentatu laginaren tamainak populazioaren antza izateari nola eragiten dion. Probatu lagin txiki eta handiekin!">
+                          Experimenta cómo el tamaño de la muestra afecta a si se parece a la población. ¡Prueba con muestras pequeñas y grandes!
+                    </span>
+                </p>
+            </div>
+
+            <div class="interactive-tool card-style">
+                <h4><i class="fas fa-question-circle"></i><span data-lang-es="¡A Practicar Conceptos!" data-lang-eu="Kontzeptuak Praktikatzera!">¡A Practicar Conceptos!</span></h4>
+                 <div id="quiz-area">
+                    <div class="quiz-scenario">
+                        <p><strong data-lang-es="Escenario:" data-lang-eu="Eszenatokia:">Escenario:</strong>
+                           <span id="quiz-scenario-text"
+                                 data-lang-es="Queremos saber la marca de refresco preferida en un instituto de 500 alumnos. Para ello, preguntamos a 50 alumnos elegidos al azar."
+                                 data-lang-eu="500 ikasleko institutu batean freskagarri marka gustukoena jakin nahi dugu. Horretarako, ausaz aukeratutako 50 ikasleri galdetzen diegu.">
+                                 Queremos saber la marca de refresco preferida en un instituto de 500 alumnos. Para ello, preguntamos a 50 alumnos elegidos al azar.
+                            </span></p>
+                    </div>
+                    <form id="quiz-form">
+                        <div class="quiz-questions-mc">
+                            <fieldset class="quiz-question-mc">
+                                <legend data-lang-es="1. ¿Cuál es la POBLACIÓN?" data-lang-eu="1. Zein da POPULAZIOA?">1. ¿Cuál es la POBLACIÓN?</legend>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q1-opt1" name="quiz-poblacion" value="50 alumnos">
+                                        <label for="q1-opt1" data-lang-es="Los 50 alumnos encuestados" data-lang-eu="Inkestatutako 50 ikasleak">Los 50 alumnos encuestados</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q1-opt2" name="quiz-poblacion" value="500 alumnos">
+                                        <label for="q1-opt2" data-lang-es="Los 500 alumnos del instituto" data-lang-eu="Institutuko 500 ikasleak">Los 500 alumnos del instituto</label> </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q1-opt3" name="quiz-poblacion" value="Marcas de refresco">
+                                        <label for="q1-opt3" data-lang-es="Las marcas de refresco" data-lang-eu="Freskagarri markak">Las marcas de refresco</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q1-opt4" name="quiz-poblacion" value="El instituto">
+                                        <label for="q1-opt4" data-lang-es="El instituto" data-lang-eu="Institutua">El instituto</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="quiz-question-mc">
+                                <legend data-lang-es="2. ¿Cuál es la MUESTRA?" data-lang-eu="2. Zein da LAGINA?">2. ¿Cuál es la MUESTRA?</legend>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q2-opt1" name="quiz-muestra" value="500 alumnos">
+                                        <label for="q2-opt1" data-lang-es="Los 500 alumnos del instituto" data-lang-eu="Institutuko 500 ikasleak">Los 500 alumnos del instituto</label>
+                                    </div>
+                                     <div class="quiz-option">
+                                        <input type="radio" id="q2-opt2" name="quiz-muestra" value="Marcas de refresco">
+                                        <label for="q2-opt2" data-lang-es="Las marcas de refresco" data-lang-eu="Freskagarri markak">Las marcas de refresco</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q2-opt3" name="quiz-muestra" value="50 alumnos">
+                                        <label for="q2-opt3" data-lang-es="Los 50 alumnos encuestados" data-lang-eu="Inkestatutako 50 ikasleak">Los 50 alumnos encuestados</label> </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q2-opt4" name="quiz-muestra" value="1 alumno">
+                                        <label for="q2-opt4" data-lang-es="Un alumno del instituto" data-lang-eu="Institutuko ikasle bat">Un alumno del instituto</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="quiz-question-mc">
+                                <legend data-lang-es="3. ¿Quién es el INDIVIDUO?" data-lang-eu="3. Nor da BANAKOA?">3. ¿Quién es el INDIVIDUO?</legend>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q3-opt1" name="quiz-individuo" value="1 alumno">
+                                        <label for="q3-opt1" data-lang-es="Un alumno del instituto" data-lang-eu="Institutuko ikasle bat">Un alumno del instituto</label> </div>
+                                     <div class="quiz-option">
+                                        <input type="radio" id="q3-opt2" name="quiz-individuo" value="50 alumnos">
+                                        <label for="q3-opt2" data-lang-es="Los 50 alumnos encuestados" data-lang-eu="Inkestatutako 50 ikasleak">Los 50 alumnos encuestados</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q3-opt3" name="quiz-individuo" value="Marca de refresco">
+                                        <label for="q3-opt3" data-lang-es="Una marca de refresco" data-lang-eu="Freskagarri marka bat">Una marca de refresco</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="q3-opt4" name="quiz-individuo" value="500 alumnos">
+                                        <label for="q3-opt4" data-lang-es="Los 500 alumnos del instituto" data-lang-eu="Institutuko 500 ikasleak">Los 500 alumnos del instituto</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <button type="submit" id="quiz-check-button-mc" data-lang-es="Comprobar Respuestas" data-lang-eu="Erantzunak Egiaztatu">Comprobar Respuestas</button>
+                    </form>
+                    <div id="quiz-feedback-mc" class="quiz-feedback"></div>
+                 </div>
+                 <p class="tool-objective">
+                    <strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong>
+                    <span data-lang-es="Identificar correctamente la población, la muestra y el individuo en diferentes situaciones, eligiendo la opción correcta."
+                          data-lang-eu="Populazioa, lagina eta banakoa egoera desberdinetan zuzen identifikatzea, aukera zuzena hautatuz.">
+                           Identificar correctamente la población, la muestra y el individuo en diferentes situaciones, eligiendo la opción correcta.
+                    </span>
+                 </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/uiComponents.js"></script>
+    <script src="../js/interactive-tools.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/poblacion-muestra.js"></script>
+
+</body>
+</html>

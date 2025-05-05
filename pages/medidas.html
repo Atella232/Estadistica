@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-es="Estadística 1º ESO - Medidas Estadísticas" data-lang-eu="Estatistika DBH 1 - Neurri Estatistikoak">Estadística 1º ESO - Medidas Estadísticas</title>
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css"> <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+    </head>
+<body data-theme="light">
+
+    <header>
+        <div class="logo">
+             <i class="fas fa-calculator"></i>
+             <a href="../index.html" class="home-link" data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">
+                 <span data-lang-es="Estadística 1º ESO" data-lang-eu="Estatistika DBH 1">Estadística 1º ESO</span>
+             </a>
+        </div>
+        <nav>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="lang-toggle"
+                    data-lang-es="Euskara"
+                    data-lang-eu="Castellano"
+                    aria-label="Cambiar idioma">
+                Euskara
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" data-lang-es="Medidas Estadísticas" data-lang-eu="Neurri Estatistikoak">Medidas Estadísticas</h2>
+
+        <section class="content-section">
+            <h3 data-lang-es="Conceptos Clave: Resumiendo los Datos" data-lang-eu="Gako Kontzeptuak: Datuak Laburbiltzen">Conceptos Clave: Resumiendo los Datos</h3>
+            <p data-lang-es="Además de organizar y visualizar, a menudo queremos <strong>resumir</strong> la información con unos pocos números clave. Las medidas estadísticas nos ayudan a hacer esto. Nos centraremos en dos tipos principales:"
+               data-lang-eu="Antolatu eta bistaratzeaz gain, askotan informazioa funtsezko zenbaki gutxi batzuekin <strong>laburbildu</strong> nahi izaten dugu. Neurri estatistikoek hori egiten laguntzen digute. Bi mota nagusitan zentratuko gara:">
+               Además de organizar los datos en tablas y visualizarlos en gráficos, a menudo queremos resumir la información con unos pocos números clave. Las medidas estadísticas nos ayudan a hacer esto. Nos centraremos en dos tipos:
+            </p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="true"> <i class="fas fa-bullseye icon-concept"></i>
+                        <span data-lang-es="Medidas de Tendencia Central" data-lang-eu="Zentralizazio-neurriak">Medidas de Tendencia Central</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p data-lang-es="Intentan encontrar un valor 'típico' o representativo del <strong>centro</strong> del conjunto de datos."
+                           data-lang-eu="Datu-multzoaren <strong>erdigunearen</strong> balio 'tipiko' edo adierazgarri bat aurkitzen saiatzen dira.">
+                           Intentan encontrar un valor 'típico' o representativo del <strong>centro</strong> del conjunto de datos.
+                        </p>
+                        <hr style="border-top: 1px dashed var(--border-color); margin: 1rem 0;">
+
+                        <div>
+                            <h6 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.05em; color: var(--primary-color);">
+                                <i class="fas fa-calculator fa-fw" style="opacity: 0.8;"></i>
+                                <span data-lang-es="Media Aritmética ($\bar{x}$)" data-lang-eu="Batezbesteko Aritmetikoa ($\bar{x}$)">Media Aritmética ($\bar{x}$)</span>
+                            </h6>
+                            <p style="margin-left: 1.8rem; font-size: 0.95em;"
+                               data-lang-es="Es el 'promedio'. Se calcula sumando todos los datos y dividiendo entre el total ($N$). Fórmula: $\bar{x} = \frac{\sum x_i}{N}$. Se ve <strong>afectada por valores extremos</strong>."
+                               data-lang-eu="'Batezbestekoa' da. Datu guztiak batu eta guztizkoarekin ($N$) zatituz kalkulatzen da. Formula: $\bar{x} = \frac{\sum x_i}{N}$. <strong>Muturreko balioek eragiten diote</strong>.">
+                               Es el 'promedio'. Se calcula sumando todos los datos y dividiendo entre el total ($N$). Fórmula: $\bar{x} = \frac{\sum x_i}{N}$. Se ve <strong>afectada por valores extremos</strong>.
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 1rem;">
+                            <h6 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.05em; color: var(--primary-color);">
+                                <i class="fas fa-compress-arrows-alt fa-fw" style="opacity: 0.8;"></i>
+                                <span data-lang-es="Mediana ($Me$)" data-lang-eu="Mediana ($Me$)">Mediana ($Me$)</span>
+                            </h6>
+                            <p style="margin-left: 1.8rem; font-size: 0.95em;"
+                               data-lang-es="Es el valor <strong>central</strong> con los datos <strong>ordenados</strong>. Si $N$ es impar, el del medio; si $N$ es par, la media de los dos centrales. Divide los datos en 50%/50%. <strong>No</strong> muy afectada por valores extremos."
+                               data-lang-eu="Datuak <strong>ordenatuta</strong> daudenean <strong>erdiko</strong> balioa da. $N$ bakoitia bada, erdikoa; $N$ bikoitia bada, erdiko bien batezbestekoa. Datuak %50/%50 banatzen ditu. Muturreko balioek <strong>ez</strong> diote asko eragiten.">
+                               Es el valor <strong>central</strong> con los datos <strong>ordenados</strong>. Si $N$ es impar, el del medio; si $N$ es par, la media de los dos centrales. Divide los datos en 50%/50%. <strong>No</strong> muy afectada por valores extremos.
+                            </p>
+                        </div>
+
+                         <div style="margin-top: 1rem;">
+                            <h6 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.05em; color: var(--primary-color);">
+                                <i class="fas fa-star fa-fw" style="opacity: 0.8;"></i>
+                                <span data-lang-es="Moda ($Mo$)" data-lang-eu="Moda ($Mo$)">Moda ($Mo$)</span>
+                            </h6>
+                            <p style="margin-left: 1.8rem; font-size: 0.95em;"
+                               data-lang-es="Es el valor/categoría con <strong>mayor frecuencia absoluta ($f_i$)</strong> ('más común'). Puede haber varias o ninguna. Única para <strong>cualitativas</strong>."
+                               data-lang-eu="<strong>Maiztasun absolutu ($f_i$) handiena</strong> duen balioa/kategoria da ('ohikoena'). Hainbat egon daitezke edo bat ere ez. <strong>Kualitatiboetarako</strong> bakarra.">
+                               Es el valor/categoría con <strong>mayor frecuencia absoluta ($f_i$)</strong> ('más común'). Puede haber varias o ninguna. Única para <strong>cualitativas</strong>.
+                            </p>
+                        </div>
+                         </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <i class="fas fa-arrows-alt-h icon-concept"></i>
+                        <span data-lang-es="Medidas de Dispersión" data-lang-eu="Sakabanatze-neurriak">Medidas de Dispersión</span>
+                        <i class="fas fa-chevron-down icon-toggle"></i>
+                    </button>
+                     <div class="accordion-content">
+                         <p data-lang-es="Nos dan una idea de cuánto se 'esparcen' o varían los datos alrededor del centro."
+                            data-lang-eu="Datuak erdigunearen inguruan zenbat 'sakabanatzen' edo aldatzen diren jakiteko ideia bat ematen digute.">
+                            Nos dan una idea de cuánto se 'esparcen' o varían los datos alrededor del centro.
+                         </p>
+                         <hr style="border-top: 1px dashed var(--border-color); margin: 1rem 0;">
+
+                          <div>
+                            <h6 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.05em; color: var(--primary-color);">
+                                <i class="fas fa-arrows-alt-h fa-fw" style="opacity: 0.8;"></i>
+                                <span data-lang-es="Rango (o Recorrido)" data-lang-eu="Heina">Rango (o Recorrido)</span>
+                            </h6>
+                            <p style="margin-left: 1.8rem; font-size: 0.95em;"
+                               data-lang-es="Es la diferencia entre el valor máximo y el mínimo (Rango = Valor Máx. - Valor Mín.). Da idea de la amplitud total."
+                               data-lang-eu="Balio maximoaren eta minimoaren arteko aldea da (Heina = Balio Max. - Balio Min.). Zabalera osoaren ideia ematen du.">
+                               Es la diferencia entre el valor máximo y el mínimo (Rango = Valor Máx. - Valor Mín.). Da idea de la amplitud total.
+                            </p>
+                        </div>
+                        </div>
+                 </div>
+            </div> <p class="key-takeaway" data-lang-es="No hay una única medida 'mejor'. La elección depende del tipo de variable y de si hay valores extremos (<em>outliers</em>). La <strong>media</strong> es sensible a outliers, la <strong>mediana</strong> no tanto, y la <strong>moda</strong> indica lo más popular."
+                           data-lang-eu="Ez dago neurri 'hoberik'. Aukeraketa aldagaiaren motaren eta muturreko baliorik (<em>outlier</em>-ak) dagoen ala ez araberakoa da. <strong>Batezbestekoa</strong> sentikorra da outlierrekiko, <strong>mediana</strong> ez hainbeste, eta <strong>moda</strong>k adierazten du zer den ezagunena.">
+                 No hay una única medida 'mejor'. La elección depende del tipo de variable y de si hay valores extremos (<em>outliers</em>). La <strong>media</strong> es sensible a outliers, la <strong>mediana</strong> no tanto, y la <strong>moda</strong> indica lo más popular.
+            </p>
+             <h4 data-lang-es="Comparativa Rápida (Tendencia Central):" data-lang-eu="Konparaketa Azkarra (Zentralizazioa):">Comparativa Rápida (Tendencia Central):</h4>
+             <div class="table-container">
+                  <table class="variables-table">
+                     <thead>
+                        <tr>
+                           <th data-lang-es="Medida" data-lang-eu="Neurria">Medida</th>
+                           <th data-lang-es="Cálculo Resumen" data-lang-eu="Kalkulu Laburtua">Cálculo Resumen</th>
+                           <th data-lang-es="Significado" data-lang-eu="Esanahia">Significado</th>
+                           <th data-lang-es="Sensible a Outliers" data-lang-eu="Sentikorra Outlierrekiko">Sensible a Outliers</th>
+                           <th data-lang-es="Uso Principal" data-lang-eu="Erabilera Nagusia">Uso Principal</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td data-lang-es="Media ($\bar{x}$)" data-lang-eu="Batezbestekoa ($\bar{x}$)">Media ($\bar{x}$)</td>
+                           <td>$\frac{\sum x_i}{N}$</td>
+                           <td data-lang-es="Promedio, punto de equilibrio" data-lang-eu="Batezbestekoa, oreka-puntua">Promedio, punto de equilibrio</td>
+                           <td data-lang-es="Sí (Alta)" data-lang-eu="Bai (Altua)">Sí (Alta)</td>
+                           <td data-lang-es="Numéricos (distr. simétrica)" data-lang-eu="Zenbakizkoak (banak. simetrikoa)">Numéricos (distr. simétrica)</td>
+                        </tr>
+                        <tr>
+                           <td data-lang-es="Mediana ($Me$)" data-lang-eu="Mediana ($Me$)">Mediana ($Me$)</td>
+                           <td data-lang-es="Valor central (datos ordenados)" data-lang-eu="Erdiko balioa (datu ordenatuak)">Valor central (datos ordenados)</td>
+                           <td data-lang-es="Divide datos en 50%/50%" data-lang-eu="Datuak %50/%50 banatzen ditu">Divide datos en 50%/50%</td>
+                            <td data-lang-es="No (Baja)" data-lang-eu="Ez (Baxua)">No (Baja)</td>
+                           <td data-lang-es="Numéricos (distr. asimétrica / outliers)" data-lang-eu="Zenbakizkoak (banak. asimetrikoa / outlierrak)">Numéricos (distr. asimétrica / outliers)</td>
+                        </tr>
+                        <tr>
+                            <td data-lang-es="Moda ($Mo$)" data-lang-eu="Moda ($Mo$)">Moda ($Mo$)</td>
+                           <td data-lang-es="Valor(es) con mayor $f_i$" data-lang-eu="$f_i$ handiena duen balioa(k)">Valor(es) con mayor $f_i$</td>
+                           <td data-lang-es="Valor/categoría más común" data-lang-eu="Balio/kategoria ohikoena">Valor/categoría más común</td>
+                           <td data-lang-es="No (Baja)" data-lang-eu="Ez (Baxua)">No (Baja)</td>
+                           <td data-lang-es="Cualitativos; valor más popular" data-lang-eu="Kualitatiboak; baliorik ezagunena">Cualitativos; valor más popular</td>
+                        </tr>
+                     </tbody>
+                  </table>
+             </div>
+               <p style="font-size: 0.9em; margin-top: 1rem;">
+                  <i class="fas fa-info-circle"></i> <strong data-lang-es="Nota:" data-lang-eu="Oharra:">Nota:</strong>
+                  <span data-lang-es="Entender la sensibilidad a outliers es clave para interpretar críticamente los resúmenes estadísticos."
+                        data-lang-eu="Outlierrekiko sentikortasuna ulertzea funtsezkoa da laburpen estatistikoak kritikoki interpretatzeko.">
+                        Entender la sensibilidad a outliers es un primer paso hacia la interpretación crítica de los resúmenes estadísticos.
+                  </span>
+              </p>
+        </section>
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejemplos Resueltos: Calculando Medidas" data-lang-eu="Adibide Ebatziak: Neurriak Kalkulatzen">Ejemplos Resueltos: Calculando Medidas</h3>
+
+            <div class="card-style" style="margin-bottom: 2rem;">
+                 <h4 data-lang-es="Ejemplo 1: Edades de 8 Primos" data-lang-eu="1. Adibidea: 8 Lehengusuren Adinak">Ejemplo 1: Edades de 8 Primos</h4>
+                 <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Calcula media, mediana, moda y rango para las edades: 7, 5, 8, 5, 9, 6, 8, 5." data-lang-eu="Kalkulatu batezbestekoa, mediana, moda eta heina adin hauetarako: 7, 5, 8, 5, 9, 6, 8, 5.">Calcula la media, mediana, moda y rango para las siguientes edades de 8 primos: 7, 5, 8, 5, 9, 6, 8, 5.</span></p>
+                 <div class="solution">
+                     <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                     <ul style="list-style: none; padding-left: 0;">
+                        <li><strong data-lang-es="Media:" data-lang-eu="Batezbestekoa:">Media:</strong> $\bar{x} = \frac{7+5+8+5+9+6+8+5}{8} = \frac{53}{8} = 6.625$ <span data-lang-es="años" data-lang-eu="urte">años.</span></li>
+                        <li><strong data-lang-es="Mediana:" data-lang-eu="Mediana:">Mediana:</strong>
+                            <ol style="font-size: 0.9em; margin-left: 1.5rem;">
+                                <li data-lang-es="Ordenar: 5, 5, 5, 6, 7, 8, 8, 9." data-lang-eu="Ordenatu: 5, 5, 5, 6, 7, 8, 8, 9.">Ordenar: 5, 5, 5, 6, 7, 8, 8, 9.</li>
+                                <li data-lang-es="$N=8$ (par). Centrales: 4º (6) y 5º (7)." data-lang-eu="$N=8$ (bikoitia). Erdikoak: 4. (6) eta 5. (7).">$N=8$ (par). Centrales: 4º (6) y 5º (7).</li>
+                                <li data-lang-es="$Me = \frac{6+7}{2} = 6.5$ años." data-lang-eu="$Me = \frac{6+7}{2} = 6.5$ urte.">$Me = \frac{6+7}{2} = 6.5$ años.</li>
+                            </ol>
+                        </li>
+                        <li><strong data-lang-es="Moda:" data-lang-eu="Moda:">Moda:</strong> <span data-lang-es="El valor más repetido es 5 (3 veces). $Mo = 5$ años." data-lang-eu="Gehien errepikatzen den balioa 5 da (3 aldiz). $Mo = 5$ urte.">El valor que más se repite es 5 (aparece 3 veces). $Mo=5$ años.</span></li>
+                        <li><strong data-lang-es="Rango:" data-lang-eu="Heina:">Rango:</strong> <span data-lang-es="Máx = 9, Mín = 5. Rango = $9 - 5 = 4$ años." data-lang-eu="Max = 9, Min = 5. Heina = $9 - 5 = 4$ urte.">Valor Máximo = 9, Valor Mínimo = 5. Rango = $9 - 5 = 4$ años.</span></li>
+                     </ul>
+                 </div>
+            </div>
+
+            <div class="card-style" style="margin-bottom: 2rem;">
+                 <h4 data-lang-es="Ejemplo 2: Impacto de un Valor Extremo (Outlier)" data-lang-eu="2. Adibidea: Muturreko Balio baten Eragina (Outlier)">Ejemplo 2: Impacto de un Valor Extremo (Outlier)</h4>
+                 <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Calcula media y mediana de: 10, 12, 11, 13, 14. Añade un 2 y recalcula. ¿Qué observas?" data-lang-eu="Kalkulatu honako hauen batezbestekoa eta mediana: 10, 12, 11, 13, 14. Gehitu 2 bat eta birkalkulatu. Zer ikusten duzu?">Calcula la media y la mediana de las notas: 10, 12, 11, 13, 14 ($N=5$). Ahora, añade una nota muy baja, 2, y vuelve a calcularlas. ¿Qué observas?</span></p>
+                <div class="solution">
+                     <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                         <div>
+                             <h6 data-lang-es="Caso 1 (Sin outlier 2)" data-lang-eu="1. Kasua (2 outlierrik gabe)">Caso 1 (Sin outlier 2)</h6>
+                             <ul style="font-size: 0.9em;">
+                                 <li data-lang-es="Ordenados: 10, 11, 12, 13, 14" data-lang-eu="Ordenatuak: 10, 11, 12, 13, 14">Ordenados: 10, 11, 12, 13, 14</li>
+                                 <li>$\bar{x} = (10+...+14)/5 = 12$</li>
+                                 <li data-lang-es="$Me =$ Valor 3º = 12" data-lang-eu="$Me =$ 3. balioa = 12">$Me =$ Valor 3º = 12</li>
+                             </ul>
+                         </div>
+                          <div>
+                             <h6 data-lang-es="Caso 2 (Con outlier 2)" data-lang-eu="2. Kasua (2 outlierrarekin)">Caso 2 (Con outlier 2)</h6>
+                             <ul style="font-size: 0.9em;">
+                                 <li data-lang-es="Ordenados: 2, 10, 11, 12, 13, 14" data-lang-eu="Ordenatuak: 2, 10, 11, 12, 13, 14">Ordenados: 2, 10, 11, 12, 13, 14</li>
+                                 <li>$\bar{x} = (2+...+14)/6 \approx 10.33$</li>
+                                 <li data-lang-es="$Me =$ Media 3º y 4º = (11+12)/2 = 11.5" data-lang-eu="$Me =$ 3. eta 4.aren batezb. = (11+12)/2 = 11.5">$Me =$ Media 3º y 4º = (11+12)/2 = 11.5</li>
+                             </ul>
+                         </div>
+                     </div>
+                     <p style="margin-top: 1rem;"><strong data-lang-es="Observación:" data-lang-eu="Oharra:">Observación:</strong> <span data-lang-es="El '2' bajó mucho la media (de 12 a 10.33), pero afectó menos a la mediana (de 12 a 11.5). ¡La mediana es más robusta a outliers!" data-lang-eu="'2'ak asko jaitsi zuen batezbestekoa (12tik 10.33ra), baina gutxiago eragin zion medianari (12tik 11.5era). Mediana sendoagoa da outlierrekiko!">Al añadir el valor extremo (2), la media bajó considerablemente (de 12 a 10.33), mientras que la mediana bajó mucho menos (de 12 a 11.5). Esto ilustra que la mediana es menos sensible a valores extremos.</span></p>
+                </div>
+            </div>
+
+             <div class="card-style">
+                 <h4 data-lang-es="Ejemplo 3: Calcular desde Tabla de Frecuencias (Notas)" data-lang-eu="3. Adibidea: Maiztasun-Taulatik Kalkulatu (Notak)">Ejemplo 3: Calcular desde Tabla de Frecuencias (Notas)</h4>
+                 <p><strong data-lang-es="Problema:" data-lang-eu="Arazoa:">Problema:</strong> <span data-lang-es="Usando la tabla de frecuencias de las notas (Subtema 3, Ejemplo 1), calcula la nota media y la moda." data-lang-eu="Noten maiztasun-taula erabiliz (3. Azpigaia, 1. Adibidea), kalkulatu batez besteko nota eta moda.">Usando la tabla de frecuencias de las notas del examen (Subtema 3, Ejemplo 1), calcula la nota media y la moda.</span></p>
+                <div class="solution">
+                     <strong data-lang-es="Solución:" data-lang-eu="Ebazpena:">Solución:</strong>
+                      <ul style="list-style: none; padding-left: 0;">
+                         <li><strong data-lang-es="Moda:" data-lang-eu="Moda:">Moda:</strong> <span data-lang-es="Buscar valor(es) con $f_i$ máxima. En la tabla, $f_5=5$ y $f_6=5$ son las máximas. Es <strong>bimodal</strong>: $Mo = 5$ y $Mo = 6$." data-lang-eu="$f_i$ maximoa duen balioa(k) bilatu. Taulan, $f_5=5$ eta $f_6=5$ dira maximoak. <strong>Bimodala</strong> da: $Mo = 5$ eta $Mo = 6$.">Buscar valor(es) con $f_i$ máxima. En la tabla, $f_5=5$ y $f_6=5$, que son las máximas. Por tanto, hay dos modas (bimodal): $Mo=5$ y $Mo=6$.</span></li>
+                         <li><strong data-lang-es="Media:" data-lang-eu="Batezbestekoa:">Media:</strong>
+                             <ul style="font-size: 0.9em; margin-left: 1.5rem;">
+                                 <li data-lang-es="Sumar todos los datos usando frecuencias: $\sum (x_i \times f_i)$" data-lang-eu="Datu guztiak batu maiztasunak erabiliz: $\sum (x_i \times f_i)$">Sumar todos los datos usando frecuencias: $\sum (x_i \times f_i)$</li>
+                                 <li data-lang-es="Suma = $(4\times2)+(5\times5)+(6\times5)+(7\times4)+(8\times2)+(9\times2) = 8+25+30+28+16+18 = 125$" data-lang-eu="Batura = $(4\times2)+(5\times5)+(6\times5)+(7\times4)+(8\times2)+(9\times2) = 8+25+30+28+16+18 = 125$">Suma = $(4\times2)+(5\times5)+(6\times5)+(7\times4)+(8\times2)+(9\times2) = 8+25+30+28+16+18=125$.</li>
+                                 <li data-lang-es="$N=20$ (de la tabla)." data-lang-eu="$N=20$ (taulatik).">$N=20$.</li>
+                                 <li>$\bar{x} = \frac{\sum (x_i \times f_i)}{N} = \frac{125}{20} = 6.25$</li>
+                             </ul>
+                         </li>
+                           <li style="font-size: 0.9em; margin-top: 0.5rem;"><i class="fas fa-info-circle"></i> <span data-lang-es="<em>Nota Mediana:</em> Calcularla desde tabla requiere usar $F_i$ para localizar la posición central (N/2)." data-lang-eu="<em>Mediana Oharra:</em> Taulatik kalkulatzeko $F_i$ erabili behar da erdiko posizioa (N/2) kokatzeko."><em>Nota Mediana:</em> Calcular la mediana desde una tabla requiere usar las frecuencias acumuladas $F_i$ para encontrar la posición central, lo cual puede ser un paso más avanzado para 1º ESO, aunque factible.</span></li>
+                      </ul>
+                 </div>
+            </div>
+        </section>
+
+
+        <section class="content-section">
+            <h3 data-lang-es="Ejercicios Propuestos: ¡Calcula y Compara!" data-lang-eu="Proposatutako Ariketak: Kalkulatu eta Konparatu!">Ejercicios Propuestos: ¡Calcula y Compara!</h3>
+            <ol class="exercises-list">
+                <li><i class="fas fa-ruler-vertical fa-fw"></i> <span data-lang-es="Calcula la media, mediana, moda y rango de las siguientes <strong>alturas</strong> (cm): 155, 162, 158, 165, 158, 170, 160." data-lang-eu="Kalkulatu honako <strong>altuera</strong> hauen batezbestekoa, mediana, moda eta heina (cm): 155, 162, 158, 165, 158, 170, 160.">Calcula la media, mediana, moda y rango de las siguientes alturas (en cm) de un grupo de 7 amigos: 155, 162, 158, 165, 158, 170, 160.</span></li>
+                <li><i class="fas fa-palette fa-fw"></i> <span data-lang-es="En la encuesta sobre <strong>colores</strong> favoritos (Subtema 3, Ejemplo 2): ¿cuál es la moda? ¿Se puede calcular media o mediana? ¿Por qué?" data-lang-eu="<strong>Kolore</strong> gustukoenei buruzko inkestan (3. Azpigaia, 2. Adibidea): zein da moda? Batezbestekoa edo mediana kalkula al daiteke? Zergatik?">En la encuesta sobre <strong>colores</strong> favoritos (Subtema 3, Ejemplo 2), ¿cuál es la moda? ¿Se puede calcular la media o la mediana? ¿Por qué?</span></li>
+                <li><i class="fas fa-basketball-ball fa-fw"></i> <span data-lang-es="Las <strong>puntuaciones</strong> de 10 jugadores fueron: 12, 15, 8, 12, 20, 10, 15, 18, 12, 9. Calcula media, mediana, moda y rango." data-lang-eu="10 jokalariren <strong>puntuazioak</strong> hauek izan ziren: 12, 15, 8, 12, 20, 10, 15, 18, 12, 9. Kalkulatu batezbestekoa, mediana, moda eta heina.">Las <strong>puntuaciones</strong> de 10 jugadores en un juego de baloncesto fueron: 12, 15, 8, 12, 20, 10, 15, 18, 12, 9. Calcula la media, mediana, moda y rango de las puntuaciones.</span></li>
+                 <li><i class="fas fa-users fa-fw"></i> <span data-lang-es="La media de las <strong>edades</strong> de 4 hermanos es 10 años. Si tres tienen 8, 9 y 12 años, ¿qué edad tiene el cuarto?" data-lang-eu="4 anai-arrebaren <strong>adinen</strong> batezbestekoa 10 urte da. Hiruk 8, 9 eta 12 urte badituzte, zer adin du laugarrenak?">La media de las <strong>edades</strong> de 4 hermanos es 10 años. Si las edades de tres de ellos son 8, 9 y 12 años, ¿cuál es la edad del cuarto hermano?</span></li>
+                 <li><i class="fas fa-balance-scale fa-fw"></i> <span data-lang-es="Observa estos dos conjuntos:" data-lang-eu="Begiratu bi multzo hauei:">Observa estos dos conjuntos de datos:</span>
+                     <ul style="list-style: none; padding-left: 1rem; margin-top: 0.5em; font-family: monospace;">
+                         <li><strong>Conjunto A:</strong> 10, 10, 10, 10, 10</li>
+                         <li><strong>Conjunto B:</strong> 0, 5, 10, 15, 20</li>
+                     </ul>
+                     <span data-lang-es="Calcula la media y el rango de ambos. ¿Qué observas? ¿Qué medida describe mejor el 'centro' en cada caso? ¿Qué dice el rango sobre la dispersión?" data-lang-eu="Kalkulatu bien batezbestekoa eta heina. Zer ikusten duzu? Zer neurrik deskribatzen du hobekien 'zentroa' kasu bakoitzean? Zer dio heinak sakabanatzeari buruz?">Calcula la media y el rango de ambos conjuntos. ¿Qué observas? ¿Qué medida usarías para describir mejor el "centro" en cada caso? ¿Qué te dice el rango sobre cómo son los datos en cada conjunto?</span></li>
+                 <li><i class="fas fa-tshirt fa-fw"></i> <span data-lang-es="En una tienda se vendieron <strong>tallas</strong> de camiseta: S, M, L, M, S, M, M, XL, L, M, S, M. ¿Qué medida de tendencia central es más útil para saber qué talla pedir más? Calcúlala." data-lang-eu="Denda batean kamiseta-<strong>taila</strong> hauek saldu ziren: S, M, L, M, S, M, M, XL, L, M, S, M. Zer zentralizazio-neurri da erabilgarriena dendariak jakiteko hurrengoan zein taila eskatu gehiago? Kalkulatu.">En una tienda de ropa, durante un día se vendieron camisetas de las siguientes tallas: S, M, L, M, S, M, M, XL, L, M, S, M. ¿Qué medida de tendencia central sería más útil para que el dueño de la tienda sepa qué talla pedir más la próxima vez? Calcúlala.</span></li>
+            </ol>
+        </section>
+
+
+        <section class="content-section">
+             <h3 data-lang-es="Ideas para Actividades y Herramientas" data-lang-eu="Jarduera eta Tresnetarako Ideiak">Ideas para Actividades y Herramientas</h3>
+             <div class="interactive-ideas-container">
+                  <div class="interactive-idea card-style">
+                      <h4><i class="fas fa-people-arrows"></i> <span data-lang-es="Estadísticas Humanas (Conceptual)" data-lang-eu="Giza Estatistikak (Kontzeptuala)">Estadísticas Humanas Ordenadas</span></h4>
+                      <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Ordenar alumnos en fila (altura, fecha nac...). Identificar Mediana (centro). Agrupar por valor (nº hermanos) para ver Moda (grupo mayor). Calcular Media sumando valores. Calcular Rango (máx-mín)." data-lang-eu="Ikasleak ilaran ordenatu (altuera, jaiotze data...). Mediana identifikatu (erdia). Balioaren arabera taldekatu (anai-arreba kop.) Moda ikusteko (talde handiena). Batezbestekoa kalkulatu balioak batuz. Heina kalkulatu (max-min).">Ordenar alumnos en fila (altura, fecha nac...). Identificar Mediana (centro). Agrupar por valor (nº hermanos) para ver Moda (grupo mayor). Calcular Media sumando valores. Calcular Rango (máx-mín).</span></p>
+                      <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Vivenciar significado de cada medida (posición, agrupación). Ordenar para mediana es clarificador." data-lang-eu="Neurri bakoitzaren esanahia bizitzea (posizioa, taldekatzea). Medianarako ordenatzea argigarria da.">Vivenciar el significado de cada medida a través de la posición y agrupación física. Ordenarse para la mediana es especialmente clarificador.</span></p>
+                  </div>
+                  <div class="interactive-idea card-style">
+                       <h4><i class="fas fa-calculator-alt"></i> <span data-lang-es="Calculadora Medidas (Digital)" data-lang-eu="Neurrien Kalkulagailua (Digitala)">Calculadora Interactiva de Medidas</span></h4>
+                       <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Widget/App para introducir lista de números. Calcula y muestra automáticamente: Suma, N, Media (cálculo), Datos ordenados, Mediana (identificando centrales), Moda (recuento frec.), Rango (máx/mín). Permite modificar datos y ver cambios (efecto outlier)." data-lang-eu="Widget/App zenbaki-zerrenda sartzeko. Automatikoki kalkulatu eta erakutsi: Batura, N, Batezbestekoa (kalkulua), Datu ordenatuak, Mediana (erdikoak identifikatuz), Moda (maiz. zenbaketa), Heina (max/min). Datuak aldatzea eta aldaketak ikustea ahalbidetzen du (outlier efektua).">Widget/App para introducir lista de números. Calcula y muestra automáticamente: Suma, N, Media (cálculo), Datos ordenados, Mediana (identificando centrales), Moda (recuento frec.), Rango (máx/mín). Permite modificar datos y ver cambios (efecto outlier).</span></p>
+                       <div class="interactive-calculator">
+                            <h5 data-lang-es="Calculadora Estadística Básica" data-lang-eu="Oinarrizko Kalkulagailu Estatistikoa">Calculadora Estadística Básica</h5>
+                            <div class="calc-input">
+                                <label for="calc-data-input" data-lang-es="Introduce los datos separados por comas o espacios:" data-lang-eu="Sartu datuak komaz edo espazioz bereizita:">Introduce los datos separados por comas o espacios:</label>
+                                <textarea id="calc-data-input" rows="3" placeholder="Ej: 7, 5, 8, 5, 9, 6, 8, 5"></textarea>
+                            </div>
+                            <div class="calc-buttons">
+                                <button type="button" data-calc="mean" data-lang-es="Calcular Media" data-lang-eu="Kalkulatu Batezbestekoa">Calcular Media</button>
+                                <button type="button" data-calc="median" data-lang-es="Calcular Mediana" data-lang-eu="Kalkulatu Mediana">Calcular Mediana</button>
+                                <button type="button" data-calc="mode" data-lang-es="Calcular Moda" data-lang-eu="Kalkulatu Moda">Calcular Moda</button>
+                                <button type="button" data-calc="range" data-lang-es="Calcular Rango" data-lang-eu="Kalkulatu Heina">Calcular Rango</button>
+                                <button type="button" data-calc="all" data-lang-es="Calcular Todo" data-lang-eu="Kalkulatu Dena">Calcular Todo</button>
+                            </div>
+                            <div class="calc-results">
+                                <h6><i class="fas fa-calculator"></i> <span data-lang-es="Resultados" data-lang-eu="Emaitzak">Resultados</span></h6>
+                                <p><strong data-lang-es="Media:" data-lang-eu="Batezbestekoa:">Media:</strong> <span id="result-mean">--</span></p>
+                                <p><strong data-lang-es="Mediana:" data-lang-eu="Mediana:">Mediana:</strong> <span id="result-median">--</span></p>
+                                <p><strong data-lang-es="Moda:" data-lang-eu="Moda:">Moda:</strong> <span id="result-mode">--</span></p>
+                                <p><strong data-lang-es="Rango:" data-lang-eu="Heina:">Rango:</strong> <span id="result-range">--</span></p>
+                            </div>
+                            <p class="calc-note" data-lang-es="(Nota: Funcionalidad de cálculo no implementada en esta demo)" data-lang-eu="(Oharra: Kalkulu-funtzionalitatea ez dago inplementatuta demo honetan)">(Nota: Funcionalidad de cálculo no implementada en esta demo)</p>
+                       </div>
+                       <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Explorar propiedades de cada medida (sensibilidad a outliers) sin cálculo manual." data-lang-eu="Neurri bakoitzaren propietateak arakatu (outlierrekiko sentikortasuna) eskuzko kalkulurik gabe.">Facilitar la exploración y el descubrimiento de las propiedades de cada medida (especialmente la sensibilidad de la media vs. mediana a outliers) sin el tedio del cálculo manual repetitivo.</span></p>
+                  </div>
+                  <div class="interactive-idea card-style">
+                       <h4><i class="fas fa-check-circle"></i> <span data-lang-es="Juego Medida Adecuada (Digital)" data-lang-eu="Neurri Egokiaren Jokoa (Digitala)">Juego "Elige la Medida Adecuada"</span></h4>
+                       <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Presentar escenarios (gráficos asimétricos, datos cualitativos...). Pregunta: ¿Qué medida (media, mediana, moda) describe mejor el 'centro'? Alumno elige y recibe explicación." data-lang-eu="Egoerak aurkeztu (grafiko asimetrikoak, datu kualitatiboak...). Galdera: Zer neurrik (batezbestekoa, mediana, moda) deskribatzen du hobekien 'zentroa'? Ikasleak aukeratu eta azalpena jasotzen du.">Presentar diferentes escenarios mediante descripciones cortas o gráficos simples (ej: un histograma muy asimétrico de salarios, un diagrama de barras de colores favoritos, un conjunto de notas muy agrupadas). La pregunta es: "¿Qué medida (media, mediana o moda) describe mejor el 'centro' o el valor 'típico' en esta situación?". El alumno elige una opción y recibe una explicación de por qué es o no la más adecuada.</span></p>
+                       <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Desarrollar juicio crítico sobre cuándo usar cada medida central." data-lang-eu="Zentralizazio-neurri bakoitza noiz erabili jakiteko irizpide kritikoa garatu.">Desarrollar el juicio crítico sobre cuándo utilizar cada medida de tendencia central, yendo más allá del simple cálculo y enfocándose en la interpretación y la adecuación al contexto.</span></p>
+                  </div>
+             </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/uiComponents.js"></script>
+    <script src="../js/main.js"></script>
+    </body>
+</html>

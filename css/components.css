@@ -1,0 +1,367 @@
+/* =============================================== */
+/* ============ ESTILOS COMPONENTES ============== */
+/* =============================================== */
+
+/* --- Botones de Navegación (Header) --- */
+nav button { background-color: transparent; color: var(--text-color); border: 1px solid var(--border-color); padding: 0.5em 1em; border-radius: 20px; cursor: pointer; margin-left: 0.8em; font-size: 0.9em; transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; }
+nav button:hover { background-color: var(--button-hover-bg); border-color: var(--button-hover-bg); color: var(--primary-color); }
+#theme-toggle { width: 40px; height: 40px; padding: 0; }
+#theme-toggle i { font-size: 1.2em; transition: transform 0.3s ease; }
+#theme-toggle:hover i { transform: scale(1.1) rotate(15deg); }
+
+/* --- Pestañas (Tabs - Index Page) --- */
+.tabs-nav { list-style: none; display: flex; justify-content: center; margin-bottom: 2rem; padding: 0; border-bottom: 2px solid var(--tab-nav-border); }
+.tabs-nav li { margin: 0 0.5rem; }
+.tabs-nav .tab-link { display: block; padding: 0.8rem 1.5rem; text-decoration: none; color: var(--text-color); opacity: var(--tab-inactive-opacity); border-bottom: 3px solid transparent; position: relative; top: 2px; transition: color 0.3s ease, opacity 0.3s ease, border-bottom-color 0.3s ease; font-weight: 700; font-size: 1.1em; cursor: pointer; }
+.tabs-nav .tab-link:hover { opacity: 1; color: var(--primary-color); }
+.tabs-nav .tab-link.active { opacity: 1; color: var(--primary-color); border-bottom-color: var(--tab-active-border); }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; animation: fadeIn 0.4s ease-out; }
+.tab-pane-content { display: flex; gap: 2.5rem; align-items: flex-start; padding-top: 1rem; }
+.tab-text { flex: 3; }
+.tab-text h3 { margin-bottom: 1rem; font-size: 1.6em; color: var(--secondary-color); font-weight: 700; }
+.tab-visual { flex: 1; text-align: center; padding-top: 1rem; }
+.subtle-icon { color: var(--subtle-icon-color); transition: color 0.3s ease, transform 0.3s ease; }
+
+/* --- Listas con Iconos (Tabs) --- */
+.icon-list, .benefits-list { list-style: none; padding-left: 0; margin-top: 1rem; }
+.icon-list li, .benefits-list li { display: flex; align-items: center; margin-bottom: 0.8rem; font-size: 1.05em; }
+.icon-list li i, .benefits-list li i { color: var(--secondary-color); margin-right: 1rem; font-size: 1.3em; width: 25px; text-align: center; flex-shrink: 0; }
+.benefits-list li b { margin-right: 0.5em; }
+
+/* --- Grid de Usos (Tabs) --- */
+.usage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.usage-item { background-color: var(--button-bg); padding: 0.8rem; border-radius: 8px; text-align: center; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; font-size: 0.95em; }
+.usage-item:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: var(--button-hover-bg); }
+.usage-item i { display: block; font-size: 1.8em; margin-bottom: 0.5rem; color: var(--icon-color); transition: color 0.2s ease; }
+.usage-item:hover i { color: var(--primary-color); }
+
+/* --- Tarjetas Subtemas (Index Page) --- */
+.cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { background-color: var(--card-bg); border-radius: 10px; box-shadow: var(--card-shadow); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease; border: 1px solid var(--border-color); display: flex; flex-direction: column; }
+.card a { display: flex; flex-direction: column; flex-grow: 1; padding: 1.8rem; color: inherit; text-decoration: none; }
+.card-icon { font-size: 2.5em; color: var(--icon-color); margin-bottom: 1rem; transition: transform 0.3s ease, color 0.3s ease; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+.card:hover { transform: translateY(-8px); box-shadow: var(--card-hover-shadow); border-color: var(--secondary-color); }
+.card:hover .card-icon { color: var(--primary-color); animation: pulse 1.5s infinite ease-in-out; }
+.card h3 { margin-bottom: 0.8em; color: var(--primary-color); font-weight: 700; }
+.card .summary { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.4s ease-out, opacity 0.4s ease-out, margin-top 0.4s ease-out; font-size: 0.95em; color: var(--text-color); margin-top: 0; flex-grow: 1; }
+.card:hover .summary { max-height: 200px; opacity: 1; margin-top: 1em; }
+.card .summary p { line-height: 1.5; }
+
+/* --- Acordeón (Subtopic Page) --- */
+.accordion { border: 1px solid var(--accordion-border); border-radius: 8px; overflow: hidden; background-color: var(--accordion-bg); }
+.accordion-item { border-bottom: 1px solid var(--accordion-border); }
+.accordion-item:last-child { border-bottom: none; }
+.accordion-header { background-color: transparent; border: none; padding: 1rem 1.5rem; width: 100%; text-align: left; font-size: 1.1em; font-weight: 700; color: var(--primary-color); cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background-color 0.2s ease; }
+.accordion-header:hover { background-color: var(--button-hover-bg); }
+.accordion-header .icon-concept { margin-right: 0.8rem; color: var(--secondary-color); font-size: 1.3em; width: 20px; text-align: center; flex-shrink: 0; }
+.accordion-header .icon-toggle { font-size: 0.9em; transition: transform 0.3s ease; color: var(--text-color); opacity: 0.6; }
+.accordion-header[aria-expanded="true"] .icon-toggle { transform: rotate(180deg); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out, background-color 0.3s ease; padding: 0 1.5rem; background-color: var(--accordion-content-bg); }
+.accordion-content p { font-size: 0.95em; margin-bottom: 0.8rem; padding-top: 0.5rem; }
+.accordion-content p:first-child { padding-top: 1rem; }
+.accordion-content p:last-child { margin-bottom: 1rem; }
+
+/* --- Carrusel (Subtopic Page) --- */
+.carousel-container { position: relative; overflow: hidden; width: 100%; background-color: var(--carousel-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 1rem 0; }
+.carousel-wrapper { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide { min-width: 100%; box-sizing: border-box; padding: 0 2rem; }
+.carousel-slide .example-solved { margin: 0; box-shadow: none; border: none; background-color: transparent; padding: 1rem 0; }
+.carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; cursor: pointer; z-index: 10; transition: background-color 0.2s ease; }
+.carousel-button:hover { background-color: rgba(0, 0, 0, 0.6); }
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+.carousel-button:disabled { opacity: 0.3; cursor: default; background-color: rgba(0, 0, 0, 0.2);}
+
+/* --- Ejemplos Resueltos (Estilos internos) --- */
+.example-solved h4 { margin-top: 0; margin-bottom: 1rem; font-size: 1.2em; color: var(--secondary-color); font-weight: 700; }
+.example-solved p strong { color: var(--primary-color); margin-right: 0.5em; }
+.solution { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border-color); }
+.solution strong { display: block; margin-bottom: 0.5rem; color: var(--text-color); font-weight: 700; }
+.solution ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+.solution li { margin-bottom: 0.4rem; font-size: 0.95em; }
+.solution li span:first-child { font-weight: bold; color: var(--primary-color); margin-right: 0.5em; }
+.example-solved.non-representative { border-left: 5px solid #d9534f; padding-left: 1rem; }
+.example-solved.non-representative .solution li i { color: #d9534f; margin-right: 0.5em; }
+
+/* --- Ejercicios Propuestos (Lista y Botón Hint) --- */
+.exercises-list { list-style-type: decimal; padding-left: 1.5rem; margin-left: 0.5rem; }
+.exercises-list li { margin-bottom: 1.5rem; padding-left: 0.5rem; border-left: 3px solid transparent; padding: 0.5rem 0.5rem 0.5rem 1rem; }
+.exercises-list li::marker { color: var(--primary-color); font-weight: bold; }
+.toggle-hint-button { display: inline-flex; align-items: center; background-color: var(--button-bg); border: 1px solid var(--border-color); color: var(--text-color); padding: 0.3em 0.8em; border-radius: 15px; cursor: pointer; font-size: 0.85em; margin-top: 0.5rem; transition: background-color 0.2s ease, color 0.2s ease; }
+.toggle-hint-button:hover { background-color: var(--button-hover-bg); color: var(--primary-color); }
+.toggle-hint-button i { margin-left: 0.5em; font-size: 0.8em; transition: transform 0.3s ease; }
+.toggle-hint-button.open i { transform: rotate(180deg); }
+.hint-content { background-color: var(--hint-bg); border: 1px dashed var(--hint-border); border-radius: 4px; padding: 0.8rem; margin-top: 0.5rem; font-size: 0.8em; transition: max-height 0.8s ease-out, opacity 0.4s ease-out, visibility 0.4s, padding 0.4s ease-out, margin-top 0.4s ease-out; max-height: 0; opacity: 0; visibility: hidden; padding-top: 0; padding-bottom: 0; margin-top: 0; overflow: visible;}
+.hint-content.visible { max-height: none !important; opacity: 1; visibility: visible; padding-top: 0.8rem; padding-bottom: 0.8rem; margin-top: 0.5rem; overflow: visible;}
+.hint-content p { margin-bottom: 0; }
+/* =============================================== */
+/* ============== ESTILOS DE TABLAS ============== */
+/* =============================================== */
+
+.variables-table {
+    width: 100%;
+    border-collapse: collapse; /* Une los bordes */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95em;
+    box-shadow: var(--card-shadow); /* Sombra sutil */
+    border-radius: 8px; /* Bordes redondeados (para el contenedor si se usa) */
+    overflow: hidden; /* Asegura que el border-radius funcione */
+    border: 1px solid var(--border-color);
+}
+
+.variables-table thead tr {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.variables-table th,
+.variables-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.variables-table tbody tr {
+    background-color: var(--card-bg); /* Fondo de las filas */
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.variables-table tbody tr:nth-of-type(even) {
+    background-color: var(--button-bg); /* Color alterno para filas pares */
+}
+
+.variables-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color); /* Borde inferior más grueso */
+}
+
+.variables-table tbody tr:hover {
+    background-color: var(--button-hover-bg); /* Resaltar al pasar el ratón */
+}
+
+.variables-table td span[data-lang-es],
+.variables-table td span[data-lang-eu] {
+     display: block; /* Asegura que el span ocupe el espacio */
+}
+
+/* Ajustes específicos para celdas con tipos/subtipos */
+.variables-table td:nth-child(2), /* Columna Tipo Principal */
+.variables-table td:nth-child(3) { /* Columna Subtipo */
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Estilo para notas/justificación */
+.variables-table td:last-child {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 0.9em;
+}
+
+/* Responsividad básica para la tabla */
+@media (max-width: 768px) {
+    .variables-table {
+        font-size: 0.85em;
+    }
+    .variables-table th,
+    .variables-table td {
+        padding: 8px 10px;
+    }
+     /* Podrías implementar un scroll horizontal si la tabla es muy ancha */
+     .table-container { /* Envuelve tu tabla en este div si es necesario */
+       overflow-x: auto;
+       -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+       border-radius: 8px; /* Heredar redondeo */
+       border: 1px solid var(--border-color); /* Borde para el contenedor */
+     }
+     .variables-table {
+         border: none; /* Quitar borde de la tabla si está en contenedor */
+         border-radius: 0;
+         box-shadow: none;
+         margin: 0;
+     }
+     .variables-table thead,    
+     .variables-table thead tr,
+     .variables-table thead th {
+          display: none;
+     }
+}
+
+/* Estilo para la sección de Ideas Interactivas con tarjetas */
+.interactive-ideas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.interactive-idea.card-style { /* Hereda estilos de card-style */
+    margin-top: 0; /* Quitar margen superior si está en grid */
+}
+.interactive-idea h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2em;
+    margin-bottom: 0.8rem;
+}
+.interactive-idea h4 i {
+    color: var(--secondary-color);
+    font-size: 1.3em;
+}
+.interactive-idea .tool-objective { /* Reutilizamos clase si es aplicable */
+     margin-top: 1rem;
+     padding-top: 0.8rem;
+     font-size: 0.9em;
+     border-top: 1px dashed var(--border-color);
+     opacity: 0.8;
+}
+
+/* Diagrama simple con CSS (Opcional, puedes reemplazar con imagen/SVG) */
+.variable-diagram {
+    text-align: center;
+    padding: 2rem 1rem;
+    border: 2px dashed var(--border-color);
+    background-color: var(--button-bg);
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    max-width: 500px;
+}
+.variable-diagram strong {
+    display: block;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+.variable-diagram .split {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.variable-diagram .category {
+    border: 1px solid var(--secondary-color);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    min-width: 150px;
+}
+.variable-diagram .sub-split {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.variable-diagram .sub-category {
+     border: 1px dashed var(--border-color);
+     padding: 0.5rem 0.8rem;
+     border-radius: 4px;
+     background-color: var(--bg-color);
+     width: 90%;
+}
+/* Placeholder for Charts */
+.chart-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Ajusta según necesidad */
+    border: 2px dashed var(--border-color);
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    opacity: 0.7;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    margin: 1.5rem auto; /* Centrar bloque */
+    border-radius: 8px;
+    max-width: 90%; /* Limitar anchura */
+}
+.chart-placeholder i { /* Estilo opcional para icono dentro del placeholder */
+    font-size: 3em;
+    margin-right: 1rem;
+    color: var(--secondary-color);
+}
+/* Basic Layout for Interactive Calculator Idea */
+.interactive-calculator {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    margin-top: 1rem;
+}
+.interactive-calculator h5 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+.interactive-calculator .calc-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.interactive-calculator .calc-input textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg); /* Match card background */
+    color: var(--text-color);
+    font-family: monospace; /* Good for numbers */
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+.interactive-calculator .calc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.interactive-calculator .calc-buttons button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6em 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.interactive-calculator .calc-buttons button:hover {
+    background-color: var(--primary-color);
+}
+.interactive-calculator .calc-buttons button:active {
+    transform: scale(0.98);
+}
+.interactive-calculator .calc-results h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.3rem;
+}
+.interactive-calculator .calc-results p {
+    background-color: var(--button-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 1.1em;
+    min-height: 1.5em; /* Ensure space even if empty */
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.interactive-calculator .calc-note {
+    font-size: 0.85em;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 1.5rem;
+}
