@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css"> <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/estadistica-tool.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
@@ -25,6 +28,7 @@
       };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 <body data-theme="light">
 
@@ -274,60 +278,176 @@
             </ol>
         </section>
 
-
         <section class="content-section">
-             <h3 data-lang-es="Ideas para Actividades y Herramientas" data-lang-eu="Jarduera eta Tresnetarako Ideiak">Ideas para Actividades y Herramientas</h3>
-             <div class="interactive-ideas-container">
-                  <div class="interactive-idea card-style">
-                      <h4><i class="fas fa-people-arrows"></i> <span data-lang-es="Estadísticas Humanas (Conceptual)" data-lang-eu="Giza Estatistikak (Kontzeptuala)">Estadísticas Humanas Ordenadas</span></h4>
-                      <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Ordenar alumnos en fila (altura, fecha nac...). Identificar Mediana (centro). Agrupar por valor (nº hermanos) para ver Moda (grupo mayor). Calcular Media sumando valores. Calcular Rango (máx-mín)." data-lang-eu="Ikasleak ilaran ordenatu (altuera, jaiotze data...). Mediana identifikatu (erdia). Balioaren arabera taldekatu (anai-arreba kop.) Moda ikusteko (talde handiena). Batezbestekoa kalkulatu balioak batuz. Heina kalkulatu (max-min).">Ordenar alumnos en fila (altura, fecha nac...). Identificar Mediana (centro). Agrupar por valor (nº hermanos) para ver Moda (grupo mayor). Calcular Media sumando valores. Calcular Rango (máx-mín).</span></p>
-                      <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Vivenciar significado de cada medida (posición, agrupación). Ordenar para mediana es clarificador." data-lang-eu="Neurri bakoitzaren esanahia bizitzea (posizioa, taldekatzea). Medianarako ordenatzea argigarria da.">Vivenciar el significado de cada medida a través de la posición y agrupación física. Ordenarse para la mediana es especialmente clarificador.</span></p>
-                  </div>
-                  <div class="interactive-idea card-style">
-                       <h4><i class="fas fa-calculator-alt"></i> <span data-lang-es="Calculadora Medidas (Digital)" data-lang-eu="Neurrien Kalkulagailua (Digitala)">Calculadora Interactiva de Medidas</span></h4>
-                       <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Widget/App para introducir lista de números. Calcula y muestra automáticamente: Suma, N, Media (cálculo), Datos ordenados, Mediana (identificando centrales), Moda (recuento frec.), Rango (máx/mín). Permite modificar datos y ver cambios (efecto outlier)." data-lang-eu="Widget/App zenbaki-zerrenda sartzeko. Automatikoki kalkulatu eta erakutsi: Batura, N, Batezbestekoa (kalkulua), Datu ordenatuak, Mediana (erdikoak identifikatuz), Moda (maiz. zenbaketa), Heina (max/min). Datuak aldatzea eta aldaketak ikustea ahalbidetzen du (outlier efektua).">Widget/App para introducir lista de números. Calcula y muestra automáticamente: Suma, N, Media (cálculo), Datos ordenados, Mediana (identificando centrales), Moda (recuento frec.), Rango (máx/mín). Permite modificar datos y ver cambios (efecto outlier).</span></p>
-                       <div class="interactive-calculator">
-                            <h5 data-lang-es="Calculadora Estadística Básica" data-lang-eu="Oinarrizko Kalkulagailu Estatistikoa">Calculadora Estadística Básica</h5>
-                            <div class="calc-input">
-                                <label for="calc-data-input" data-lang-es="Introduce los datos separados por comas o espacios:" data-lang-eu="Sartu datuak komaz edo espazioz bereizita:">Introduce los datos separados por comas o espacios:</label>
-                                <textarea id="calc-data-input" rows="3" placeholder="Ej: 7, 5, 8, 5, 9, 6, 8, 5"></textarea>
-                            </div>
-                            <div class="calc-buttons">
-                                <button type="button" data-calc="mean" data-lang-es="Calcular Media" data-lang-eu="Kalkulatu Batezbestekoa">Calcular Media</button>
-                                <button type="button" data-calc="median" data-lang-es="Calcular Mediana" data-lang-eu="Kalkulatu Mediana">Calcular Mediana</button>
-                                <button type="button" data-calc="mode" data-lang-es="Calcular Moda" data-lang-eu="Kalkulatu Moda">Calcular Moda</button>
-                                <button type="button" data-calc="range" data-lang-es="Calcular Rango" data-lang-eu="Kalkulatu Heina">Calcular Rango</button>
-                                <button type="button" data-calc="all" data-lang-es="Calcular Todo" data-lang-eu="Kalkulatu Dena">Calcular Todo</button>
-                            </div>
-                            <div class="calc-results">
-                                <h6><i class="fas fa-calculator"></i> <span data-lang-es="Resultados" data-lang-eu="Emaitzak">Resultados</span></h6>
-                                <p><strong data-lang-es="Media:" data-lang-eu="Batezbestekoa:">Media:</strong> <span id="result-mean">--</span></p>
-                                <p><strong data-lang-es="Mediana:" data-lang-eu="Mediana:">Mediana:</strong> <span id="result-median">--</span></p>
-                                <p><strong data-lang-es="Moda:" data-lang-eu="Moda:">Moda:</strong> <span id="result-mode">--</span></p>
-                                <p><strong data-lang-es="Rango:" data-lang-eu="Heina:">Rango:</strong> <span id="result-range">--</span></p>
-                            </div>
-                            <p class="calc-note" data-lang-es="(Nota: Funcionalidad de cálculo no implementada en esta demo)" data-lang-eu="(Oharra: Kalkulu-funtzionalitatea ez dago inplementatuta demo honetan)">(Nota: Funcionalidad de cálculo no implementada en esta demo)</p>
-                       </div>
-                       <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Explorar propiedades de cada medida (sensibilidad a outliers) sin cálculo manual." data-lang-eu="Neurri bakoitzaren propietateak arakatu (outlierrekiko sentikortasuna) eskuzko kalkulurik gabe.">Facilitar la exploración y el descubrimiento de las propiedades de cada medida (especialmente la sensibilidad de la media vs. mediana a outliers) sin el tedio del cálculo manual repetitivo.</span></p>
-                  </div>
-                  <div class="interactive-idea card-style">
-                       <h4><i class="fas fa-check-circle"></i> <span data-lang-es="Juego Medida Adecuada (Digital)" data-lang-eu="Neurri Egokiaren Jokoa (Digitala)">Juego "Elige la Medida Adecuada"</span></h4>
-                       <p><strong data-lang-es="Descripción:" data-lang-eu="Deskribapena:">Descripción:</strong> <span data-lang-es="Presentar escenarios (gráficos asimétricos, datos cualitativos...). Pregunta: ¿Qué medida (media, mediana, moda) describe mejor el 'centro'? Alumno elige y recibe explicación." data-lang-eu="Egoerak aurkeztu (grafiko asimetrikoak, datu kualitatiboak...). Galdera: Zer neurrik (batezbestekoa, mediana, moda) deskribatzen du hobekien 'zentroa'? Ikasleak aukeratu eta azalpena jasotzen du.">Presentar diferentes escenarios mediante descripciones cortas o gráficos simples (ej: un histograma muy asimétrico de salarios, un diagrama de barras de colores favoritos, un conjunto de notas muy agrupadas). La pregunta es: "¿Qué medida (media, mediana o moda) describe mejor el 'centro' o el valor 'típico' en esta situación?". El alumno elige una opción y recibe una explicación de por qué es o no la más adecuada.</span></p>
-                       <p class="tool-objective"><strong data-lang-es="Objetivo:" data-lang-eu="Helburua:">Objetivo:</strong> <span data-lang-es="Desarrollar juicio crítico sobre cuándo usar cada medida central." data-lang-eu="Zentralizazio-neurri bakoitza noiz erabili jakiteko irizpide kritikoa garatu.">Desarrollar el juicio crítico sobre cuándo utilizar cada medida de tendencia central, yendo más allá del simple cálculo y enfocándose en la interpretación y la adecuación al contexto.</span></p>
-                  </div>
-             </div>
+            <h3 data-lang-es="Calculadora Estadística Interactiva" data-lang-eu="Estatistika Kalkulagailu Interaktiboa">Calculadora Estadística Interactiva</h3>
+            <p data-lang-es="Usa esta herramienta para practicar los conceptos que acabas de aprender. Introduce tus propios datos y descubre cómo se calculan las medidas estadísticas." 
+               data-lang-eu="Erabili tresna hau ikasi berri dituzun kontzeptuak praktikatzeko. Sartu zure datuak eta ikusi nola kalkulatzen diren neurri estatistikoak.">Usa esta herramienta para practicar los conceptos que acabas de aprender. Introduce tus propios datos y descubre cómo se calculan las medidas estadísticas.</p>
+            
+            <div class="estadistica-tool-container">
+                <header class="estadistica-tool-header">
+                    <h1>
+                        <span data-lang-es="📊 Calculadora Estadística Mágica ✨" data-lang-eu="📊 Estatistika Kalkulagailu Magikoa ✨">📊 Calculadora Estadística Mágica ✨</span>
+                    </h1>
+                    <p data-lang-es="Introduce tus datos y descubre la magia de los números!" data-lang-eu="Sartu zure datuak eta ezagutu zenbakien magia!">¡Introduce tus datos y descubre la magia de los números!</p>
+                </header>
+
+                <section id="data-input-section" class="estadistica-tool-section section-input">
+                    <div class="section-number">1</div>
+                    <h2>
+                        <i class="fas fa-plus-circle"></i>
+                        <span data-lang-es="Gehitu Zure Datuak Hemen" data-lang-eu="Gehitu Zure Datuak Hemen">Añade Tus Datos Aquí</span>
+                    </h2>
+                    <div class="input-group">
+                        <div class="form-control">
+                            <label for="xi">
+                                <span data-lang-es="Valor (xi):" data-lang-eu="Balioa (xi):">Valor (xi):</span>
+                                <small data-lang-es="(Ej: nota, edad, color)" data-lang-eu="(Adib: nota, adina, kolorea)">(Ej: nota, edad, color)</small>
+                            </label>
+                            <input type="text" id="xi" placeholder="Ej: 7 o Azul" class="input">
+                        </div>
+                        <div class="form-control">
+                            <label for="fi">
+                                <span data-lang-es="Frecuencia Absoluta (fi):" data-lang-eu="Maiztasun Absolutua (fi):">Frecuencia Absoluta (fi):</span>
+                                <small data-lang-es="(Cuántas veces aparece)" data-lang-eu="(Zenbat aldiz agertzen den)">(Cuántas veces aparece)</small>
+                            </label>
+                            <input type="text" id="fi" placeholder="Ej: 3" class="input">
+                        </div>
+                        <button id="addDataBtn" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                            <span data-lang-es="Añadir Dato" data-lang-eu="Gehitu Datua">Añadir Dato</span>
+                        </button>
+                    </div>
+                    <div id="error-message"></div>
+                </section>
+
+                <section id="frequency-table-section" class="estadistica-tool-section section-table">
+                    <div class="section-number">2</div>
+                    <h2>
+                        <i class="fas fa-table"></i>
+                        <span data-lang-es="Tabla de Frecuencias" data-lang-eu="Maiztasun Taula">Tabla de Frecuencias</span>
+                    </h2>
+                    
+                    <div class="text-right mb-3">
+                        <button id="clearTableBtn" class="btn btn-secondary">
+                            <i class="fas fa-trash-alt"></i>
+                            <span data-lang-es="Limpiar Tabla" data-lang-eu="Garbitu Taula">Limpiar Tabla</span>
+                        </button>
+                    </div>
+                    
+                    <div class="frequency-table-container">
+                        <table id="frequencyTableElement" class="frequency-table">
+                            <thead>
+                                <tr>
+                                    <th data-lang-es="VALOR (XI)" data-lang-eu="BALIOA (XI)">VALOR (XI)</th>
+                                    <th data-lang-es="FREC. ABSOLUTA (FI)" data-lang-eu="MAIZT. ABSOLUTUA (FI)">FREC. ABSOLUTA (FI)</th>
+                                    <th data-lang-es="FREC. RELATIVA (HI)" data-lang-eu="MAIZT. ERLATIBOA (HI)">FREC. RELATIVA (HI)</th>
+                                    <th data-lang-es="PORCENTAJE (%)" data-lang-eu="EHUNEKOA (%)">PORCENTAJE (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="frequencyTableBody">
+                                <tr id="no-data-row">
+                                    <td colspan="4" class="text-center">
+                                        <span data-lang-es="¡Todavía no hay datos. ¡Añade algunos!" data-lang-eu="Oraindik ez dago daturik. Gehitu batzuk!">¡Todavía no hay datos. ¡Añade algunos!</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="chart-section" class="estadistica-tool-section section-chart">
+                    <div class="section-number">3</div>
+                    <h2>
+                        <i class="fas fa-chart-bar"></i>
+                        <span data-lang-es="¡Visualiza Tus Datos en un Gráfico!" data-lang-eu="Ikusi Zure Datuak Grafiko Batean!">¡Visualiza Tus Datos en un Gráfico!</span>
+                    </h2>
+                    
+                    <div class="text-center mb-4">
+                        <button id="barChartBtn" class="btn btn-chart-bar mr-2">
+                            <i class="fas fa-chart-bar"></i>
+                            <span data-lang-es="Diagrama de Barras" data-lang-eu="Barra Diagrama">Diagrama de Barras</span>
+                        </button>
+                        <button id="pieChartBtn" class="btn btn-chart-pie">
+                            <i class="fas fa-chart-pie"></i>
+                            <span data-lang-es="Diagrama de Sectores" data-lang-eu="Sektore Diagrama">Diagrama de Sectores</span>
+                        </button>
+                    </div>
+                    
+                    <div id="chartCanvasContainer" class="chart-container">
+                        <canvas id="myChartCanvas"></canvas>
+                        <p id="chart-placeholder" class="absolute inset-0 flex items-center justify-center text-slate-500 text-center p-4">
+                            <span data-lang-es="Elige un tipo de gráfico para empezar.<br/>¡Asegúrate de tener datos en la tabla!" data-lang-eu="Aukeratu grafiko mota bat hasteko.<br/>Ziurtatu taulan datuak dituzula!">Elige un tipo de gráfico para empezar.<br/>¡Asegúrate de tener datos en la tabla!</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="statistics-section" class="estadistica-tool-section section-stats">
+                    <div class="section-number">4</div>
+                    <h2>
+                        <i class="fas fa-calculator"></i>
+                        <span data-lang-es="Medidas Estadísticas" data-lang-eu="Estatistika Neurriak">Medidas Estadísticas</span>
+                    </h2>
+                    
+                    <div id="statisticsGrid" class="stats-grid">
+                        <div class="stat-card">
+                            <h3 data-lang-es="Media" data-lang-eu="Batezbestekoa">Media</h3>
+                            <p id="meanValue">-</p>
+                            <button onclick="showExplanation('mean')" class="btn-ver-pasos">
+                                <span data-lang-es="Ver Pasos" data-lang-eu="Urratsak Ikusi">Ver Pasos</span>
+                            </button>
+                        </div>
+                        <div class="stat-card">
+                            <h3 data-lang-es="Moda" data-lang-eu="Moda">Moda</h3>
+                            <p id="modeValue">-</p>
+                            <button onclick="showExplanation('mode')" class="btn-ver-pasos">
+                                <span data-lang-es="Ver Pasos" data-lang-eu="Urratsak Ikusi">Ver Pasos</span>
+                            </button>
+                        </div>
+                        <div class="stat-card">
+                            <h3 data-lang-es="Mediana" data-lang-eu="Mediana">Mediana</h3>
+                            <p id="medianValue">-</p>
+                            <button onclick="showExplanation('median')" class="btn-ver-pasos">
+                                <span data-lang-es="Ver Pasos" data-lang-eu="Urratsak Ikusi">Ver Pasos</span>
+                            </button>
+                        </div>
+                        <div class="stat-card">
+                            <h3 data-lang-es="Rango" data-lang-eu="Heina">Rango</h3>
+                            <p id="rangeValue">-</p>
+                            <button onclick="showExplanation('range')" class="btn-ver-pasos">
+                                <span data-lang-es="Ver Pasos" data-lang-eu="Urratsak Ikusi">Ver Pasos</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="explanationModal">
+                    <div id="modalDialog">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 id="modalTitle" class="text-2xl font-bold">
+                                <span data-lang-es="Nola Aurkitu Moda 😎" data-lang-eu="Nola Aurkitu Moda 😎">Nola Aurkitu Moda 😎</span>
+                            </h3>
+                            <button id="closeModalBtn" class="text-slate-500 hover:text-slate-800 text-3xl font-light leading-none">&times;</button>
+                        </div>
+                        <div id="modalContent" class="text-sm md:text-base text-slate-700 space-y-3 prose max-w-none"></div>
+                    </div>
+                </div>
+                
+                <footer class="text-center mt-6 mb-2 text-sm text-slate-500">
+                    <span data-lang-es="❤️ Creado con amor para aprender estadística" data-lang-eu="❤️-rekin sortua estatistika ikasteko">❤️ Creado con amor para aprender estadística</span>
+                </footer>
+            </div>
         </section>
-
-
+     
     </main>
 
     <footer>
-        <p data-lang-es="© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional" data-lang-eu="© 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala">© 2025 - Web de Estadística 1º ESO | Diseño Minimalista Profesional</p>
+        <p data-lang-es=" 2025 - Web de Estadstica 1 ESO | Diseo Minimalista Profesional" data-lang-eu=" 2025 - Estatistika DBH 1 Webgunea | Diseinu Minimalista Profesionala"> 2025 - Web de Estadstica 1 ESO | Diseo Minimalista Profesional</p>
     </footer>
 
     <script src="../js/theme.js"></script>
     <script src="../js/language.js"></script>
     <script src="../js/uiComponents.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/estadistica-tool.js"></script>
     </body>
 </html>
