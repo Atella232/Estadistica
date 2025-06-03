@@ -8,13 +8,9 @@
  * @param {NodeListOf<Element>} tabPanes - Los elementos <div> que actúan como paneles de contenido.
  */
 function initTabs(tabLinks, tabPanes) {
-    console.log("UITABS: Entrando en initTabs."); 
-    console.log(`UITABS: Número de enlaces de pestaña: ${tabLinks.length}`);
-    console.log(`UITABS: Número de paneles de pestaña: ${tabPanes.length}`);
     
     // Imprimir detalles de los enlaces de pestaña
     tabLinks.forEach((link, index) => {
-        console.log(`UITABS: Enlace ${index}:`, {
             href: link.getAttribute('href'),
             text: link.textContent,
             isActive: link.classList.contains('active')
@@ -23,7 +19,6 @@ function initTabs(tabLinks, tabPanes) {
     
     // Imprimir detalles de los paneles de pestaña
     tabPanes.forEach((pane, index) => {
-        console.log(`UITABS: Panel ${index}:`, {
             id: pane.id,
             isActive: pane.classList.contains('active')
         });
@@ -34,12 +29,9 @@ function initTabs(tabLinks, tabPanes) {
         console.warn("UITABS: Elementos de pestañas no encontrados o vacíos en initTabs. Saliendo.");
         return;
     }
-     console.log("UITABS: Elementos encontrados, añadiendo listeners...");
 
     tabLinks.forEach((link, index) => {
-        console.log(`UITABS: Añadiendo listener al enlace ${index}:`, link); // Verifica cada enlace
         link.addEventListener('click', (event) => {
-            console.log(`UITABS: Clic detectado en enlace ${index}! href: ${link.getAttribute('href')}`); // Mensaje en cada clic
 
             event.preventDefault(); // Previene el comportamiento por defecto
             const targetId = link.getAttribute('href');
@@ -50,29 +42,21 @@ function initTabs(tabLinks, tabPanes) {
             }
 
             // 1. Desactivar todos los enlaces y paneles
-            console.log("UITABS: Desactivando todos los enlaces y paneles...");
             tabLinks.forEach((lnk, i) => {
                 lnk.classList.remove('active');
-                // console.log(`UITABS: quitada clase active de link ${i}`); // Log detallado (opcional)
             });
             tabPanes.forEach((pane, i) => {
                 pane.classList.remove('active');
-                 // console.log(`UITABS: quitada clase active de pane ${i}`); // Log detallado (opcional)
             });
-             console.log("UITABS: Desactivación completada.");
 
             // 2. Activar el enlace clicado
             link.classList.add('active');
-            console.log(`UITABS: Añadida clase active al enlace ${index}.`);
 
             // 3. Activar el panel correspondiente
-            console.log(`UITABS: Buscando panel con selector "${targetId}"...`);
             try {
                 const targetPane = document.querySelector(targetId);
                 if (targetPane) {
-                    console.log(`UITABS: Panel encontrado:`, targetPane);
                     targetPane.classList.add('active');
-                    console.log(`UITABS: Añadida clase active al panel ${targetId}.`);
                 } else {
                     console.error(`UITABS: Panel no encontrado con el selector: ${targetId}`);
                 }
@@ -83,7 +67,6 @@ function initTabs(tabLinks, tabPanes) {
     });
 
     // Asegurar estado inicial (lógica revisada para claridad)
-    console.log("UITABS: Revisando estado inicial de las pestañas...");
     let activeLinkInHTML = null;
     tabLinks.forEach(link => {
         if (link.classList.contains('active')) {
@@ -92,7 +75,6 @@ function initTabs(tabLinks, tabPanes) {
     });
 
     if (activeLinkInHTML) {
-        console.log("UITABS: Se encontró un enlace activo en el HTML:", activeLinkInHTML);
         // Asegurar que el panel correspondiente está activo
         const targetId = activeLinkInHTML.getAttribute('href');
         if (targetId) {
@@ -102,7 +84,6 @@ function initTabs(tabLinks, tabPanes) {
                      // Quitar active de otros paneles por si acaso hubiera más de uno activo en HTML
                      tabPanes.forEach(pane => { if (pane !== targetPane) pane.classList.remove('active'); });
                      targetPane.classList.add('active'); // Asegurar que este está activo
-                     console.log(`UITABS: Panel inicial ${targetId} activado.`);
                  } else {
                      console.error(`UITABS: Panel para enlace activo inicial ${targetId} no encontrado.`);
                  }
@@ -114,7 +95,6 @@ function initTabs(tabLinks, tabPanes) {
         }
     } else if (tabLinks.length > 0) {
         // Si no hay ninguno activo en HTML, activar el primero
-        console.log("UITABS: Ningún enlace activo en HTML, activando el primero por defecto.");
         tabLinks[0].classList.add('active');
         const targetId = tabLinks[0].getAttribute('href');
          if (targetId) {
@@ -123,7 +103,6 @@ function initTabs(tabLinks, tabPanes) {
                  if (targetPane) {
                      tabPanes.forEach(pane => pane.classList.remove('active')); // Desactivar todos los demás
                      targetPane.classList.add('active');
-                     console.log(`UITABS: Panel inicial por defecto ${targetId} activado.`);
                  } else {
                       console.error(`UITABS: Panel inicial por defecto ${targetId} no encontrado.`);
                  }
@@ -134,9 +113,7 @@ function initTabs(tabLinks, tabPanes) {
              console.error("UITABS: El primer enlace no tiene href válido.");
          }
     } else {
-        console.log("UITABS: No hay enlaces de pestaña para establecer estado inicial.");
     }
-     console.log("UITABS: Fin de initTabs.");
 }
 
 
