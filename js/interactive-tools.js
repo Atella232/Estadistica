@@ -25,8 +25,10 @@ function initSamplingSimulator(sampleSizeInput, takeSampleButton, populationDisp
         size = Math.min(Math.max(size, MIN_POPULATION_SIZE), MAX_POPULATION_SIZE);
         const ORANGE_RATIO = 0.4; // 40% orange
         
-        const blueCount = Math.round(size * BLUE_RATIO);
-        const orangeCount = size - blueCount;
+        // Usar "let" para permitir ajustes posteriores si el redondeo no suma
+        // exactamente el tamaño deseado
+        let blueCount = Math.round(size * BLUE_RATIO);
+        let orangeCount = size - blueCount;
         
         // Ajustar para asegurar que la suma sea exactamente conceptualPopulationSize
         const totalCount = blueCount + orangeCount;
