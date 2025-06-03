@@ -5,7 +5,7 @@ body {
 
 /* Contenedor principal para la calculadora */
 .estadistica-tool-container {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 15px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -21,11 +21,11 @@ body {
     text-align: center;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f0f9ff;
+    border-bottom: 2px solid var(--calc-section-input-bg);
 }
 
 .estadistica-tool-header h1 {
-    color: #0ea5e9; /* Azul brillante como en la imagen */
+    color: var(--calc-header-color);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -36,7 +36,7 @@ body {
 }
 
 .estadistica-tool-header p {
-    color: #64748b; /* Gris slate */
+    color: var(--calc-muted-text);
     font-size: 0.875rem;
 }
 
@@ -50,20 +50,20 @@ body {
 
 /* Colores específicos para cada sección */
 .section-input {
-    background-color: #f0f9ff; /* Azul muy claro */
+    background-color: var(--calc-section-input-bg);
 }
 
 .section-table {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--calc-section-table-bg);
+    border: 1px solid var(--calc-table-border);
 }
 
 .section-chart {
-    background-color: #faf5ff; /* Lila muy claro */
+    background-color: var(--calc-section-chart-bg);
 }
 
 .section-stats {
-    background-color: #ecfdf5; /* Verde muy claro */
+    background-color: var(--calc-section-stats-bg);
 }
 
 /* Números de sección */
@@ -73,15 +73,15 @@ body {
     left: 0.75rem;
     width: 1.5rem;
     height: 1.5rem;
-    background: #ffffff;
+    background: var(--card-bg);
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: #64748b;
+    color: var(--calc-section-number-text);
     font-size: 0.875rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--calc-table-border);
 }
 
 /* Encabezados de sección */
@@ -96,19 +96,19 @@ body {
 }
 
 .section-input h2 {
-    color: #0284c7; /* Azul */
+    color: var(--calc-heading-blue);
 }
 
 .section-table h2 {
-    color: #0284c7; /* Azul */
+    color: var(--calc-heading-blue);
 }
 
 .section-chart h2 {
-    color: #8b5cf6; /* Violeta */
+    color: var(--calc-heading-violet);
 }
 
 .section-stats h2 {
-    color: #10b981; /* Verde */
+    color: var(--calc-heading-green);
 }
 
 /* Contenedor para el gráfico */
@@ -118,7 +118,7 @@ body {
     width: 100%;
     max-width: 600px; /* Ancho máximo para el gráfico */
     margin: auto; /* Centrar el gráfico */
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 8px;
     padding: 0.5rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
@@ -147,21 +147,21 @@ body {
     display: block;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #334155;
+    color: var(--calc-label-color);
     margin-bottom: 0.5rem;
 }
 
 .form-control small {
     display: block;
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--calc-muted-text);
     margin-top: 0.25rem;
 }
 
 .form-control input {
     width: 100%;
     padding: 0.625rem 0.75rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--calc-table-border);
     border-radius: 0.375rem;
     font-size: 0.875rem;
     transition: all 150ms ease;
@@ -169,7 +169,7 @@ body {
 
 .form-control input:focus {
     outline: none;
-    border-color: #0ea5e9;
+    border-color: var(--calc-btn-primary-bg);
     box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
 
@@ -189,46 +189,46 @@ body {
 }
 
 .btn-primary {
-    background-color: #0ea5e9; /* Azul brillante */
+    background-color: var(--calc-btn-primary-bg);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #0284c7;
+    background-color: var(--calc-btn-primary-hover-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-    background-color: #f43f5e; /* Rosa */
+    background-color: var(--calc-btn-secondary-bg);
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #e11d48;
+    background-color: var(--calc-btn-secondary-hover-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-chart-bar {
-    background-color: #8b5cf6; /* Violeta */
+    background-color: var(--calc-btn-chart-bar-bg);
     color: white;
 }
 
 .btn-chart-bar:hover {
-    background-color: #7c3aed;
+    background-color: var(--calc-btn-chart-bar-hover-bg);
 }
 
 .btn-chart-pie {
-    background-color: #ec4899; /* Rosa */
+    background-color: var(--calc-btn-chart-pie-bg);
     color: white;
 }
 
 .btn-chart-pie:hover {
-    background-color: #db2777;
+    background-color: var(--calc-btn-chart-pie-hover-bg);
 }
 
 /* Botón Ver Pasos */
 .btn-ver-pasos {
-    background-color: #f59e0b;
+    background-color: var(--calc-btn-steps-bg);
     color: white;
     font-weight: 500;
     padding: 0.25rem 0.75rem;
@@ -243,14 +243,14 @@ body {
 }
 
 .btn-ver-pasos:hover {
-    background-color: #d97706;
+    background-color: var(--calc-btn-steps-hover-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para la tabla de frecuencias */
 .frequency-table-container {
     overflow-x: auto;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 8px;
     margin-top: 1rem;
 }
@@ -263,8 +263,8 @@ body {
 }
 
 .frequency-table th {
-    background-color: #e0f2fe; /* Azul muy claro */
-    color: #0369a1; /* Azul oscuro */
+    background-color: var(--calc-table-header-bg);
+    color: var(--calc-table-header-text);
     font-weight: 600;
     text-transform: uppercase;
     padding: 0.75rem 1rem;
@@ -283,8 +283,8 @@ body {
 
 .frequency-table td {
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid #e2e8f0;
-    color: #334155;
+    border-bottom: 1px solid var(--calc-table-border);
+    color: var(--calc-table-data-text);
 }
 
 /* Tarjetas de estadísticas */
@@ -307,7 +307,7 @@ body {
 }
 
 .stat-card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
@@ -315,7 +315,7 @@ body {
 }
 
 .stat-card h3 {
-    color: #10b981; /* Verde */
+    color: var(--calc-stat-title-color);
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -324,7 +324,7 @@ body {
 .stat-card p {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #334155;
+    color: var(--calc-table-data-text);
     margin: 0.5rem 0;
 }
 
@@ -347,7 +347,7 @@ body {
 }
 
 #modalDialog {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 0.75rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     width: 100%;
@@ -368,7 +368,7 @@ body {
 
 /* Estilos específicos para el contenido del modal - estilo tipo imagen */
 #modalTitle {
-    color: #0ea5e9;
+    color: var(--calc-modal-title-color);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -390,7 +390,7 @@ body {
 }
 
 #modalContent .font-semibold {
-    color: #059669;
+    color: var(--calc-modal-bold-color);
 }
 
 /* Animación para la aparición de elementos */
@@ -411,7 +411,7 @@ body {
 
 /* Mensaje de error */
 #error-message {
-    color: #ef4444;
+    color: var(--calc-error-color);
     font-size: 0.875rem;
     font-weight: 500;
     margin-top: 0.75rem;
