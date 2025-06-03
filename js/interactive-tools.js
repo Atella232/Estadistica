@@ -556,6 +556,5 @@ function initVariableClassifier(langUtils) {
 
     // --- Inicialización ---
     populateCards(); // Carga inicial de tarjetas
-    console.log("Variable Classifier Initialized");
 
 } // Fin initVariableClassifier
