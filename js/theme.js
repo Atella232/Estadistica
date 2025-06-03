@@ -3,6 +3,7 @@ function initTheme(body, themeToggle) {
     const applyTheme = (theme) => {
         if (!body) return; // Safety check
         body.dataset.theme = theme;
+        body.dispatchEvent(new CustomEvent('themeChanged', {detail: theme}));
         if (themeToggle) {
              themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         }

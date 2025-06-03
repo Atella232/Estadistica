@@ -3,6 +3,33 @@ let data = []; // { xi: string|number, fi: number } objetos para almacenar datos
 let chartInstance = null;
 let currentLanguage = 'es'; // Idioma predeterminado
 
+function getChartThemeColors() {
+    const styles = getComputedStyle(document.body);
+    return {
+        text: styles.getPropertyValue('--text-color').trim(),
+        grid: styles.getPropertyValue('--border-color').trim()
+    };
+}
+
+function applyChartTheme(chart) {
+    if (!chart) return;
+    const colors = getChartThemeColors();
+    chart.options.plugins.legend.labels.color = colors.text;
+    if (chart.options.plugins.tooltip) {
+        chart.options.plugins.tooltip.backgroundColor = colors.grid;
+    }
+    if (chart.options.scales) {
+        ['x', 'y'].forEach(ax => {
+            if (chart.options.scales[ax]) {
+                if (chart.options.scales[ax].ticks)
+                    chart.options.scales[ax].ticks.color = colors.text;
+                if (chart.options.scales[ax].grid)
+                    chart.options.scales[ax].grid.color = colors.grid;
+            }
+        });
+    }
+}
+
 // Traducciones
 const translations = {
     es: {
@@ -157,6 +184,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('langChanged', function(e) {
             updateCurrentLanguage();
             updateUITexts();
+        });
+        document.body.addEventListener('themeChanged', function() {
+            if (chartInstance) {
+                applyChartTheme(chartInstance);
+                chartInstance.update();
+            }
         });
     }
 });
@@ -481,6 +514,7 @@ function renderChart(type) {
     
     const backgroundColors = data.map((_, index) => chartColors[index % chartColors.length]);
     const borderColors = backgroundColors.map(color => color.replace(')', ', 0.8)').replace('rgb', 'rgba'));
+    const themeColors = getChartThemeColors();
 
     const datasetLabel = currentLanguage === 'eu' ? 'Maiztasun Absolutua (fi)' : 'Frecuencia Absoluta (fi)';
 
@@ -497,16 +531,37 @@ function renderChart(type) {
                 hoverOffset: 4
             }]
         },
-        options: { 
-            responsive: true, maintainAspectRatio: false, animation: { duration: 600, easing: 'easeInOutQuart' },
-            plugins: { legend: { position: type === 'pie' || type === 'doughnut' ? 'top' : 'bottom', labels: { font: { size: 12, family: "'Inter', sans-serif" }, color: '#334155'}},
-                tooltip: { backgroundColor: 'rgba(0,0,0,0.7)', titleFont: { size: 14, family: "'Inter', sans-serif", weight: 'bold' }, bodyFont: { size: 12, family: "'Inter', sans-serif" }, padding: 10, cornerRadius: 6 }
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 600, easing: 'easeInOutQuart' },
+            plugins: {
+                legend: {
+                    position: type === 'pie' || type === 'doughnut' ? 'top' : 'bottom',
+                    labels: { font: { size: 12, family: "'Inter', sans-serif" }, color: themeColors.text }
+                },
+                tooltip: {
+                    backgroundColor: themeColors.grid,
+                    titleFont: { size: 14, family: "'Inter', sans-serif", weight: 'bold' },
+                    bodyFont: { size: 12, family: "'Inter', sans-serif" },
+                    padding: 10,
+                    cornerRadius: 6
+                }
             },
-            scales: type === 'bar' ? { y: { beginAtZero: true, grid: { color: '#e2e8f0' }, ticks: { color: '#475569', font: { size: 12, family: "'Inter', sans-serif" }, stepSize: 1 }},
-                x: { grid: { display: false }, ticks: { color: '#475569', font: { size: 12, family: "'Inter', sans-serif" }}}
+            scales: type === 'bar' ? {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: themeColors.grid },
+                    ticks: { color: themeColors.text, font: { size: 12, family: "'Inter', sans-serif" }, stepSize: 1 }
+                },
+                x: {
+                    grid: { display: false, color: themeColors.grid },
+                    ticks: { color: themeColors.text, font: { size: 12, family: "'Inter', sans-serif" } }
+                }
             } : {}
         }
     });
+    applyChartTheme(chartInstance);
 }
 
 // --- Modal de explicaciones ---

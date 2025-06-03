@@ -37,6 +37,37 @@
     --quiz-feedback-incorrect-border: #ebccd1;
     --dot-blue: #4285F4;
     --dot-orange: #FFA500;
+
+    /* Colores para la calculadora */
+    --calc-header-color: #0ea5e9;
+    --calc-muted-text: #64748b;
+    --calc-section-input-bg: #f0f9ff;
+    --calc-section-table-bg: var(--card-bg);
+    --calc-section-chart-bg: #faf5ff;
+    --calc-section-stats-bg: #ecfdf5;
+    --calc-table-header-bg: #e0f2fe;
+    --calc-table-header-text: #0369a1;
+    --calc-table-border: #e2e8f0;
+    --calc-section-number-text: #64748b;
+    --calc-modal-title-color: #0ea5e9;
+    --calc-modal-bold-color: #059669;
+    --calc-error-color: #ef4444;
+    --calc-heading-blue: #0284c7;
+    --calc-heading-violet: #8b5cf6;
+    --calc-heading-green: #10b981;
+    --calc-btn-primary-bg: #0ea5e9;
+    --calc-btn-primary-hover-bg: #0284c7;
+    --calc-btn-secondary-bg: #f43f5e;
+    --calc-btn-secondary-hover-bg: #e11d48;
+    --calc-btn-chart-bar-bg: #8b5cf6;
+    --calc-btn-chart-bar-hover-bg: #7c3aed;
+    --calc-btn-chart-pie-bg: #ec4899;
+    --calc-btn-chart-pie-hover-bg: #db2777;
+    --calc-btn-steps-bg: #f59e0b;
+    --calc-btn-steps-hover-bg: #d97706;
+    --calc-stat-title-color: #10b981;
+    --calc-table-data-text: #334155;
+    --calc-label-color: #334155;
 }
 
 [data-theme="dark"] {
@@ -73,6 +104,37 @@
     --quiz-feedback-incorrect-border: #a94442;
     --dot-blue: #5c9bff; /* Azul más brillante */
     --dot-orange: #ffb74d; /* Naranja más brillante */
+
+    /* Colores para la calculadora */
+    --calc-header-color: #5ac9ff;
+    --calc-muted-text: #94a3b8;
+    --calc-section-input-bg: #1e293b;
+    --calc-section-table-bg: var(--card-bg);
+    --calc-section-chart-bg: #302c3f;
+    --calc-section-stats-bg: #1f3a33;
+    --calc-table-header-bg: #243447;
+    --calc-table-header-text: #9cdcf2;
+    --calc-table-border: var(--border-color);
+    --calc-section-number-text: #94a3b8;
+    --calc-modal-title-color: #5ac9ff;
+    --calc-modal-bold-color: #34d399;
+    --calc-error-color: #f87171;
+    --calc-heading-blue: #0284c7;
+    --calc-heading-violet: #8b5cf6;
+    --calc-heading-green: #10b981;
+    --calc-btn-primary-bg: #0ea5e9;
+    --calc-btn-primary-hover-bg: #0284c7;
+    --calc-btn-secondary-bg: #f43f5e;
+    --calc-btn-secondary-hover-bg: #e11d48;
+    --calc-btn-chart-bar-bg: #8b5cf6;
+    --calc-btn-chart-bar-hover-bg: #7c3aed;
+    --calc-btn-chart-pie-bg: #ec4899;
+    --calc-btn-chart-pie-hover-bg: #db2777;
+    --calc-btn-steps-bg: #f59e0b;
+    --calc-btn-steps-hover-bg: #d97706;
+    --calc-stat-title-color: #10b981;
+    --calc-table-data-text: #d1d2d3;
+    --calc-label-color: #d1d2d3;
 }
 
 /* Transiciones suaves para cambios de tema */
